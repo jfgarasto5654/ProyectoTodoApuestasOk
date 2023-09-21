@@ -1,9 +1,18 @@
+h1{
+    text-align: center;
+    padding: 20px;
+}
+
+h3{
+    text-align: center;
+    color: #c69749;
+}
+
 body{
    background-color: black;
    font-family: Arial, Helvetica, sans-serif;
    text-align: center;
 }
-
 #navbarNav{
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -17,13 +26,33 @@ body{
 }
 
 #logo-nav{
-    width: 60px;
-    margin-right: 60px;
+width: 60px;
+margin-right: 60px;
 }
 
 .navbar{
     background-color: #c69749;
 }
+
+#bets{
+    justify-content: center;
+    text-align: center;
+    margin-top: 60px;
+    color: aliceblue;
+}
+
+.d-block{
+    width: 1000px;
+    padding: 20px;
+    margin: auto;
+}
+
+footer{
+    color: aliceblue;
+    padding: 200px;
+    text-align: center;
+}
+
 
 .navbar-apuesta{
     font-family: "Cream Cake";
@@ -36,15 +65,13 @@ body{
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
-form{
-    justify-content: center;
-    display: grid;
-    text-align: left;
-    color: aliceblue;
+
+#link-deportes{
+   color: aliceblue;
 }
 
-#titulo{
-    padding: 50px;
-    text-align: center;
-    color: aliceblue;
+#link-deportes:hover{
+    color:gold;
 }
+
+

@@ -1,5 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+
 <html>
   <head>
     <meta charset="UTF-8">
@@ -20,19 +21,17 @@
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a id = "Home" class="nav-link active" aria-current="page" href="inicioSesion.jsp">Iniciar Sesion</a>
+                    <a id = "Home" class="nav-link active" aria-current="page" href="new_usuarios.jsp">Crear Usuario</a>
                   </li>
                 </ul>
               </div>
             </div>
           </nav>
 
-        <h1 id="titulo" >NUEVO USUARIO</h1>
-        <form action="Svusuarios" method="POST">
-            <p> <label>DNI</label> <input type="text" name="dni"></p>
-            <p> <label>NOMBRE</label> <input type="text" name="nombre"></p>
-            <p> <label>APELLIDO</label> <input type="text" name="apellido"></p>
-            <p> <label>EDAD</label> <input type="text" name="edad"></p>
+        <h1 id="titulo" >Inicio Sesion</h1>
+        <form action="SvIngresoUsuario" method="POST">
+            <p> <label>Usuario</label> <input type="text" name="usuario"></p>
+            <p> <label>Contraseña</label> <input type="password" name="password"></p>
             <input type="submit" name="Enviar datos" value="Enviar datos">
        </form>
     </body>
