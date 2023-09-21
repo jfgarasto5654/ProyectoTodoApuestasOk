@@ -1,13 +1,12 @@
 
 package com.mycompany.apuestatodook;
 
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(name = "Svusuarios", urlPatterns = {"/Svusuarios"})
 public class Svusuarios extends HttpServlet {
@@ -36,10 +35,6 @@ public class Svusuarios extends HttpServlet {
         System.out.println(nombre);
         System.out.println(apellido);
         System.out.println(edad);
-        
-        if(edad.equals("18")){
-            System.out.println("TIENE 18 AÑOS");
-        }
         
         response.sendRedirect("usuarioCreado.jsp");
     }
