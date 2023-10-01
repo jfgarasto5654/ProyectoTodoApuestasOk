@@ -36,6 +36,29 @@ body{
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+#bets{
+    justify-content: center;
+    text-align: center;
+    margin-top: 60px;
+    color: aliceblue;
+}
+
+.d-block{
+    padding: 20px;
+    margin: auto;
+}
+
+
+
+#link-deportes{
+   color: aliceblue;
+}
+
+#link-deportes:hover{
+    color:gold;
+}
+
 form{
     justify-content: center;
     display: grid;
@@ -48,3 +71,15 @@ form{
     text-align: center;
     color: aliceblue;
 }
+
+#botonRegreso{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: #c69749;
+}
+
+#botonRegreso:hover{
+    color: currentColor;
+}
+
