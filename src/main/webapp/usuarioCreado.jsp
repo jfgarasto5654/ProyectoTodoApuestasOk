@@ -57,6 +57,6 @@
         <h3>Aposta con responsabilidad</h3>
         
         <a id="botonRegreso" href="${pageContext.request.contextPath}">Comenza a apostar</a>     
-        
+        <c:import url="componentesHTML/footer.jsp" /> 
     </body>
 </html>

@@ -36,5 +36,6 @@
             <p> <label>EDAD</label> <input type="text" name="edad"></p>
             <input type="submit" name="Enviar datos" value="Enviar datos">
        </form>
+        <c:import url="componentesHTML/footer.jsp" /> 
     </body>
 </html>

@@ -35,5 +35,6 @@
             <p> <label>Contraseña</label> <input type="password" name="password"></p>
             <input type="submit" name="Enviar datos" value="Enviar datos">
        </form>
+        <c:import url="componentesHTML/footer.jsp" /> 
     </body>
 </html>

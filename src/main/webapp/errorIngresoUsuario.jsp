@@ -59,6 +59,6 @@
         
         <a id="botonRegreso" href="#">Olvido su contraseña?</a> 
         
-        
+        <c:import url="componentesHTML/footer.jsp" /> 
     </body>
 </html>
