@@ -82,4 +82,39 @@ form{
 #botonRegreso:hover{
     color: currentColor;
 }
+footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .footer-content {
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            flex-wrap: wrap; 
+            gap: 20px;
+        }
 
+        .footer-column {
+            flex: 1; 
+            text-align: left; 
+            max-width: calc(25% - 20px);
+        }
+
+        .footer-column h3 {
+            color: #c69749;
+            font-size: 18px;
+        }
+
+        .footer-column p {
+            margin: 0;
+            font-size: 12px
+        }
+.mi-lista {
+  background-color: gray;
+}
