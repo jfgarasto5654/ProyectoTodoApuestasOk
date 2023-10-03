@@ -1,36 +1,7 @@
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
 <c:import url="componentesHTML/inicioHTML.jsp" />
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <img src="img/logoAP.jpg" id = "logo-nav">
-          <h1 class="navbar-apuesta">Apuesta</h1> <h1 class="navbar-todocom">todo.com</h1> 
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a id = "Home" class="nav-link active" aria-current="page" href="inicioSesion.jsp">aca tiene que estar el nombre del usuario iniciado</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-      <ul class="nav justify-content-center">
-        <li class="nav-item">
-          <a class="nav-link active" id = "link-deportes" aria-current="page" href="#">Futbol</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id = "link-deportes" href="#">Handball</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id = "link-deportes" href="#">Golf</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
+<c:import url="componentesHTML/navBar-Iniciado.jsp" />
+<c:import url="componentesHTML/ul-BarraDeportes.jsp" />
 
         <h2 id = "bets">BETS DESTACADAS</h2>
         <div id="carouselExample" class="carousel slide">
