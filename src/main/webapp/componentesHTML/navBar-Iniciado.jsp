@@ -8,7 +8,13 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a id = "Home" class="nav-link active" aria-current="page" href="inicioSesion.jsp">aca tiene que estar el nombre del usuario iniciado</a>
+                <a id = "Home" class="nav-link active" aria-current="page" href="principalIniciado.jsp">Persona</a>
+              </li>
+              <li class="nav-item">
+                <a id = "Home" class="nav-link active" aria-current="page" href="billetera.jsp">Billetera</a>
+              </li>
+              <li class="nav-item">
+                <a id = "Home" class="nav-link active" aria-current="page" href="partidos.jsp">Partidos</a>
               </li>
             </ul>
           </div>
