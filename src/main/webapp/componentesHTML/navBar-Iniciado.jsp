@@ -16,6 +16,9 @@
               <li class="nav-item">
                 <a id = "Home" class="nav-link active" aria-current="page" href="partidos.jsp">Partidos</a>
               </li>
+              <li class="nav-item">
+                <a id = "Home" class="nav-link active" aria-current="page" href="resultados.jsp">Resultados</a>
+              </li>
             </ul>
           </div>
         </div>
