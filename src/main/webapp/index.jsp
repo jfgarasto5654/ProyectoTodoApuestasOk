@@ -2,18 +2,15 @@
 <c:import url="componentesHTML/inicioHTML.jsp" />
 <c:import url="componentesHTML/navBar-No-Iniciado.jsp" />
 
-      <ul class="nav justify-content-center">
+      <ul class="nav justify-content-center mi-lista">
         <li class="nav-item">
-          <a class="nav-link active" id = "link-deportes" aria-current="page" href="#">Futbol</a>
+          <a class="nav-link active" id = "link-deportes" aria-current="page" href="inicioSesion.jsp">Futbol</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id = "link-deportes" href="#">Handball</a>
+          <a class="nav-link" id = "link-deportes" href="inicioSesion.jsp">Handball</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id = "link-deportes" href="#">Golf</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          <a class="nav-link" id = "link-deportes" href="inicioSesion.jsp">Golf</a>
         </li>
       </ul>
 
