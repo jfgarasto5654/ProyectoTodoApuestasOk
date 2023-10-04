@@ -10,8 +10,7 @@
         <h1>SU CUENTA HA SIDO CREADA</h1>
         <h1>Gracias por unirte a la comunidad de Apuesta Todo</h1>
         <h3>Aposta con responsabilidad</h3>
-        
-        <a id="botonRegreso" href="${pageContext.request.contextPath}">Comenza a apostar</a>     
+            
         <c:import url="componentesHTML/footer.jsp" /> 
     </body>
 </html>

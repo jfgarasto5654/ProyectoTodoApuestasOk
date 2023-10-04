@@ -10,9 +10,8 @@
         <h3>Ingrese Nuevamnete</h3>
         
         <a id="botonRegreso" href="inicioSesion.jsp">Volver a Ingresar</a>   
-        <a id="botonRegreso" href="new_usuarios.jsp">Crear Cuenta</a> 
+        <a id="botonRegreso" href="newUsuarios.jsp">Crear Cuenta</a> 
         
-        <a id="botonRegreso" href="#">Olvido su contraseña?</a> 
         
         <c:import url="componentesHTML/footer.jsp" /> 
     </body>
