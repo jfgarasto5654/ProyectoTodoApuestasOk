@@ -2,6 +2,9 @@ body{
    background-color: #282A3A;
    font-family: Arial, Helvetica, sans-serif;
    text-align: center;
+   position: relative;
+   padding-bottom: 15em;
+   min-height: 100vh;
 }
 
 #navbarNav{
