@@ -118,3 +118,13 @@ footer {
 .mi-lista {
   background-color: gray;
 }
+.tabla-grande {
+    font-size: 18px; /* Tamaño de fuente más grande */
+    border-collapse: collapse; /* Combina los bordes de las celdas */
+    width: 100%; /* Ancho de la tabla al 100% del contenedor */
+}
+
+.tabla-grande th, .tabla-grande td {
+    padding: 10px; /* Espaciado interno mayor */
+    text-align: center; /* Alineación de texto al centro */
+}

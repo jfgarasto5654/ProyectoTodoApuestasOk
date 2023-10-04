@@ -7,7 +7,7 @@
         </div>
         
         <h1>partidos</h1>
-        <table border="1">
+        <table border="1" class="tabla-grande">
         <thead>
             <tr>
                 <th>Local</th>

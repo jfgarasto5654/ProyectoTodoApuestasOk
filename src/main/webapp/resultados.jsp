@@ -8,7 +8,7 @@
         
         <h1>partidos</h1>
         <h1>aca no se muy bien si poner todos los partidos viejos o solo a los que se apostaron, o ambos y separados</h1>
-        <table border="1">
+        <table border="1" class="tabla-grande">
         <thead>
             <tr>
                 <th>Local</th>
