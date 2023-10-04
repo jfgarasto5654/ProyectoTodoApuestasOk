@@ -20,13 +20,19 @@
 
       <div class="carousel-inner">
         <div class="carousel-item active">
+            <a href="inicioSesion.jsp">
           <img src="img/Boca-Racing-ESPN.jpg" class="d-block " alt="...">
+          </a>
         </div>
         <div class="carousel-item">
+            <a href="inicioSesion.jsp">
           <img src="img/Barcelona-Madrid-Aguero.jpg" class="d-block " alt="...">
+          </a>
         </div>
         <div class="carousel-item">
+            <a href="inicioSesion.jsp">
           <img src="img/espn-Final.jpg" class="d-block " alt="...">
+          </a>
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">

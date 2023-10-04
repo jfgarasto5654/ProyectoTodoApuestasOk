@@ -8,15 +8,19 @@
 
 
       <div class="carousel-inner">
-        <div class="carousel-item active">
+        <a href="partidos.jsp">
           <img src="img/Boca-Racing-ESPN.jpg" class="d-block " alt="...">
+          </a>
         </div>
         <div class="carousel-item">
+            <a href="partidos.jsp">
           <img src="img/Barcelona-Madrid-Aguero.jpg" class="d-block " alt="...">
+          </a>
         </div>
         <div class="carousel-item">
+            <a href="partidos.jsp">
           <img src="img/espn-Final.jpg" class="d-block " alt="...">
-        </div>
+          </a>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
