@@ -156,3 +156,9 @@ border-bottom-right-radius: .3rem;
 }
 }
 
+#fondoNewUsuario{
+    background-image: url(../img/Neymar.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
