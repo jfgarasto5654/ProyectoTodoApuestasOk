@@ -62,7 +62,7 @@ body{
     color:gold;
 }
 
-form{
+#Formulario-InicioSesion{
     justify-content: center;
     display: grid;
     text-align: left;
@@ -155,3 +155,4 @@ border-top-right-radius: .3rem;
 border-bottom-right-radius: .3rem;
 }
 }
+
