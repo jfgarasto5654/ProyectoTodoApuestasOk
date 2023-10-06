@@ -26,16 +26,16 @@ public class Svusuarios extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        String dni = request.getParameter("dni");
-        String nombre = request.getParameter("nombre");
-        String apellido = request.getParameter("apellido");
-        String edad = request.getParameter("edad");
+        String usuario = request.getParameter("usuario");
+        String email = request.getParameter("email");
+        String password = request.getParameter("password");
+        String cpassword = request.getParameter("cpassword");
         
-        System.out.println(dni);
-        System.out.println(nombre);
-        System.out.println(apellido);
-        System.out.println(edad);
-        
+        System.out.println(usuario);
+        System.out.println(email);
+        System.out.println(password);
+        System.out.println(cpassword);
+
         response.sendRedirect("usuarioCreado.jsp");
     }
     
