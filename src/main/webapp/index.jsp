@@ -1,16 +1,16 @@
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
-<c:import url="componentesHTML/inicioHTML.jsp" />
-<c:import url="componentesHTML/navBar-No-Iniciado.jsp" />
+<c:import url="WEB-INF/jsp/componentesHTML/inicioHTML.jsp" />
+<c:import url="WEB-INF/jsp/componentesHTML/navBar-No-Iniciado.jsp" />
 
       <ul class="nav justify-content-center mi-lista">
         <li class="nav-item">
-          <a class="nav-link active" id = "link-deportes" aria-current="page" href="inicioSesion.jsp">Futbol</a>
+          <a class="nav-link active" id = "link-deportes" aria-current="page" href="WEB-INF/jsp/inicioSesion.jsp">Futbol</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id = "link-deportes" href="inicioSesion.jsp">Handball</a>
+          <a class="nav-link" id = "link-deportes" href="WEB-INF/jsp/inicioSesion.jsp">Handball</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id = "link-deportes" href="inicioSesion.jsp">Golf</a>
+          <a class="nav-link" id = "link-deportes" href="WEB-INF/jsp/inicioSesion.jsp">Golf</a>
         </li>
       </ul>
 
@@ -44,7 +44,7 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-   <c:import url="componentesHTML/footer.jsp" /> 
+   <c:import url="WEB-INF/jsp/componentesHTML/footer.jsp" /> 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>

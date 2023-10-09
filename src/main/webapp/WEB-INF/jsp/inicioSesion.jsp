@@ -65,6 +65,6 @@
                 </section>
     
                 
-<h1 id="footerprueba">ACA VA EL FOOTER</h1>
+ <c:import url="componentesHTML/footer.jsp" /> 
                 
 </html>
