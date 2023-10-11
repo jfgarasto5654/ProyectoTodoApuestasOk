@@ -4,13 +4,13 @@
 
       <ul class="nav justify-content-center mi-lista">
         <li class="nav-item">
-          <a class="nav-link active" id = "link-deportes" aria-current="page" href="WEB-INF/jsp/inicioSesion.jsp">Futbol</a>
+          <a class="nav-link active" id = "link-deportes" aria-current="page" href="SvIndex?action=inicioSesion">Futbol</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id = "link-deportes" href="WEB-INF/jsp/inicioSesion.jsp">Handball</a>
+          <a class="nav-link" id = "link-deportes" href="SvIndex?action=inicioSesion">Handball</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id = "link-deportes" href="WEB-INF/jsp/inicioSesion.jsp">Golf</a>
+          <a class="nav-link" id = "link-deportes" href="SvIndex?action=inicioSesion">Golf</a>
         </li>
       </ul>
 

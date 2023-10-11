@@ -9,6 +9,13 @@
             30
         </session-timeout>
     </session-config>
-    
+  <servlet>
+    <servlet-name>SvIndex</servlet-name>
+    <servlet-class>com.mycompany.apuestatodook.SvIndex</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>SvIndex</servlet-name>
+    <url-pattern>/SvIndex</url-pattern>
+</servlet-mapping>  
         
 </web-app>
