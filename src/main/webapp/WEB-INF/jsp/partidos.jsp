@@ -11,35 +11,20 @@
         <thead>
             <tr>
                 <th>Local</th>
-                <th>equipo1</th>
-                <th>fecha</th>
-                <th>equipo2</th>
                 <th>Visitante</th>
+                <th>fecha</th>            
+                
+                <c:forEach items="${listaDePartidos}" var="partido">
+                <tr>
+                    <td>${partido.local}</td>
+                    <td>${partido.visitante}</td>
+                    <td>${partido.fecha}</td>
+                    <td><a href="/La-pagina-de-apuestas?id=${partido.idParttido}">APOSTAR</a></td>
+                </tr>
+                </c:forEach>
             </tr>
         </thead>
-        <tbody>
-            <tr>
-                <td>Fila 1, C1</td>
-                <td>Fila 1, C2</td>
-                <td>Fila 1, C3</td>
-                <td>Fila 1, C4</td>
-                <td>Fila 1, C5</td>
-            </tr>
-            <tr>
-                <td>Fila 2, C1</td>
-                <td>Fila 2, C2</td>
-                <td>Fila 2, C3</td>
-                <td>Fila 2, C4</td>
-                <td>Fila 2, C5</td>
-            </tr>
-            <tr>
-                <td>Fila 3, C1</td>
-                <td>Fila 3, C2</td>
-                <td>Fila 3, C3</td>
-                <td>Fila 3, C4</td>
-                <td>Fila 3, C5</td>
-            </tr>
-        </tbody>
+     
     </table> 
         <c:import url="componentesHTML/footer.jsp" /> 
     </body>
