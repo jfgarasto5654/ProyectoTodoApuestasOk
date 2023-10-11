@@ -37,12 +37,12 @@
                                   <div class="text-center pt-1 mb-5 pb-1">
                                       <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">Log
                                       in</button>
-                                    <a class="text-muted" href="#!">Forgot password?</a>
+                                    <a class="text-muted" href="#!">Olvido Contraseña?</a>
                                   </div>
 
                                   <div class="d-flex align-items-center justify-content-center pb-4">
-                                    <p class="mb-0 me-2">Don't have an account?</p>
-                                    <a href="newUsuarios.jsp" class="btn btn-success">Create new</a>
+                                    <p class="mb-0 me-2">No tienes Cuenta?</p>
+                                    <a href="Index?action=newUsuarios" class="btn btn-success">Crea una Nueva</a>
                                     
                                   </div>
 

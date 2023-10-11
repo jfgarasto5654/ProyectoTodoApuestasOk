@@ -9,8 +9,8 @@
         <h1>Usuario o Contraseña Erronea</h1>
         <h3>Ingrese Nuevamnete</h3>
         
-        <a id="botonRegreso" href="inicioSesion.jsp">Volver a Ingresar</a>   
-        <a id="botonRegreso" href="newUsuarios.jsp">Crear Cuenta</a> 
+        <a id="botonRegreso" href="Index?action=inicioSesion">Volver a Ingresar</a>   
+        <a id="botonRegreso" href="Index?action=newUsuarios">Crear Cuenta</a> 
         
         
         <c:import url="componentesHTML/footer.jsp" /> 

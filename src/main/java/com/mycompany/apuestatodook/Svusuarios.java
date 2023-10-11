@@ -30,7 +30,7 @@ public class Svusuarios extends HttpServlet {
         System.out.println(password);
         System.out.println(cpassword);
 
-        response.sendRedirect("usuarioCreado.jsp");
+        response.sendRedirect("Index?action=usuarioCreado");
     }
     
     @Override

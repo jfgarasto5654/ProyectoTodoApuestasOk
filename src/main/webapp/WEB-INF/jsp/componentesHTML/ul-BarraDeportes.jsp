@@ -3,9 +3,9 @@
           <a class="nav-link active" id = "link-deportes" aria-current="page" href="partidos.jsp">Futbol</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id = "link-deportes" href="partidos.jsp">Handball</a>
+          <a class="nav-link" id = "link-deportes" href="Index?action=partidos">Handball</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id = "link-deportes" href="partidos.jsp">Golf</a>
+          <a class="nav-link" id = "link-deportes" href="Index?action=partidos">Golf</a>
         </li>
       </ul>

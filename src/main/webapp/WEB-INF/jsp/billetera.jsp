@@ -12,7 +12,7 @@
         <h3>quizas un cuadrado quede bien</h3>
         <h3>algunos botones tambien</h3>
         <h3>para meter plata y sacar</h3>
-        <a id="botonRegreso" href="partidos.jsp">Comenza a apostar</a>    
+        <a id="botonRegreso" href="Index?action=partidos">Comenza a apostar</a>    
         <!--preguntar al profe que es esto $ {pageContext.request.contextPath} -->
         <c:import url="componentesHTML/footer.jsp" /> 
     </body>

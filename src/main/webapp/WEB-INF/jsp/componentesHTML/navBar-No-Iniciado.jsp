@@ -10,10 +10,10 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a id = "Home" class="nav-link active" aria-current="page" href="inicioSesion.jsp">Iniciar Sesion</a>
+                <a id = "Home" class="nav-link active" aria-current="page" href="Index?action=inicioSesion">Iniciar Sesion</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="newUsuarios.jsp">Crear Usuario</a>
+                <a class="nav-link" href="Index?action=newUsuarios">Crear Usuario</a>
               </li>
                    </ul>
           </div>

@@ -8,17 +8,17 @@
 
 
       <div class="carousel-inner">
-        <a href="partidos.jsp">
+        <a href="Index?action=partidos">
           <img src="img/Boca-Racing-ESPN.jpg" class="d-block " alt="...">
           </a>
         </div>
         <div class="carousel-item">
-            <a href="partidos.jsp">
+            <a href="Index?action=partidos">
           <img src="img/Barcelona-Madrid-Aguero.jpg" class="d-block " alt="...">
           </a>
         </div>
         <div class="carousel-item">
-            <a href="partidos.jsp">
+            <a href="Index?action=partidos">
           <img src="img/espn-Final.jpg" class="d-block " alt="...">
           </a>
       </div>

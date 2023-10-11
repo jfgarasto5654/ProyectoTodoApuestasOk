@@ -36,8 +36,8 @@ public class SvIngresoUsuario extends HttpServlet {
         String usuario1 = "admin";
         String contrasenia1 = "1234";
         if (usuario1.equalsIgnoreCase(usuario)&&(contrasenia.equals(contrasenia1)))
-        response.sendRedirect("principalIniciado.jsp");
-        else response.sendRedirect("errorIngresoUsuario.jsp");
+        response.sendRedirect("Index?action=principalIniciado");
+        else response.sendRedirect("Index?action=errorIngresoUsuario");
     }
     
     @Override

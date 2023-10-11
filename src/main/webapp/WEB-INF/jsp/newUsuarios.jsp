@@ -20,27 +20,27 @@
                       <div class="form-outline mb-4">
                              <input type="text" id="form2Example11" class="form-control"
                              placeholder="User" name="usuario"/>
-                             <label class="form-label" for="form2Example11">Username</label>
+                             <label class="form-label" for="form2Example11">Usuario</label>
                              </div>
 
                             <div class="form-outline mb-4">
                             <input type="email" name="email" id="form2Example22" class="form-control" placeholder="email address"/>
-                            <label class="form-label" for="form2Example22">EMAIL</label>
+                            <label class="form-label" for="form2Example22">Email</label>
                             </div>
 
                             <div class="form-outline mb-4">
                             <input type="password" name="password" id="form2Example22" class="form-control" placeholder="password" />
-                            <label class="form-label" for="form2Example22">Password</label>
+                            <label class="form-label" for="form2Example22">Comtraseña</label>
                             </div>
 
                             <div class="form-outline mb-4">
                             <input type="password" name="cpassword" id="form2Example22" class="form-control" placeholder="confirm password"/>
-                            <label class="form-label" for="form2Example22">Confirm password</label>
+                            <label class="form-label" for="form2Example22">Confirme Contraseña</label>
                             </div>
 
 
                             <div class="d-flex justify-content-end pt-3">
-                            <button type="button" class="btn btn-light btn-lg">Reset all</button>
+                            <button type="button" class="btn btn-light btn-lg">Reiniciar</button>
                             <input type="submit" name="Enviar datos" value="Enviar datos">
                             </div>                 
                   </form>

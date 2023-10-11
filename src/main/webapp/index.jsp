@@ -4,13 +4,13 @@
 
       <ul class="nav justify-content-center mi-lista">
         <li class="nav-item">
-          <a class="nav-link active" id = "link-deportes" aria-current="page" href="SvIndex?action=inicioSesion">Futbol</a>
+          <a class="nav-link active" id = "link-deportes" aria-current="page" href="Index?action=inicioSesion">Futbol</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id = "link-deportes" href="SvIndex?action=inicioSesion">Handball</a>
+          <a class="nav-link" id = "link-deportes" href="Index?action=inicioSesion">Handball</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id = "link-deportes" href="SvIndex?action=inicioSesion">Golf</a>
+          <a class="nav-link" id = "link-deportes" href="Index?action=inicioSesion">Golf</a>
         </li>
       </ul>
 
@@ -20,17 +20,17 @@
 
       <div class="carousel-inner">
         <div class="carousel-item active">
-            <a href="inicioSesion.jsp">
+            <a href="Index?action=inicioSesion">
           <img src="img/Boca-Racing-ESPN.jpg" class="d-block " alt="...">
           </a>
         </div>
         <div class="carousel-item">
-            <a href="inicioSesion.jsp">
+            <a href="Index?action=inicioSesion">
           <img src="img/Barcelona-Madrid-Aguero.jpg" class="d-block " alt="...">
           </a>
         </div>
         <div class="carousel-item">
-            <a href="inicioSesion.jsp">
+            <a href="Index?action=inicioSesion">
           <img src="img/espn-Final.jpg" class="d-block " alt="...">
           </a>
         </div>

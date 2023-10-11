@@ -10,16 +10,16 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a id = "Home" class="nav-link active" aria-current="page" href="principalIniciado.jsp">Persona</a>
+                <a id = "Home" class="nav-link active" aria-current="page" href="Index?action=principalIniciado">Persona</a>
               </li>
               <li class="nav-item">
-                <a id = "Home" class="nav-link active" aria-current="page" href="billetera.jsp">Billetera</a>
+                <a id = "Home" class="nav-link active" aria-current="page" href="Index?action=billetera">Billetera</a>
               </li>
               <li class="nav-item">
-                <a id = "Home" class="nav-link active" aria-current="page" href="partidos.jsp">Partidos</a>
+                <a id = "Home" class="nav-link active" aria-current="page" href="Index?action=partidos">Partidos</a>
               </li>
               <li class="nav-item">
-                <a id = "Home" class="nav-link active" aria-current="page" href="resultados.jsp">Resultados</a>
+                <a id = "Home" class="nav-link active" aria-current="page" href="Index?action=resultados">Resultados</a>
               </li>
             </ul>
           </div>
