@@ -31,8 +31,20 @@ public class partidosHarcodeados {
     }
     
     private void cargarPartidosFake() {
-        add(new Partido("River","boca","12-05-2023",contador ));
-        add(new Partido("Racing","independiente","20-30-2502",contador ));
-        add(new Partido("San Lorenzo","Huracan","02-65-8189",contador ));
+        add(new Partido("Real Madrid", "FC Barcelona", "01-11-2023", contador));
+        add(new Partido("Manchester City", "Liverpool FC", "02-11-2023", contador));
+        add(new Partido("Bayern Munich", "Borussia Dortmund", "03-11-2023", contador));
+        add(new Partido("Paris Saint-Germain", "AC Milan", "04-11-2023", contador));
+        add(new Partido("Juventus", "Inter Milan", "05-11-2023", contador));
+        add(new Partido("Chelsea FC", "Arsenal FC", "06-11-2023", contador));
+        add(new Partido("Atletico Madrid", "Sevilla FC", "07-11-2023", contador));
+        add(new Partido("Borussia Monchengladbach", "Hertha Berlin", "08-11-2023", contador));
+        add(new Partido("Ajax Amsterdam", "PSV Eindhoven", "09-11-2023", contador));
+        add(new Partido("AS Roma", "SS Lazio", "10-11-2023", contador));
+        add(new Partido("FC Porto", "SL Benfica", "11-11-2023", contador));
+        add(new Partido("Tottenham Hotspur", "Manchester United", "12-11-2023", contador));
+        add(new Partido("ACF Fiorentina", "Napoli", "13-11-2023", contador));
+        add(new Partido("Everton FC", "Leeds United", "14-11-2023", contador));
+        add(new Partido("Ajax Cape Town", "Kaizer Chiefs", "15-11-2023", contador));
     }
 }

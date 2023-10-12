@@ -161,4 +161,42 @@ border-bottom-right-radius: .3rem;
     background-repeat: no-repeat;
     background-size: cover;
 }
+/* Estilos para el contenedor de partidos */
+.partidos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
+/* Estilos para las burbujas de partido */
+.partido-burbuja {
+    background-color: #735F32;
+    border: 2px solid #333;
+    padding: 10px;
+    text-align: center;
+    margin: 10px; /* Espacio entre burbujas */
+    border-radius: 10px;
+    width: calc(33.33% - 20px); /* Ancho de un tercio del contenedor con margen */
+    box-sizing: border-box;
+}
+
+.equipo-local, .equipo-visitante {
+    font-weight: bold;
+}
+
+.fecha {
+    color: #777;
+}
+
+a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    position: relative; /* Añadir una posición relativa al enlace */
+}

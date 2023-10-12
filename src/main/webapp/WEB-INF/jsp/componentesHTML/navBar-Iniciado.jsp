@@ -16,7 +16,7 @@
                 <a id = "Home" class="nav-link active" aria-current="page" href="Index?action=billetera">Billetera</a>
               </li>
               <li class="nav-item">
-                <a id = "Home" class="nav-link active" aria-current="page" href="Index?action=partidos">Partidos</a>
+                <a id = "Home" class="nav-link active" aria-current="page" href="/ApuestaTodook/Partidos">Partidos</a>
               </li>
               <li class="nav-item">
                 <a id = "Home" class="nav-link active" aria-current="page" href="Index?action=resultados">Resultados</a>

@@ -6,27 +6,20 @@
             <h1>AP</h1>  
         </div>
         
-        <h1>partidos</h1>
-        <table border="1" class="tabla-grande">
-        <thead>
-            <tr>
-                <th>Local</th>
-                <th>Visitante</th>
-                <th>fecha</th>            
-                
-                <c:forEach items="${listaDePartidos}" var="partido">
-                <tr>
-                    <td>${partido.local}</td>
-                    <td>${partido.visitante}</td>
-                    <td>${partido.fecha}</td>
-                    <td><a href="/La-pagina-de-apuestas?id=${partido.idParttido}">APOSTAR</a></td>
-                </tr>
-                </c:forEach>
-            </tr>
-        </thead>
-     
-    </table> 
-        <c:import url="componentesHTML/footer.jsp" /> 
-    </body>
+<h1>Partidos</h1>
+<div class="row">
+    <div class="col-md-12">
+        <div class="partidos-container">
+            <c:forEach items="${listaDePartidos}" var="partido" varStatus="loop">
+                <div class="partido-burbuja">
+                    <div class="equipo-local">${partido.local}</div>
+                    <div class="equipo-visitante">${partido.visitante}</div>
+                    <div class="fecha">${partido.fecha}</div>
+                    <a class="btn btn-primary" href="/ApuestaTodook/Apuesta?id=${partido.idParttido}">APOSTAR</a>
+                </div>
+            </c:forEach>
+        </div>
+    </div>
+</div>
 </html>
 
