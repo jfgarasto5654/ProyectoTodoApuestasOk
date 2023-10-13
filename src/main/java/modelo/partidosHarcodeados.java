@@ -5,6 +5,7 @@
 package modelo;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -46,5 +47,19 @@ public class partidosHarcodeados {
         add(new Partido("ACF Fiorentina", "Napoli", "13-11-2023", contador));
         add(new Partido("Everton FC", "Leeds United", "14-11-2023", contador));
         add(new Partido("Ajax Cape Town", "Kaizer Chiefs", "15-11-2023", contador));
+    }
+    
+    public Partido getPartidoPorId(int id) {
+        Partido partidoEncontrado = null;
+        Iterator<Partido> it = partidos.iterator();
+
+        while (it.hasNext() && partidoEncontrado == null) {
+            Partido partido = it.next();
+            if (partido.getIdParttido() == id) {
+                partidoEncontrado = partido;
+            }
+        }
+
+        return partidoEncontrado;
     }
 }
