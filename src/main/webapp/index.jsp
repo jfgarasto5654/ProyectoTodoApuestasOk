@@ -2,15 +2,15 @@
 <c:import url="WEB-INF/jsp/componentesHTML/inicioHTML.jsp" />
 <c:import url="WEB-INF/jsp/componentesHTML/navBar-No-Iniciado.jsp" />
 
-      <ul class="nav justify-content-center mi-lista">
+      <ul class="nav justify-content-center d-flex align-items-center mi-lista">
         <li class="nav-item mx-2">
-          <a class="btn btn-navbar" id = "link-deportes" aria-current="page" href="Index?action=inicioSesion">Futbol</a>
+          <a class="btn btn-navbar"  href="Index?action=inicioSesion">Futbol</a>
         </li>
         <li class="nav-item mx-2">
-          <a class="btn btn-navbar" id = "link-deportes" href="Index?action=inicioSesion">Handball</a>
+          <a class="btn btn-navbar"  href="Index?action=inicioSesion">Handball</a>
         </li>
         <li class="nav-item mx-2">
-          <a class="btn btn-navbar" id = "link-deportes" href="Index?action=inicioSesion">Golf</a>
+          <a class="btn btn-navbar"  href="Index?action=inicioSesion">Golf</a>
         </li>
       </ul>
         <hr id="lineadebajo-navbar">

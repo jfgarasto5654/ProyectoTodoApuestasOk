@@ -1,6 +1,5 @@
 body{
    background-color: #DBCC8F;
-   font-family: Arial, Helvetica, sans-serif;
    text-align: center;
    position: relative;
    padding-bottom: 15em;
@@ -27,20 +26,21 @@ body{
 .navbar-apuesta{
     font-family: "Cream Cake";
     font-size: 60px;
+     font-weight: 900;
 }
 
 .navbar-todocom{
     padding: 10px;
     margin-top: 15px;
     font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+     font-weight: 900;
 }
 
 #bets{
     justify-content: center;
     text-align: center;
     margin-top: 60px;
-    color: aliceblue;
+    color: black;
 }
 
 .d-block{
@@ -48,15 +48,6 @@ body{
     margin: auto;
 }
 
-
-
-#link-deportes{
-   color: aliceblue;
-}
-
-#link-deportes:hover{
-    color:gold;
-}
 
 #Formulario-InicioSesion{
     justify-content: center;
@@ -111,9 +102,7 @@ footer {
             margin: 0;
             font-size: 12px
         }
-.mi-lista {
-  background-color: #000000;
-}
+
 .tabla-grande {
     font-size: 18px; /* Tamaño de fuente más grande */
     border-collapse: collapse; /* Combina los bordes de las celdas */
@@ -194,11 +183,15 @@ a {
 }
 .btn-navbar {
   background-color: #FEFFDB; /* Código de color naranja como ejemplo */
-  color: #110133; /* Color de texto */
+  color: black; /* Color de texto */
  font-weight: 900;
 }
 #lineadebajo-navbar{
   border-color: black;/* Cambia el color a tu preferencia */
   border-width: 3px; /* Establece el grosor de la línea */
   margin: 0; /* Ajusta el margen si es necesario */
+}
+.mi-lista {
+  background-color: #000000;
+  padding: 6px; 
 }

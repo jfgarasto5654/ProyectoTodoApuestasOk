@@ -1,11 +1,12 @@
-<ul class="nav justify-content-center mi-lista">
-        <li class="nav-item">
-          <a class="nav-link active" id = "link-deportes" aria-current="page" href="partidos.jsp">Futbol</a>
+      <ul class="nav justify-content-center d-flex align-items-center mi-lista">
+        <li class="nav-item mx-2">
+          <a class="btn btn-navbar"  href="/ApuestaTodook/Partidos">Futbol</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" id = "link-deportes" href="Index?action=partidos">Handball</a>
+        <li class="nav-item mx-2">
+          <a class="btn btn-navbar"  href="/ApuestaTodook/Partidos">Handball</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" id = "link-deportes" href="Index?action=partidos">Golf</a>
+        <li class="nav-item mx-2">
+          <a class="btn btn-navbar"  href="/ApuestaTodook/Partidos">Golf</a>
         </li>
       </ul>
+       <hr id="lineadebajo-navbar">

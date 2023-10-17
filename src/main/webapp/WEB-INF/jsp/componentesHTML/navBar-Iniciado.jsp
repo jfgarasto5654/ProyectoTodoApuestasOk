@@ -5,7 +5,7 @@
             </a>
           <h1 class="navbar-apuesta">Apuesta</h1> <h1 class="navbar-todocom">todo.com</h1> 
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="nav justify-content-center mi-lista">
+            <ul class="navbar-nav ms-auto">
               <li class="nav-item mx-2">
                 <a id = "Home" class="btn btn-navbar" aria-current="page" href="Index?action=principalIniciado">Persona</a>
               </li>
@@ -22,3 +22,4 @@
           </div>
         </div>
       </nav>
+       <hr id="lineadebajo-navbar">
