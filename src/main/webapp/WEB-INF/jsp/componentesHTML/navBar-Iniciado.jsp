@@ -4,22 +4,19 @@
           <img src="img/logoAP.jpg" id = "logo-nav">
             </a>
           <h1 class="navbar-apuesta">Apuesta</h1> <h1 class="navbar-todocom">todo.com</h1> 
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a id = "Home" class="nav-link active" aria-current="page" href="Index?action=principalIniciado">Persona</a>
+            <ul class="nav justify-content-center mi-lista">
+              <li class="nav-item mx-2">
+                <a id = "Home" class="btn btn-navbar" aria-current="page" href="Index?action=principalIniciado">Persona</a>
               </li>
-              <li class="nav-item">
-                <a id = "Home" class="nav-link active" aria-current="page" href="Index?action=billetera">Billetera</a>
+              <li class="nav-item mx-2">
+                <a id = "Home" class="btn btn-navbar" aria-current="page" href="Index?action=billetera">Billetera</a>
               </li>
-              <li class="nav-item">
-                <a id = "Home" class="nav-link active" aria-current="page" href="/ApuestaTodook/Partidos">Partidos</a>
+              <li class="nav-item mx-2">
+                <a id = "Home" class="btn btn-navbar" aria-current="page" href="/ApuestaTodook/Partidos">Partidos</a>
               </li>
-              <li class="nav-item">
-                <a id = "Home" class="nav-link active" aria-current="page" href="Index?action=resultados">Resultados</a>
+              <li class="nav-item mx-2">
+                <a id = "Home" class="btn btn-navbar" aria-current="page" href="Index?action=resultados">Resultados</a>
               </li>
             </ul>
           </div>

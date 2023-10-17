@@ -1,14 +1,10 @@
 body{
-   background-color: #282A3A;
+   background-color: #DBCC8F;
    font-family: Arial, Helvetica, sans-serif;
    text-align: center;
    position: relative;
    padding-bottom: 15em;
    min-height: 100vh;
-}
-
-#navbarNav{
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .container-fluid{
@@ -25,7 +21,7 @@ body{
 }
 
 .navbar{
-    background-color: #c69749;
+    background-color: #FFC60B;
 }
 
 .navbar-apuesta{
@@ -82,10 +78,6 @@ body{
     color: #c69749;
 }
 
-#botonRegreso:hover{
-    color: currentColor;
-}
-
 footer {
             position: absolute;
             bottom: 0;
@@ -120,7 +112,7 @@ footer {
             font-size: 12px
         }
 .mi-lista {
-  background-color: #735F32;
+  background-color: #000000;
 }
 .tabla-grande {
     font-size: 18px; /* Tamaño de fuente más grande */
@@ -146,7 +138,7 @@ background: linear-gradient(to right, #c69749, #c69749, #c69749, #c69749);
 
 @media (min-width: 768px) {
 .gradient-form {
-height: 100vh !important;
+height: 100vh;
 }
 }
 @media (min-width: 769px) {
@@ -199,4 +191,14 @@ a {
     margin-top: 10px;
     text-decoration: none;
     position: relative; /* Añadir una posición relativa al enlace */
+}
+.btn-navbar {
+  background-color: #FEFFDB; /* Código de color naranja como ejemplo */
+  color: #110133; /* Color de texto */
+ font-weight: 900;
+}
+#lineadebajo-navbar{
+  border-color: black;/* Cambia el color a tu preferencia */
+  border-width: 3px; /* Establece el grosor de la línea */
+  margin: 0; /* Ajusta el margen si es necesario */
 }

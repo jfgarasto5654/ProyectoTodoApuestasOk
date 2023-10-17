@@ -3,16 +3,17 @@
 <c:import url="WEB-INF/jsp/componentesHTML/navBar-No-Iniciado.jsp" />
 
       <ul class="nav justify-content-center mi-lista">
-        <li class="nav-item">
-          <a class="nav-link active" id = "link-deportes" aria-current="page" href="Index?action=inicioSesion">Futbol</a>
+        <li class="nav-item mx-2">
+          <a class="btn btn-navbar" id = "link-deportes" aria-current="page" href="Index?action=inicioSesion">Futbol</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" id = "link-deportes" href="Index?action=inicioSesion">Handball</a>
+        <li class="nav-item mx-2">
+          <a class="btn btn-navbar" id = "link-deportes" href="Index?action=inicioSesion">Handball</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" id = "link-deportes" href="Index?action=inicioSesion">Golf</a>
+        <li class="nav-item mx-2">
+          <a class="btn btn-navbar" id = "link-deportes" href="Index?action=inicioSesion">Golf</a>
         </li>
       </ul>
+        <hr id="lineadebajo-navbar">
 
         <h2 id = "bets">BETS DESTACADAS</h2>
         <div id="carouselExample" class="carousel slide">
