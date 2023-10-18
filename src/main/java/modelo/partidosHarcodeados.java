@@ -13,7 +13,6 @@ import java.util.List;
  * @author Alumno
  */
 public class partidosHarcodeados {
-    private static int contador = 1;
     private List<Partido> partidos;
 
     public partidosHarcodeados() {
@@ -22,9 +21,7 @@ public class partidosHarcodeados {
     }
      
         public void add(Partido partido) {
-        partido.setIdParttido(contador);
         partidos.add(partido);
-        contador++;
     }
         
     public List<Partido> getAll() {
@@ -32,22 +29,23 @@ public class partidosHarcodeados {
     }
     
     private void cargarPartidosFake() {
-        add(new Partido("Real Madrid", "FC Barcelona", "01-11-2023", contador));
-        add(new Partido("Manchester City", "Liverpool FC", "02-11-2023", contador));
-        add(new Partido("Bayern Munich", "Borussia Dortmund", "03-11-2023", contador));
-        add(new Partido("Paris Saint-Germain", "AC Milan", "04-11-2023", contador));
-        add(new Partido("Juventus", "Inter Milan", "05-11-2023", contador));
-        add(new Partido("Chelsea FC", "Arsenal FC", "06-11-2023", contador));
-        add(new Partido("Atletico Madrid", "Sevilla FC", "07-11-2023", contador));
-        add(new Partido("Borussia Monchengladbach", "Hertha Berlin", "08-11-2023", contador));
-        add(new Partido("Ajax Amsterdam", "PSV Eindhoven", "09-11-2023", contador));
-        add(new Partido("AS Roma", "SS Lazio", "10-11-2023", contador));
-        add(new Partido("FC Porto", "SL Benfica", "11-11-2023", contador));
-        add(new Partido("Tottenham Hotspur", "Manchester United", "12-11-2023", contador));
-        add(new Partido("ACF Fiorentina", "Napoli", "13-11-2023", contador));
-        add(new Partido("Everton FC", "Leeds United", "14-11-2023", contador));
-        add(new Partido("Ajax Cape Town", "Kaizer Chiefs", "15-11-2023", contador));
+        add(new Partido("Real Madrid", "FC Barcelona", "01-11-2023", 1));
+        add(new Partido("Manchester City", "Liverpool FC", "02-11-2023", 2));
+        add(new Partido("Bayern Munich", "Borussia Dortmund", "03-11-2023", 3));
+        add(new Partido("Paris Saint-Germain", "AC Milan", "04-11-2023", 4));
+        add(new Partido("Juventus", "Inter Milan", "05-11-2023", 5));
+        add(new Partido("Chelsea FC", "Arsenal FC", "06-11-2023", 6));
+        add(new Partido("Atletico Madrid", "Sevilla FC", "07-11-2023", 7));
+        add(new Partido("Borussia Monchengladbach", "Hertha Berlin", "08-11-2023", 8));
+        add(new Partido("Ajax Amsterdam", "PSV Eindhoven", "09-11-2023", 9));
+        add(new Partido("AS Roma", "SS Lazio", "10-11-2023", 10));
+        add(new Partido("FC Porto", "SL Benfica", "11-11-2023", 11));
+        add(new Partido("Tottenham Hotspur", "Manchester United", "12-11-2023", 12));
+        add(new Partido("ACF Fiorentina", "Napoli", "13-11-2023", 13));
+        add(new Partido("Everton FC", "Leeds United", "14-11-2023", 14));
+        add(new Partido("Ajax Cape Town", "Kaizer Chiefs", "15-11-2023", 15));
     }
+
     
 
     public Partido getPartidoPorId(Integer id) {
