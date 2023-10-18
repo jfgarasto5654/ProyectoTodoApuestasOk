@@ -8,10 +8,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import modelo.partidosHarcodeados;
 
-/**
- *
- * @author Alumno
- */
+
 @WebServlet(name = "SvPartidos", urlPatterns = {"/Partidos"})
 public class SvPartidos extends HttpServlet {
 
