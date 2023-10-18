@@ -49,17 +49,18 @@ public class partidosHarcodeados {
         add(new Partido("Ajax Cape Town", "Kaizer Chiefs", "15-11-2023", contador));
     }
     
-    public Partido getPartidoPorId(int id) {
-        Partido partidoEncontrado = null;
-        Iterator<Partido> it = partidos.iterator();
 
+    public Partido getPartidoPorId(Integer id) {
+        UtilExceptions.checkNumeroNegativo(id, "El ID no puede ser negativo");
+        Partido partidoEncontrado = null;
+        Iterator<Partido> it = this.partidos.iterator();
         while (it.hasNext() && partidoEncontrado == null) {
-            Partido partido = it.next();
-            if (partido.getIdParttido() == id) {
-                partidoEncontrado = partido;
+            Partido aux = it.next();
+            if (aux.getIdParttido() == id) {
+                partidoEncontrado = aux;
             }
         }
-
+            UtilExceptions.checkObjetoNulo(partidoEncontrado, "No existe receta con id " + id);
         return partidoEncontrado;
     }
 }
