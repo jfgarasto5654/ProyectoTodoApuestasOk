@@ -1,1 +1,8 @@
+modelo\partidosHarcodeados.class
+com\mycompany\apuestatodook\SvIngresoUsuario.class
+modelo\UtilExceptions.class
+com\mycompany\apuestatodook\SvApuesta.class
+com\mycompany\apuestatodook\SvIndex.class
+com\mycompany\apuestatodook\SvPartidos.class
 com\mycompany\apuestatodook\Svusuarios.class
+modelo\Partido.class
