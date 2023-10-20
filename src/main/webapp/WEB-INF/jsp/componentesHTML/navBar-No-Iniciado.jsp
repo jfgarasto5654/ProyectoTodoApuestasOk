@@ -7,10 +7,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto"> 
         <li class="nav-item mx-2">
-          <a class="btn btn-navbar" href="Index?action=inicioSesion">Iniciar Sesion</a>
+          <a class="btn btn-success" href="Index?action=inicioSesion">Iniciar Sesion</a>
         </li>
         <li class="nav-item mx-2">
-          <a class="btn btn-navbar" href="Index?action=newUsuarios">Crear Usuario</a>
+          <a class="btn btn-success" href="Index?action=newUsuarios">Crear Usuario</a>
         </li>
       </ul>
     </div>

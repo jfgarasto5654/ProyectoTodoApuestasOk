@@ -4,7 +4,7 @@
 <c:import url="componentesHTML/ul-BarraDeportes.jsp" />
 
 <div class="container">
-    <form method="post" action="procesar_apuesta.jsp">
+    <form method="post" action="Svprocesar_apuesta">
         <div class="row">
             <div class="col-md-4">
                 <h4>Local</h4>

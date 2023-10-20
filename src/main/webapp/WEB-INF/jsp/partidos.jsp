@@ -2,11 +2,8 @@
 <c:import url="componentesHTML/inicioHTML.jsp" />
 <c:import url="componentesHTML/navBar-Iniciado.jsp" />
 <c:import url="componentesHTML/ul-BarraDeportes.jsp" />
-        <div id="nav-bar">
-            <h1>AP</h1>  
-        </div>
         
-<h1>Partidos</h1>
+<h1 style="margin-top: 30px; color: aliceblue">Partidos Disponibles</h1>
 <div class="row">
     <div class="col-md-12">
         <div class="partidos-container">
