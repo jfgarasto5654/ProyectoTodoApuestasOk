@@ -7,16 +7,16 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item mx-2">
-                <a id = "Home" class="btn btn-navbar" aria-current="page" href="Index?action=principalIniciado">Persona</a>
+                <a id = "Home" class="btn btn-success" aria-current="page" href="Index?action=principalIniciado">Persona</a>
               </li>
               <li class="nav-item mx-2">
-                <a id = "Home" class="btn btn-navbar" aria-current="page" href="Index?action=billetera">Billetera</a>
+                <a id = "Home" class="btn btn-success" aria-current="page" href="Index?action=billetera">Billetera</a>
               </li>
               <li class="nav-item mx-2">
-                <a id = "Home" class="btn btn-navbar" aria-current="page" href="/ApuestaTodook/Partidos">Partidos</a>
+                <a id = "Home" class="btn btn-success" aria-current="page" href="/ApuestaTodook/Partidos">Partidos</a>
               </li>
               <li class="nav-item mx-2">
-                <a id = "Home" class="btn btn-navbar" aria-current="page" href="Index?action=resultados">Resultados</a>
+                <a id = "Home" class="btn btn-success" aria-current="page" href="Index?action=resultados">Resultados</a>
               </li>
             </ul>
           </div>
