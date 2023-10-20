@@ -1,5 +1,5 @@
 body{
-   background-color: #DBCC8F;
+    background-color: #ffffff;
    text-align: center;
    position: relative;
    padding-bottom: 15em;
@@ -20,7 +20,7 @@ body{
 }
 
 .navbar{
-    background-color: #FFC60B;
+    background-color: #ccc414;
 }
 
 .navbar-apuesta{
@@ -182,16 +182,16 @@ a {
     position: relative; /* Añadir una posición relativa al enlace */
 }
 .btn-navbar {
-  background-color: #FEFFDB; /* Código de color naranja como ejemplo */
+  background-color: #999999; /* Código de color naranja como ejemplo */
   color: black; /* Color de texto */
  font-weight: 900;
 }
 #lineadebajo-navbar{
-  border-color: black;/* Cambia el color a tu preferencia */
+    border-color: #999999;/* Cambia el color a tu preferencia */
   border-width: 3px; /* Establece el grosor de la línea */
   margin: 0; /* Ajusta el margen si es necesario */
 }
 .mi-lista {
-  background-color: #000000;
+    background-color: aliceblue;
   padding: 6px; 
 }
