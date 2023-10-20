@@ -1,10 +1,11 @@
 body{
-    background-color: #ffffff;
+    background:linear-gradient(to right, #000000, #232323 , #6d6c6b, #9d9d9b );
    text-align: center;
    position: relative;
    padding-bottom: 15em;
    min-height: 100vh;
 }
+
 
 .container-fluid{
     margin-left: 70px;
@@ -147,11 +148,13 @@ border-bottom-right-radius: .3rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    color: black;
+    margin: 50px;
 }
 
 /* Estilos para las burbujas de partido */
 .partido-burbuja {
-    background-color: #735F32;
+    background-color:#ccc414;
     border: 2px solid #333;
     padding: 10px;
     text-align: center;
@@ -166,7 +169,7 @@ border-bottom-right-radius: .3rem;
 }
 
 .fecha {
-    color: #777;
+    color: darkgreen;
 }
 
 a {
@@ -192,6 +195,6 @@ a {
   margin: 0; /* Ajusta el margen si es necesario */
 }
 .mi-lista {
-    background-color: aliceblue;
+    background-color: black;
   padding: 6px; 
 }
