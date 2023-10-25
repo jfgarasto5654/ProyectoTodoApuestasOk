@@ -7,7 +7,7 @@ package modelo;
 import java.util.List;
 
 
-public class UsuariosHarcodeados {
+public class UsuarioDAO {
      private List<Usuario> Usuarios;
      
      
