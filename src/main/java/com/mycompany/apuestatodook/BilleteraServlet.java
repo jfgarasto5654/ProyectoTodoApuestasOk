@@ -10,7 +10,7 @@ import java.io.IOException;
 
 @WebServlet(name = "SvBilletera", urlPatterns = "/Billetera")
 
-public class SvBilletera extends HttpServlet{
+public class BilleteraServlet extends HttpServlet{
     
    
     @Override

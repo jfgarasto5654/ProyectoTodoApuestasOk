@@ -8,8 +8,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "Svusuarios", urlPatterns = {"/Svusuarios"})
-public class Svusuarios extends HttpServlet {
+@WebServlet(name = "SvIngresosoUsuario", urlPatterns = {"/SvIngresoUsuario"})
+public class IngresoUsuarioServlet extends HttpServlet {
 
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -17,20 +17,27 @@ public class Svusuarios extends HttpServlet {
     }
 
     @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
+    }
+
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
         String usuario = request.getParameter("usuario");
-        String email = request.getParameter("email");
-        String password = request.getParameter("password");
-        String cpassword = request.getParameter("cpassword");
+        String contrasenia = request.getParameter("password");
+
         
         System.out.println(usuario);
-        System.out.println(email);
-        System.out.println(password);
-        System.out.println(cpassword);
-
-        response.sendRedirect("Index?action=usuarioCreado");
+        System.out.println(contrasenia);
+        
+        String usuario1 = "admin";
+        String contrasenia1 = "1234";
+        if (usuario1.equalsIgnoreCase(usuario)&&(contrasenia.equals(contrasenia1)))
+        response.sendRedirect("Index?action=principalIniciado");
+        else response.sendRedirect("Index?action=errorIngresoUsuario");
     }
     
     @Override

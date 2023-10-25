@@ -10,7 +10,7 @@ import modelo.PartidoDAO;
 
 
 @WebServlet(name = "SvPartidos", urlPatterns = {"/Partidos"})
-public class SvPartidos extends HttpServlet {
+public class PartidosServlet extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

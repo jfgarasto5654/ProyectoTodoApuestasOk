@@ -10,7 +10,7 @@ import modelo.Partido;
 import modelo.PartidoDAO;
 
 @WebServlet(name = "SvApuesta", urlPatterns = {"/Apuesta"})
-public class SvApuesta extends HttpServlet {
+public class ApuestaServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)

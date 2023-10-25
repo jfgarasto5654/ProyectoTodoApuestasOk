@@ -17,7 +17,7 @@ import jakarta.servlet.http.HttpServletResponse;
  * @author Juan
  */
 @WebServlet(name = "Svprocesar_apuesta", urlPatterns = {"/Svprocesar_apuesta"})
-public class Svprocesar_apuesta extends HttpServlet {
+public class Procesar_apuestaServlet extends HttpServlet {
 
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
