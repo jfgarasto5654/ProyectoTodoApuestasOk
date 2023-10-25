@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
-    <a href="index.jsp">
+    <a href="${pageContext.request.contextPath}">
       <img src="img/logoAP.jpg" id="logo-nav">
     </a>
     <h1 class="navbar-apuesta">Apuesta</h1> <h1 class="navbar-todocom">todo.com</h1>
