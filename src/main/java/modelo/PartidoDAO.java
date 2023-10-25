@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class partidosHarcodeados {
+public class PartidoDAO {
     private List<Partido> partidos;
 
-    public partidosHarcodeados() {
+    public PartidoDAO() {
         this.partidos = new ArrayList<>();
         cargarPartidosFake();
     }

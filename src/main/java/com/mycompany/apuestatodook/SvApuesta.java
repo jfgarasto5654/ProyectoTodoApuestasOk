@@ -7,7 +7,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import modelo.Partido;
-import modelo.partidosHarcodeados;
+import modelo.PartidoDAO;
 
 @WebServlet(name = "SvApuesta", urlPatterns = {"/Apuesta"})
 public class SvApuesta extends HttpServlet {
@@ -18,7 +18,7 @@ public class SvApuesta extends HttpServlet {
         
         int partidoId = Integer.parseInt(request.getParameter("id"));
         
-        partidosHarcodeados PartidoDAO = new partidosHarcodeados();
+        PartidoDAO PartidoDAO = new PartidoDAO();
         
         Partido partido = PartidoDAO.getPartidoPorId(partidoId);
         

@@ -6,7 +6,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import modelo.partidosHarcodeados;
+import modelo.PartidoDAO;
 
 
 @WebServlet(name = "SvPartidos", urlPatterns = {"/Partidos"})
@@ -20,10 +20,10 @@ public class SvPartidos extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        partidosHarcodeados PartidoDAO = new partidosHarcodeados();
+        PartidoDAO partidosHarcodeados = new PartidoDAO();
         String destino;
         
-        request.setAttribute("listaDePartidos", PartidoDAO.getAll());
+        request.setAttribute("listaDePartidos", partidosHarcodeados.getAll());
         destino = "WEB-INF/jsp/partidos.jsp";
         
         request.getRequestDispatcher(destino).forward(request, response);
