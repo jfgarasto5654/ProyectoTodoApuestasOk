@@ -1,7 +1,12 @@
 package modelo;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 
 public class PartidoDAO {
@@ -9,7 +14,7 @@ public class PartidoDAO {
 
     public PartidoDAO() {
         this.partidos = new ArrayList<>();
-        cargarPartidosFake();
+        
     }
      
         public void add(Partido partido) {
@@ -17,28 +22,22 @@ public class PartidoDAO {
     }
         
     public List<Partido> getAll() {
-        return new ArrayList<>(this.partidos);
+        List<Partido>partidos = new LinkedList();
+        String query = "SELECT * FROM partido";
+        try(Connection con = ConnectionPool.getInstance().getConnection();
+        PreparedStatement ps = con.prepareStatement(query);
+        ResultSet rs = ps.executeQuery();)
+        {
+            while(rs.next()){
+                partidos.add(rsRowToPartido(rs));
+            }
+        }catch(SQLException ex){
+            throw new RuntimeException(ex);
+        }
+        return partidos;
     }
     
-    private void cargarPartidosFake() {
-        add(new Partido("Real Madrid", "FC Barcelona", "01-11-2023", 1));
-        add(new Partido("Manchester City", "Liverpool FC", "02-11-2023", 2));
-        add(new Partido("Bayern Munich", "Borussia Dortmund", "03-11-2023", 3));
-        add(new Partido("Paris Saint-Germain", "AC Milan", "04-11-2023", 4));
-        add(new Partido("Juventus", "Inter Milan", "05-11-2023", 5));
-        add(new Partido("Chelsea FC", "Arsenal FC", "06-11-2023", 6));
-        add(new Partido("Atletico Madrid", "Sevilla FC", "07-11-2023", 7));
-        add(new Partido("Borussia Monchengladbach", "Hertha Berlin", "08-11-2023", 8));
-        add(new Partido("Ajax Amsterdam", "PSV Eindhoven", "09-11-2023", 9));
-        add(new Partido("AS Roma", "SS Lazio", "10-11-2023", 10));
-        add(new Partido("FC Porto", "SL Benfica", "11-11-2023", 11));
-        add(new Partido("Tottenham Hotspur", "Manchester United", "12-11-2023", 12));
-        add(new Partido("ACF Fiorentina", "Napoli", "13-11-2023", 13));
-        add(new Partido("Everton FC", "Leeds United", "14-11-2023", 14));
-        add(new Partido("Ajax Cape Town", "Kaizer Chiefs", "15-11-2023", 15));
-    }
-
-    
+ 
 
     public Partido getPartidoPorId(Integer id) {
         UtilExceptions.checkNumeroNegativo(id, "El ID no puede ser negativo");
@@ -52,5 +51,13 @@ public class PartidoDAO {
         }
             UtilExceptions.checkObjetoNulo(partidoEncontrado, "No existe receta con id " + id);
         return partidoEncontrado;
+    }
+
+    private Partido rsRowToPartido(ResultSet rs) throws SQLException {
+       int id = rs.getInt(1);
+       String local = rs.getString(2);
+       String visitante = rs.getString(3);
+       String fecha = rs.getString(4);
+       return new Partido(local, visitante, fecha, id);
     }
 }

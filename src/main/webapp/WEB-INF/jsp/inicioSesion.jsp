@@ -20,7 +20,7 @@
                                   <h4 class="mt-1 mb-5 pb-1">Inicio de sesion</h4>
                                 </div>
 
-                                  <form action="SvIngresoUsuario" method="POST" style="color:#000000;">
+                                  <form action="SvIngresoUsuario" method="POST" ;">
                                   <p>Please login to your account</p>
 
                                   <div class="form-outline mb-4">
@@ -50,7 +50,7 @@
 
                               </div>
                             </div>
-                            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                            <div class="col-lg-6 d-flex align-items-center" id="fondodenewusuario">
                               <div class="text-white px-3 py-4 p-md-5 mx-md-4">
                                 <h4 class="mb-4">Hola devuelta!</h4>
                                 <p class="small mb-0">Somos Apuesta Todo.com la pagina de apuestas digitales
