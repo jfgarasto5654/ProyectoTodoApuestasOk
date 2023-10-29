@@ -15,10 +15,11 @@ import java.io.IOException;
 public class IngresoUsuarioServlet extends HttpServlet {
 
 
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String n = request.getParameter("nombre");
-        String p = request.getParameter("pass");
+        String n = request.getParameter("usuario");
+        String p = request.getParameter("Contraseña");
         Usuario user = new UsuarioDAO().autenticar(n, p);
         if (user != null) {
             // ¿Recordás el input oculto en el .jsp? Lo obtengo y lo guardo

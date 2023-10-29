@@ -18,6 +18,11 @@
                                     <img src="img/logoAP.jpg"
                                     style="width: 70px;" alt="logo">
                                   <h4 class="mt-1 mb-5 pb-1">Inicio de sesion</h4>
+                                  <c:if test="${hayError}">
+                                        <div class="container mt-3 p-3 bg-danger text-light">
+                                            <h2>${mensajeError}</h2>
+                                        </div>
+                                  </c:if>
                                 </div>
 
                                   <form action="${pageContext.request.contextPath}/SvIngresoUsuario" method="POST" >
@@ -26,12 +31,12 @@
                                   <div class="form-outline mb-4">
                                     <input type="text" id="form2Example11" class="form-control"
                                       placeholder="Usuario" name="usuario"/>
-                                    <label class="form-label" for="form2Example11">Ussuario</label>
+                                    <label class="form-label" for="form2Example11">Usuario</label>
                                   </div>
 
                                   <div class="form-outline mb-4">
-                                    <input type="password" name="Contraseñia" id="form2Example22" class="form-control" placeholder="*****" />
-                                    <label class="form-label" for="form2Example22">Contraseñia</label>
+                                    <input type="password" name="Contraseña" id="form2Example22" class="form-control" placeholder="*****" />
+                                    <label class="form-label" for="form2Example22">Contraseña</label>
                                   </div>
 
                                   <div class="text-center pt-1 mb-5 pb-1">
