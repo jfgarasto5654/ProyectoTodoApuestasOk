@@ -40,9 +40,6 @@ public class IndexServlet extends HttpServlet {
                 case "usuarioCreado":
                     destino = "/WEB-INF/jsp/usuarioCreado.jsp";
                     break;
-                case "salir":
-                    destino = "${pageContext.request.contextPath}/Salir";
-                    break;
             }
         }
         request.getRequestDispatcher(destino).forward(request, response);
