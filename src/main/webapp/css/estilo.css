@@ -120,12 +120,16 @@ footer {
 height: 100vh;
 }
 }
-
+#fondodenewusuario{
+    background-image: url(../img/iniciosesion.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
 
 #fondoNewUsuario{
     background-image: url(../img/futboloscuro.jpg);
+    background-size: 100% 100%;
     background-repeat: no-repeat;
-    background-size: cover;
 }
 /* Estilos para el contenedor de partidos */
 .partidos-container {

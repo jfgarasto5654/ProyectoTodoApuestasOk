@@ -40,7 +40,6 @@
 
 
                             <div class="d-flex justify-content-end pt-3">
-                            <button type="button" class="btn btn-success btn-block fa-lg gradient-custom-2">Reiniciar</button>
                             <input class="btn btn-success btn-block fa-lg gradient-custom-2" type="submit" name="Enviar datos" value="Enviar datos">
                             </div>                 
                   </form>

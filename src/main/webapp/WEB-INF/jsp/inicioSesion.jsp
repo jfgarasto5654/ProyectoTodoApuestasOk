@@ -22,7 +22,7 @@
                                         <div class="container mt-3 p-3 bg-danger text-light">
                                             <h2>${mensajeError}</h2>
                                         </div>
-                                  </c:if>
+                                    </c:if>
                                 </div>
 
                                   <form action="${pageContext.request.contextPath}/SvIngresoUsuario" method="POST" >
@@ -57,8 +57,8 @@
                             </div>
                             <div class="col-lg-6 d-flex align-items-center" id="fondodenewusuario">
                               <div class="text-white px-3 py-4 p-md-5 mx-md-4">
-                                <h4 class="mb-4">Hola devuelta!</h4>
-                                <p class="small mb-0">Somos Apuesta Todo.com la pagina de apuestas digitales
+                                <h4 class="mb-4 sesion">Hola devuelta!</h4>
+                                <p class="small mb-1 sesion">Somos Apuesta Todo.com la pagina de apuestas digitales
                                 mas confiable del pais. Agradecemos que confies en nosotros una vez mas.</p>
                               </div>
                             </div>
