@@ -19,7 +19,7 @@
     <a href="Index?action=billetera" class="nav-link">billetera</a>
   </li>
   <li class="nav-item" >
-    <a href="Index?action=Resultados" class="nav-link">Partidos</a>
+    <a href="Index?action=resultados" class="nav-link">Resultados</a>
   </li>
   <li class="nav-item" >
     <a href="Index?action=Apuestas" class="nav-link">Apuestas</a>

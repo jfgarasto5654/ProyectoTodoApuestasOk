@@ -30,14 +30,17 @@ public class IngresoUsuarioServlet extends HttpServlet {
         String p = request.getParameter("Contraseña");
         Usuario user = new UsuarioDAO().autenticar(n, p);
         if (user != null) {
-            // ¿Recordás el input oculto en el .jsp? Lo obtengo y lo guardo
+      
             String haciaDondeIba = request.getParameter("deDondeViene");
             HttpSession session = request.getSession(); // Pido la sesión actual
             session.setMaxInactiveInterval(10); // Seteo tiempo máximo de inactividad (en segundos)
             session.setAttribute("userLogueado", user); // Asigno la info del usuario a la sesión
-            // Lo mando hacia donde quería ir
-            response.sendRedirect(request.getContextPath() + haciaDondeIba);
-        } else {
+           if (haciaDondeIba != null) {
+                response.sendRedirect(request.getContextPath() + haciaDondeIba);
+            } else {
+                response.sendRedirect(request.getContextPath() + "/principaliniciado.jsp");            
+            }
+            }else {
             request.setAttribute("hayError", true);
             request.setAttribute("mensajeError", "Credenciales incorrectas!");
             doGet(request, response);
