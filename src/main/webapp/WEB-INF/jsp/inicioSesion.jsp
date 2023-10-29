@@ -20,23 +20,23 @@
                                   <h4 class="mt-1 mb-5 pb-1">Inicio de sesion</h4>
                                 </div>
 
-                                  <form action="SvIngresoUsuario" method="POST" ;">
-                                  <p>Please login to your account</p>
+                                  <form action="${pageContext.request.contextPath}/SvIngresoUsuario" method="POST" >
+                                  <p>Hola! Por favor inicie sesion</p>
 
                                   <div class="form-outline mb-4">
                                     <input type="text" id="form2Example11" class="form-control"
-                                      placeholder="Phone number or email address" name="usuario"/>
-                                    <label class="form-label" for="form2Example11">Username</label>
+                                      placeholder="Usuario" name="usuario"/>
+                                    <label class="form-label" for="form2Example11">Ussuario</label>
                                   </div>
 
                                   <div class="form-outline mb-4">
-                                    <input type="password" name="password" id="form2Example22" class="form-control" />
-                                    <label class="form-label" for="form2Example22">Password</label>
+                                    <input type="password" name="Contraseñia" id="form2Example22" class="form-control" placeholder="*****" />
+                                    <label class="form-label" for="form2Example22">Contraseñia</label>
                                   </div>
 
                                   <div class="text-center pt-1 mb-5 pb-1">
-                                      <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="submit">Log
-                                      in</button>
+                                      <button class="btn btn-success btn-block fa-lg gradient-custom-2 mb-3" type="submit">Ingresar</button>
+                                      <input type="hidden" name="deDondeViene" value="${param.origen}">
                                     <a class="text-muted" href="#!">Olvido Contraseña?</a>
                                   </div>
 

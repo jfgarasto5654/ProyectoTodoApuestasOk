@@ -24,24 +24,24 @@
                              </div>
 
                             <div class="form-outline mb-4">
-                            <input type="email" name="email" id="form2Example22" class="form-control" placeholder="email address"/>
+                            <input type="email" name="email" id="form2Example22" class="form-control" placeholder="Email"/>
                             <label class="form-label" for="form2Example22">Email</label>
                             </div>
 
                             <div class="form-outline mb-4">
-                            <input type="password" name="password" id="form2Example22" class="form-control" placeholder="password" />
+                            <input type="password" name="password" id="form2Example22" class="form-control" placeholder="Contraseña" />
                             <label class="form-label" for="form2Example22">Comtraseña</label>
                             </div>
 
                             <div class="form-outline mb-4">
-                            <input type="password" name="cpassword" id="form2Example22" class="form-control" placeholder="confirm password"/>
+                            <input type="password" name="cpassword" id="form2Example22" class="form-control" placeholder="Confirme Contraseña"/>
                             <label class="form-label" for="form2Example22">Confirme Contraseña</label>
                             </div>
 
 
                             <div class="d-flex justify-content-end pt-3">
-                            <button type="button" class="btn btn-light btn-lg">Reiniciar</button>
-                            <input type="submit" name="Enviar datos" value="Enviar datos">
+                            <button type="button" class="btn btn-success btn-block fa-lg gradient-custom-2">Reiniciar</button>
+                            <input class="btn btn-success btn-block fa-lg gradient-custom-2" type="submit" name="Enviar datos" value="Enviar datos">
                             </div>                 
                   </form>
               </div>
