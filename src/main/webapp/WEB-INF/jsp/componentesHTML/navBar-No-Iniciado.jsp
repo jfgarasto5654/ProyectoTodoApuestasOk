@@ -18,8 +18,10 @@
   <li class="nav-item" >
     <a href="Index?action=newUsuarios" class="nav-link">Crear Usuario</a>
   </li>
-</ul>
-
+  <li class="nav-item" >
+    <a href="${pageContext.request.contextPath}/Partidos" class="nav-link">Partidos</a>
+  </li>
+      </ul>
     </div>
   </div>
 </nav>
