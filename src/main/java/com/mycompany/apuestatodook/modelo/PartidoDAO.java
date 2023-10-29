@@ -1,4 +1,4 @@
-package modelo;
+package com.mycompany.apuestatodook.modelo;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

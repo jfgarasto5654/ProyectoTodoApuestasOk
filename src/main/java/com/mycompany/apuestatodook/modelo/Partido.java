@@ -1,4 +1,4 @@
-package modelo;
+package com.mycompany.apuestatodook.modelo;
 
 
 public class Partido {

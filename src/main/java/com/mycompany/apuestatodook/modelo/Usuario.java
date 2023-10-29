@@ -1,5 +1,5 @@
 
-package modelo;
+package com.mycompany.apuestatodook.modelo;
 
 
 public class Usuario {
