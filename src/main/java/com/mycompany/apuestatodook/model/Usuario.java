@@ -5,14 +5,14 @@ package com.mycompany.apuestatodook.model;
 public class Usuario {
     // Atributos
     private int IDusuario;
-    private String nombre;
-    private String contrasena;
+    private String usuario;
+    private String contrasenia;
 
     // Constructor
-    public Usuario(int IDusuario, String nombre, String contrasena) {
+    public Usuario(int IDusuario, String usuario, String contrasenia) {
         this.IDusuario = IDusuario;
-        this.nombre = nombre;
-        this.contrasena = contrasena;
+        this.usuario = usuario;
+        this.contrasenia = contrasenia;
     }
 
     // Métodos para acceder a los atributos
@@ -21,11 +21,11 @@ public class Usuario {
     }
 
     public String getNombre() {
-        return nombre;
+        return usuario;
     }
 
     public String getContrasena() {
-        return contrasena;
+        return contrasenia;
     }
 
     // Métodos para modificar los atributos
@@ -34,16 +34,16 @@ public class Usuario {
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+        this.usuario = nombre;
     }
 
     public void setContrasena(String contrasena) {
-        this.contrasena = contrasena;
+        this.contrasenia = contrasena;
     }
 
     @Override
     public String toString() {
-        return "Usuario [IDusuario=" + IDusuario + ", nombre=" + nombre + ", contrasena=" + contrasena + "]";
+        return "Usuario [IDusuario=" + IDusuario + ", nombre=" + usuario + ", contrasena=" + contrasenia + "]";
     }
 
     // Otros métodos específicos de la clase Usuario, si es necesario
