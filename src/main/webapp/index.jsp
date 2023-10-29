@@ -1,18 +1,7 @@
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
 <c:import url="WEB-INF/jsp/componentesHTML/inicioHTML.jsp" />
 <c:import url="WEB-INF/jsp/componentesHTML/navBar-No-Iniciado.jsp" />
-      <ul class="nav justify-content-center d-flex align-items-center mi-lista">
-        <li class="nav-item mx-2">
-          <a class="navlink mi-link-barra"  href="Index?action=inicioSesion">Futbol</a>
-        </li>
-        <li class="nav-item mx-2">
-          <a class="navlink mi-link-barra"  href="Index?action=inicioSesion">Handball</a>
-        </li>
-        <li class="nav-item mx-2">
-          <a class="navlink mi-link-barra"  href="Index?action=inicioSesion">Golf</a>
-        </li>
-      </ul>
-        <hr id="lineadebajo-navbar">
+<c:import url="componentesHTML/ul-BarraDeportes.jsp" />
 
         <h2 id = "bets">BETS DESTACADAS</h2>
         <div id="carouselExample" class="carousel slide">
