@@ -11,32 +11,52 @@ body{
     margin-left: 70px;
 }
 
-.navbar-nav{
-    margin-left: 500px;
-}
-
-#logo-nav{
-    width: 60px;
-    margin-right: 60px;
+.navbar-logo {
+  max-height: 80px;
 }
 
 .navbar{
-    background-color: #ccc414;
+    background-image: url("../img/yellowtriangles.jpg");
 }
 
-.navbar-apuesta{
-    font-family: "Cream Cake";
-    font-size: 60px;
-     font-weight: 900;
+.navbar-apuesta {
+  margin-left: 10px;
+  font-size: 50px;
+  font-weight:900;
+  color: black;
+  text-decoration: none;
 }
 
 .navbar-todocom{
-    padding: 10px;
-    margin-top: 15px;
-    font-size: 20px;
-     font-weight: 900;
+  margin-top: 35px;  
+  font-size: 25px; 
+  font-weight:600;
+  margin-left: 10px; 
+  color: black;
 }
-
+.mi-link-barra{
+     font-weight:600 ;
+  background-color:#ccc414;  
+  color: black;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px; 
+}
+.mi-link-barra:hover{
+   background-color: #ad8a1f;
+}
+.nav-link {
+  padding: 5px 10px;
+  margin-top: 50px;   
+  font-weight:600 ;
+  background-color: #ccc414;
+  color: black;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.nav-link:hover{
+   background-color: #D9D34F;
+}
 #bets{
     justify-content: center;
     text-align: center;
@@ -131,7 +151,7 @@ height: 100vh;
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
-/* Estilos para el contenedor de partidos */
+
 .partidos-container {
     display: flex;
     flex-wrap: wrap;
@@ -139,16 +159,14 @@ height: 100vh;
     color: black;
     margin: 50px;
 }
-
-/* Estilos para las burbujas de partido */
 .partido-burbuja {
     background-color:#ccc414;
     border: 2px solid #333;
     padding: 10px;
     text-align: center;
-    margin: 10px; /* Espacio entre burbujas */
+    margin: 10px; 
     border-radius: 10px;
-    width: calc(33.33% - 20px); /* Ancho de un tercio del contenedor con margen */
+    width: calc(33.33% - 20px);
     box-sizing: border-box;
 }
 
@@ -159,26 +177,13 @@ height: 100vh;
 .fecha {
     color: darkgreen;
 }
-
-a {
-    display: block;
-    margin-top: 10px;
-    text-decoration: none;
-}
-
-a {
-    display: block;
-    margin-top: 10px;
-    text-decoration: none;
-    position: relative; /* Añadir una posición relativa al enlace */
-}
 .btn-navbar {
   background-color: #999999; /* Código de color naranja como ejemplo */
   color: black; /* Color de texto */
  font-weight: 900;
 }
 #lineadebajo-navbar{
-    border-color: #999999;/* Cambia el color a tu preferencia */
+    border-color: white;/* Cambia el color a tu preferencia */
   border-width: 3px; /* Establece el grosor de la línea */
   margin: 0; /* Ajusta el margen si es necesario */
 }

@@ -25,7 +25,7 @@
                                     </c:if>
                                 </div>
 
-                                  <form action="${pageContext.request.contextPath}/SvIngresoUsuario" method="POST" >
+                                  <form action="IngresoUsuario" method="POST" >
                                   <p>Hola! Por favor inicie sesion</p>
 
                                   <div class="form-outline mb-4">
@@ -40,8 +40,8 @@
                                   </div>
 
                                   <div class="text-center pt-1 mb-5 pb-1">
-                                      <button class="btn btn-success btn-block fa-lg gradient-custom-2 mb-3" type="submit">Ingresar</button>
                                       <input type="hidden" name="deDondeViene" value="${param.origen}">
+                                      <button class="btn btn-success btn-block fa-lg gradient-custom-2 mb-3" type="submit">Ingresar</button>
                                     <a class="text-muted" href="#!">Olvido Contraseña?</a>
                                   </div>
 
