@@ -1,4 +1,4 @@
-package com.mycompany.apuestatodook.modelo;
+package com.mycompany.apuestatodook.model;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -39,25 +39,27 @@ public class PartidoDAO {
     
  
 
-    public Partido getPartidoPorId(Integer id) {
-        UtilExceptions.checkNumeroNegativo(id, "El ID no puede ser negativo");
-        Partido partidoEncontrado = null;
-        Iterator<Partido> it = this.partidos.iterator();
-        while (it.hasNext() && partidoEncontrado == null) {
-            Partido aux = it.next();
-            if (aux.getIdParttido() == id) {
-                partidoEncontrado = aux;
+    public Partido getPartidoPorId(Integer Id) {
+        String query = "SELECT * FROM partido WHERE id_partido = ?";
+        Partido partido = null;
+        try (Connection con = ConnectionPool.getInstance().getConnection(); PreparedStatement preparedStatement = con.prepareStatement(query)) {
+            preparedStatement.setInt(1, Id);
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                if (resultSet.next()) {
+                    partido = rsRowToPartido(resultSet);
+                }
             }
+        } catch (SQLException ex) {
+            throw new RuntimeException(ex);
         }
-            UtilExceptions.checkObjetoNulo(partidoEncontrado, "No existe receta con id " + id);
-        return partidoEncontrado;
+        return partido;
     }
 
     private Partido rsRowToPartido(ResultSet rs) throws SQLException {
-       int id = rs.getInt(1);
+       int id_partido = rs.getInt(1);
        String local = rs.getString(2);
        String visitante = rs.getString(3);
        String fecha = rs.getString(4);
-       return new Partido(local, visitante, fecha, id);
+       return new Partido(local, visitante, fecha, id_partido);
     }
 }

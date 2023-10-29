@@ -6,8 +6,8 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import com.mycompany.apuestatodook.modelo.Partido;
-import com.mycompany.apuestatodook.modelo.PartidoDAO;
+import com.mycompany.apuestatodook.model.Partido;
+import com.mycompany.apuestatodook.model.PartidoDAO;
 
 @WebServlet(name = "SvApuesta", urlPatterns = {"/Apuesta"})
 public class ApuestaServlet extends HttpServlet {
