@@ -14,6 +14,11 @@
               <div class="card-body p-md-5 text-black">
                   <div>
                       <h3 class="mb-5 text-uppercase">Crear Usuario</h3> 
+                       <c:if test="${hayError}">
+                                        <div class="container mt-3 p-3 bg-danger text-light">
+                                            <h2>${mensajeError}</h2>
+                                        </div>
+                        </c:if>
                   </div>
                   <form action="NuevoUsuario" method="POST">
                              

@@ -25,15 +25,19 @@ public class UsuarioNuevoServlet extends HttpServlet {
         String dni = request.getParameter("dni");
 
         if (edad < 18) {
-            // Manejo de error si la edad es menor de 18
+            request.setAttribute("hayError", true);
+            request.setAttribute("mensajeError", "La edad debe ser mayor o igual a 18 años.");
+            request.getRequestDispatcher("/WEB-INF/jsp/crearUsuario.jsp").forward(request, response);
         } else if (!password.equals(cpassword)) {
-            // Manejo de error si las contraseñas no coinciden
+            request.setAttribute("hayError", true);
+            request.setAttribute("mensajeError", "Las contraseñas no coinciden.");
+            request.getRequestDispatcher("/WEB-INF/jsp/crearUsuario.jsp").forward(request, response);
         } else {
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             int idUsuario = usuarioDAO.add(usuario, password);
             PersonaDAO personaDAO = new PersonaDAO();
             personaDAO.agregarPersona(idUsuario, nombre, apellido, edad, dni);
-            request.getRequestDispatcher("WEB-INF/jsp/usuarioCreado.jsp").forward(request, response);
+            request.getRequestDispatcher("/WEB-INF/jsp/usuarioCreado.jsp").forward(request, response);
         }
     }
 }
