@@ -8,6 +8,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -55,4 +56,24 @@ public class UsuarioDAO {
        String contrasenia = rs.getString(3);
        return new Usuario(IDusuario,usuario, contrasenia);
     }
+
+    public int add(String usuario, String password) {
+        String query = "INSERT INTO usuario (usuario, password) VALUES (?, ?)";
+        try (Connection con = ConnectionPool.getInstance().getConnection(); PreparedStatement preparedStatement = con.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
+            preparedStatement.setString(1, usuario);
+            preparedStatement.setString(2, password);
+            preparedStatement.executeUpdate();
+
+            ResultSet key = preparedStatement.getGeneratedKeys();
+            if (key.next()) {
+                return key.getInt(1);
+            } else {
+                throw new SQLException("No se pudo obtener el ID de usuario generado automáticamente.");
+            }
+        } catch (SQLException ex) {
+            throw new RuntimeException(ex);
+        }
+    }
 }
+    
+
