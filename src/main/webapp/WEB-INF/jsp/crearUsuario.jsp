@@ -22,11 +22,6 @@
                              placeholder="User" name="usuario"/>
                              <label class="form-label" for="form2Example11">Usuario</label>
                              </div>
-
-                            <div class="form-outline mb-4">
-                            <input type="email" name="email" id="form2Example22" class="form-control" placeholder="Email"/>
-                            <label class="form-label" for="form2Example22">Email</label>
-                            </div>
                       
                             <div class="form-outline mb-4">
                             <input type="text" name="nombre" id="form2Example22" class="form-control" placeholder="Nombre"/>
@@ -39,7 +34,7 @@
                             </div>
                       
                             <div class="form-outline mb-4">
-                            <input type="text" name="dnis" id="form2Example22" class="form-control" placeholder="DNI"/>
+                            <input type="text" name="dni" id="form2Example22" class="form-control" placeholder="DNI"/>
                             <label class="form-label" for="form2Example22">DNI</label>
                             </div>
                       

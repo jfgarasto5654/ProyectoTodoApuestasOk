@@ -18,7 +18,6 @@ public class UsuarioNuevoServlet extends HttpServlet {
         String usuario = request.getParameter("usuario");
         String password = request.getParameter("password");
         String cpassword = request.getParameter("cpassword");
-        String email = request.getParameter("email");
         String nombre = request.getParameter("nombre");
         String apellido = request.getParameter("apellido");
         String edadStr = request.getParameter("edad");
@@ -33,7 +32,7 @@ public class UsuarioNuevoServlet extends HttpServlet {
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             int idUsuario = usuarioDAO.add(usuario, password);
             PersonaDAO personaDAO = new PersonaDAO();
-            personaDAO.agregarPersona(idUsuario, email, nombre, apellido, edad, dni);
+            personaDAO.agregarPersona(idUsuario, nombre, apellido, edad, dni);
             request.getRequestDispatcher("WEB-INF/jsp/usuarioCreado.jsp").forward(request, response);
         }
     }

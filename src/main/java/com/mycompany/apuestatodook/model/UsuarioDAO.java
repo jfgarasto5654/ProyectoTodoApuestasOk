@@ -57,11 +57,11 @@ public class UsuarioDAO {
        return new Usuario(IDusuario,usuario, contrasenia);
     }
 
-    public int add(String usuario, String password) {
-        String query = "INSERT INTO usuario (usuario, password) VALUES (?, ?)";
+    public int add(String usuario, String contrasenia) {
+        String query = "INSERT INTO usuario (usuario, contrasenia) VALUES (?, ?)";
         try (Connection con = ConnectionPool.getInstance().getConnection(); PreparedStatement preparedStatement = con.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
             preparedStatement.setString(1, usuario);
-            preparedStatement.setString(2, password);
+            preparedStatement.setString(2, contrasenia);
             preparedStatement.executeUpdate();
 
             ResultSet key = preparedStatement.getGeneratedKeys();
