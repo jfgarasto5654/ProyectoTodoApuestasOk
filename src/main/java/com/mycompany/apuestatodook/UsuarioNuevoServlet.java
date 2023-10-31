@@ -2,7 +2,6 @@
 package com.mycompany.apuestatodook;
 
 import com.mycompany.apuestatodook.model.PersonaDAO;
-import com.mycompany.apuestatodook.model.Usuario;
 import com.mycompany.apuestatodook.model.UsuarioDAO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -14,6 +13,7 @@ import java.io.IOException;
 @WebServlet(name = "NuevoUsuario", urlPatterns = {"/NuevoUsuario"})
 public class UsuarioNuevoServlet extends HttpServlet {
 
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String usuario = request.getParameter("usuario");
         String password = request.getParameter("password");
@@ -34,6 +34,7 @@ public class UsuarioNuevoServlet extends HttpServlet {
             int idUsuario = usuarioDAO.add(usuario, password);
             PersonaDAO personaDAO = new PersonaDAO();
             personaDAO.agregarPersona(idUsuario, email, nombre, apellido, edad, dni);
+            request.getRequestDispatcher("WEB-INF/jsp/usuarioCreado.jsp").forward(request, response);
         }
     }
 }
