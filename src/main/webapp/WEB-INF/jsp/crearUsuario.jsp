@@ -13,9 +13,9 @@
             <div class="col-xl-6">
               <div class="card-body p-md-5 text-black">
                   <div>
-                      <h3 class="mb-5 text-uppercase">Sign UP</h3> 
+                      <h3 class="mb-5 text-uppercase">Crear Usuario</h3> 
                   </div>
-                  <form action="Svusuarios" method="POST">
+                  <form action="NuevoUsuario" method="POST">
                              
                       <div class="form-outline mb-4">
                              <input type="text" id="form2Example11" class="form-control"
@@ -27,6 +27,26 @@
                             <input type="email" name="email" id="form2Example22" class="form-control" placeholder="Email"/>
                             <label class="form-label" for="form2Example22">Email</label>
                             </div>
+                      
+                            <div class="form-outline mb-4">
+                            <input type="text" name="nombre" id="form2Example22" class="form-control" placeholder="Nombre"/>
+                            <label class="form-label" for="form2Example22">Nombre</label>
+                            </div>
+                            
+                            <div class="form-outline mb-4">
+                            <input type="text" name="apellido" id="form2Example22" class="form-control" placeholder="Apellido"/>
+                            <label class="form-label" for="form2Example22">Apellido</label>
+                            </div>
+                      
+                            <div class="form-outline mb-4">
+                            <input type="text" name="dnis" id="form2Example22" class="form-control" placeholder="DNI"/>
+                            <label class="form-label" for="form2Example22">DNI</label>
+                            </div>
+                      
+                            <div class="form-outline mb-4">
+                            <input type="number" name="edad" id="form2Example22" class="form-control" placeholder="Edad"/>
+                            <label class="form-label" for="form2Example22">Edad</label>
+                            </div>
 
                             <div class="form-outline mb-4">
                             <input type="password" name="password" id="form2Example22" class="form-control" placeholder="Contraseña" />
@@ -37,7 +57,6 @@
                             <input type="password" name="cpassword" id="form2Example22" class="form-control" placeholder="Confirme Contraseña"/>
                             <label class="form-label" for="form2Example22">Confirme Contraseña</label>
                             </div>
-
 
                             <div class="d-flex justify-content-end pt-3">
                             <input class="btn btn-success btn-block fa-lg gradient-custom-2" type="submit" name="Enviar datos" value="Enviar datos">

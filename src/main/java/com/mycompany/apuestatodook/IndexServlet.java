@@ -20,7 +20,7 @@ public class IndexServlet extends HttpServlet {
                     destino = "/WEB-INF/jsp/inicioSesion.jsp";
                     break;
                 case "newUsuarios":
-                    destino = "/WEB-INF/jsp/CrearUsuarios.jsp";
+                    destino = "/WEB-INF/jsp/crearUsuario.jsp";
                     break;
                 case "errorIngresoUsuario":
                     destino = "/WEB-INF/jsp/errorIngresoUsuario.jsp";

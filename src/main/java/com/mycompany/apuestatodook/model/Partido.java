@@ -2,6 +2,8 @@ package com.mycompany.apuestatodook.model;
 
 
 public class Partido {
+    private int id_persona;
+    
     private String local;
     private String visitante;
     private String fecha;

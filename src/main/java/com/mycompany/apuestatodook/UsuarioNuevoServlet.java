@@ -8,8 +8,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "Svusuarios", urlPatterns = {"/Svusuarios"})
-public class UsuariosServlet extends HttpServlet {
+@WebServlet(name = "NuevoUsuario", urlPatterns = {"/NuevoUsuario"})
+public class UsuarioNuevoServlet extends HttpServlet {
 
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -24,18 +24,10 @@ public class UsuariosServlet extends HttpServlet {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         String cpassword = request.getParameter("cpassword");
-        
-        System.out.println(usuario);
-        System.out.println(email);
-        System.out.println(password);
-        System.out.println(cpassword);
+        String nombre = request.getParameter("nombre");
+        String apellido = request.getParameter("apellido");
+        String edad= request.getParameter("edad");
 
         response.sendRedirect("Index?action=usuarioCreado");
     }
-    
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }
-
 }
