@@ -17,10 +17,10 @@ public class PartidosServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        PartidoDAO partidosHarcodeados = new PartidoDAO();
+        PartidoDAO partidosDAO = new PartidoDAO();
         String destino;
         
-        request.setAttribute("listaDePartidos", partidosHarcodeados.getAll());
+        request.setAttribute("listaDePartidos", partidosDAO.getAll());
         destino = "WEB-INF/jsp/partidos.jsp";
         
         request.getRequestDispatcher(destino).forward(request, response);

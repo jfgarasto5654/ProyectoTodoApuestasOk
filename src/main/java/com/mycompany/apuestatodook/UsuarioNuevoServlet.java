@@ -11,11 +11,6 @@ import java.io.IOException;
 @WebServlet(name = "NuevoUsuario", urlPatterns = {"/NuevoUsuario"})
 public class UsuarioNuevoServlet extends HttpServlet {
 
-
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-    }
-
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -27,7 +22,8 @@ public class UsuarioNuevoServlet extends HttpServlet {
         String nombre = request.getParameter("nombre");
         String apellido = request.getParameter("apellido");
         String edad= request.getParameter("edad");
+        String dni= request.getParameter("dni");
 
-        response.sendRedirect("Index?action=usuarioCreado");
+
     }
 }
