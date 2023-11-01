@@ -5,8 +5,8 @@
 
 <div class="container">
     
-        <div class="row">
-            <div class="col-md-4" style="color: aliceblue; padding: 30px">
+    <div class="row" style="background-color: #ccc414; margin-top: 50px">
+            <div class="col-md-4" style="color: #000000; padding: 30px">
                 <h4>Local</h4>
                 <p>${partido.local}</p>
                 
@@ -22,7 +22,7 @@
                   </form>
             </div>
                       
-                      <div class="col-md-4" style="color: aliceblue; padding: 30px">
+                      <div class="col-md-4" style="color: #000000; padding: 30px">
                 <h4>Visitante</h4>
                 <p>${partido.visitante}</p>
                 
@@ -37,7 +37,7 @@
                             <input class="btn btn-primary" type="submit" name="Enviar datos" value="Apostar">                           
                   </form>
             </div>
-            <div class="col-md-4">
+                      <div class="col-md-4" style="color: #000000; padding-top: 70px">
                 <h4>Fecha</h4>
                 <p>${partido.fecha}</p>
             </div>
