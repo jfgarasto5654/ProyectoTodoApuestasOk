@@ -20,20 +20,21 @@ body{
 }
 
 .navbar-apuesta {
-  margin-left: 10px;
   font-size: 50px;
   font-weight:900;
   color: black;
   text-decoration: none;
+  text-align: left;
 }
 
 .navbar-todocom{
   margin-top: 35px;  
   font-size: 25px; 
   font-weight:600;
-  margin-left: 10px; 
   color: black;
+  float: left;
 }
+
 .mi-link-barra{
      font-weight:600 ;
   background-color:#ccc414;  
@@ -53,6 +54,11 @@ body{
   color: black;
   border-radius: 5px;
   margin-right: 10px;
+}
+
+.btn-danger{
+   padding: 5px 10px;
+  margin-top: 50px;
 }
 .nav-link:hover{
    background-color: #D9D34F;

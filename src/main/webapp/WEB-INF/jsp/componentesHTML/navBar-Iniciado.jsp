@@ -18,7 +18,25 @@
                         <a class="btn btn-primary" href="${pageContext.request.contextPath}/IngresoUsuario">Login</a>
                     </c:when>
                     <c:otherwise>
-                        <a class="btn btn-danger" href="${pageContext.request.contextPath}/logout">Logout</a>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ms-auto">
+                        <li class="nav-item" >
+                          <a href="${pageContext.request.contextPath}/Partidos" class="nav-link">Partidos</a>
+                        </li>
+                        <li class="nav-item" >
+                          <a href="Index?action=billetera" class="nav-link">billetera</a>
+                        </li>
+                        <li class="nav-item" >
+                          <a href="Index?action=resultados" class="nav-link">Resultados</a>
+                        </li>
+                        <li class="nav-item" >
+                          <a href="Index?action=Apuestas" class="nav-link">Apuestas</a>
+                        </li>
+                        <li class="nav-item" >
+                          <a href="${pageContext.request.contextPath}/logout" class="btn btn-danger">Logout</a>
+                        </li>
+                      </ul>
+                          </div>
                     </c:otherwise>
                 </c:choose> 
             </form>
