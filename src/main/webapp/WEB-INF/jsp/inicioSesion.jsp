@@ -3,7 +3,7 @@
 
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
 <c:import url="componentesHTML/inicioHTML.jsp" />
-<c:import url="componentesHTML/navBar-No-Iniciado.jsp" />
+<c:import url="componentesHTML/navBar-Iniciado.jsp" />
 
 <section id="Formulario-InicioSesion" class="h-100 gradient-form" >
                   <div class="container py-5 h-100">
