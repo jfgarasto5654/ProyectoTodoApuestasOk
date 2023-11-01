@@ -12,4 +12,10 @@ import jakarta.servlet.http.HttpServletResponse;
 @WebServlet(name = "Svprocesar_apuesta", urlPatterns = {"/Svprocesar_apuesta"})
 public class ProcesarApuestaServlet extends HttpServlet {
 
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        
+    }
+
+    
 }
