@@ -16,7 +16,7 @@
                              <input type="text" id="form2Example11" class="form-control"
                              placeholder="Monto" name="monto"/>
                              <input type="hidden" name="por" value="local">
-                             <input type="hidden" name="idPartido" value="${partido.idParttido}">
+                             <input type="hidden" name="idPartido" value= "${idpartido}">
                       </div>
                             <input class="btn btn-primary" type="submit" name="Enviar datos" value="Apostar">                           
                   </form>
@@ -32,7 +32,7 @@
                              <input type="text" id="form2Example11" class="form-control"
                              placeholder="Monto" name="monto"/>
                              <input type="hidden" name="por" value="visitante">
-                             <input type="hidden" name="idPartido" value="${partido.idParttido}">
+                             <input type="hidden" name="idPartido" value= "${partido.idParttido}">
                       </div>
                             <input class="btn btn-primary" type="submit" name="Enviar datos" value="Apostar">                           
                   </form>
@@ -40,6 +40,7 @@
                       <div class="col-md-4" style="color: #000000; padding-top: 70px">
                 <h4>Fecha</h4>
                 <p>${partido.fecha}</p>
+                <p>${partido.idParttido}</p>
             </div>
         </div>
     
