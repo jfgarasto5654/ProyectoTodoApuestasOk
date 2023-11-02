@@ -45,7 +45,7 @@
                           <a href="${pageContext.request.contextPath}/apuestas-persona" class="nav-link">Apuestas</a>
                         </li>
                         <li class="nav-item" >
-                          <a href="${pageContext.request.contextPath}/logout" class="btn btn-danger">Logout</a>
+                          <a href="${pageContext.request.contextPath}/Salir" class="btn btn-danger">Logout</a>
                         </li>
                       </ul>
                           </div>

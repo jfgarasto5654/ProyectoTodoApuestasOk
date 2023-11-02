@@ -10,7 +10,7 @@
                 <h4>Local</h4>
                 <p>${partido.local}</p>
                 
-                <form action="Svprocesar_apuesta" method="POST">
+                <form action="SvprocesarApuesta" method="POST">
                              
                       <div class="form-outline mb-4">
                              <input type="text" id="form2Example11" class="form-control"
@@ -26,7 +26,7 @@
                 <h4>Visitante</h4>
                 <p>${partido.visitante}</p>
                 
-                <form action="Svprocesar_apuesta" method="POST">
+                <form action="SvprocesarApuesta" method="POST">
                              
                       <div class="form-outline mb-4">
                              <input type="text" id="form2Example11" class="form-control"

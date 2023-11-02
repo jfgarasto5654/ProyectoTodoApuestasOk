@@ -10,7 +10,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "Svprocesar_apuesta", urlPatterns = {"/Svprocesar_apuesta"})
+@WebServlet(name = "SvprocesarApuesta", urlPatterns = {"/SvprocesarApuesta"})
 public class ProcesarApuestaServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -18,7 +18,7 @@ public class ProcesarApuestaServlet extends HttpServlet {
 
         String por = request.getParameter("por");
 
-        Usuario usuario = (Usuario) request.getSession().getAttribute("usuario");
+        Usuario usuario = (Usuario) request.getSession().getAttribute("userLogueado");
 
         if (usuario != null) {
             int idUsuario = usuario.getIDusuario();
@@ -33,7 +33,7 @@ public class ProcesarApuestaServlet extends HttpServlet {
             apuestaDAO.add(apuesta);
         } else {
         request.setAttribute("hayError", true);
-        request.setAttribute("mensajeError", "Credenciales incorrectas!");
+        request.setAttribute("mensajeError", "Ingrese Nuevamente!");
         request.getRequestDispatcher("/WEB-INF/jsp/inicioSesion.jsp").forward(request, response);
         }
 

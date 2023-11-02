@@ -12,7 +12,7 @@ public class ApuestaDAO {
             preparedStatement.setInt(1, apuesta.getMonto());
             preparedStatement.setInt(2, apuesta.getPremio());
             preparedStatement.setString(3, apuesta.getPor_quien());
-            preparedStatement.setInt(4, apuesta.getIdPersona());
+            preparedStatement.setInt(4, apuesta.getIdUsuario());
             preparedStatement.setInt(5, apuesta.getIdResultado());
             preparedStatement.setInt(6, apuesta.getIdPartido());
             preparedStatement.executeUpdate();

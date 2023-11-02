@@ -1,17 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.apuestatodook.model;
 
-import java.util.logging.Logger;
 
-/**
- *
- * @author Juan
- */
 public class Apuesta {
-
     private int idApuesta;
     private int monto;
     private int premio;
@@ -20,7 +10,7 @@ public class Apuesta {
     private int idResultado;
     private int idPartido;
 
-    public Apuesta(int idApuesta, int monto, int premio, String por_quien, int idUsuario, int idResultado) {
+    public Apuesta(int idApuesta, int monto, int premio, String por_quien, int idUsuario, int idResultado, int idPartido) {
         this.idApuesta = idApuesta;
         this.monto = monto;
         this.premio = premio;
@@ -30,42 +20,36 @@ public class Apuesta {
         this.idPartido = idPartido;
     }
 
+    // Métodos getter y setter
     public int getIdApuesta() {
         return idApuesta;
+    }
+
+    public int getMonto() {
+        return monto;
+    }
+
+    public int getPremio() {
+        return premio;
+    }
+
+    public String getPor_quien() {
+        return por_quien;
     }
 
     public int getIdUsuario() {
         return idUsuario;
     }
 
+    public int getIdResultado() {
+        return idResultado;
+    }
+
     public int getIdPartido() {
         return idPartido;
     }
 
-    public void setIdPartido(int idPartdio) {
+    public void setIdPartido(int idPartido) {
         this.idPartido = idPartido;
     }
-    
-
-    public int getMonto() {
-        return monto;
-    }
-
-    public String getPor_quien() {
-        return por_quien;
-    }
-    
-
-    public int getPremio() {
-        return premio;
-    }
-
-    public int getIdPersona() {
-        return idUsuario;
-    }
-
-    public int getIdResultado() {
-        return idResultado;
-    }   
-    
 }

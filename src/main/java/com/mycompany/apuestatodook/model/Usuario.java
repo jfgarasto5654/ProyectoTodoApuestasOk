@@ -2,7 +2,7 @@
 package com.mycompany.apuestatodook.model;
 
 
-public class Usuario {
+public class Usuario{
 
     private int IDusuario;
     private String usuario;
