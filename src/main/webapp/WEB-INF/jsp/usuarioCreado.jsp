@@ -11,7 +11,7 @@
     </head>
     <body>
 
-<c:import url="componentesHTML/navBar-No-Iniciado.jsp" />      
+<c:import url="componentesHTML/navBar-Iniciado.jsp" />    
         <div id="nav-bar">
             <h1>AP</h1>  
         </div>

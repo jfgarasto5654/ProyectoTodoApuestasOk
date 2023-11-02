@@ -1,6 +1,6 @@
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
 <c:import url="componentesHTML/inicioHTML.jsp" />
-<c:import url="componentesHTML/navBar-No-Iniciado.jsp" />
+<c:import url="componentesHTML/navBar-Iniciado.jsp" />
         
         <div id="nav-bar">
             <h1>AP</h1>  
