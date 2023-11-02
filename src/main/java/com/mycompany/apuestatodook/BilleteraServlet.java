@@ -8,7 +8,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 
-@WebServlet(name = "SvBilletera", urlPatterns = "/Billetera")
+@WebServlet(name = "SvBilletera", urlPatterns = "/billetera")
 
 public class BilleteraServlet extends HttpServlet{
     

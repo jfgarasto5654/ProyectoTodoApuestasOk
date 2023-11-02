@@ -36,7 +36,7 @@
                           <a href="${pageContext.request.contextPath}/Partidos" class="nav-link">Partidos</a>
                         </li>
                         <li class="nav-item" >
-                          <a href="${pageContext.request.contextPath}/Billetera" class="nav-link">billetera</a>
+                          <a href="Index?action=billetera" class="nav-link">billetera</a>
                         </li>
                         <li class="nav-item" >
                           <a href="Index?action=resultados" class="nav-link">Resultados</a>
