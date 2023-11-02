@@ -4,26 +4,46 @@
 <c:import url="componentesHTML/ul-BarraDeportes.jsp" />
 
 <div class="container">
-    <form method="post" action="Svprocesar_apuesta">
-        <div class="row">
-            <div class="col-md-4">
+    
+    <div class="row" style="background-color: #ccc414; margin-top: 50px">
+            <div class="col-md-4" style="color: #000000; padding: 30px">
                 <h4>Local</h4>
                 <p>${partido.local}</p>
-                <input type="text" class="form-control" name="apuestaLocal" placeholder="Apostar">
-                <button type="submit" class="btn btn-primary">Apostar</button>
+                
+                <form action="Svprocesar_apuesta" method="POST">
+                             
+                      <div class="form-outline mb-4">
+                             <input type="text" id="form2Example11" class="form-control"
+                             placeholder="Monto" name="monto"/>
+                             <input type="hidden" name="por" value="local">
+                             <input type="hidden" name="idPartido" value= "${idpartido}">
+                      </div>
+                            <input class="btn btn-primary" type="submit" name="Enviar datos" value="Apostar">                           
+                  </form>
             </div>
-            <div class="col-md-4">
+                      
+                      <div class="col-md-4" style="color: #000000; padding: 30px">
                 <h4>Visitante</h4>
                 <p>${partido.visitante}</p>
-                <input type="text" class="form-control" name="apuestaVisitante" placeholder="Apostar">
-                <button type="submit" class="btn btn-primary">Apostar</button>
+                
+                <form action="Svprocesar_apuesta" method="POST">
+                             
+                      <div class="form-outline mb-4">
+                             <input type="text" id="form2Example11" class="form-control"
+                             placeholder="Monto" name="monto"/>
+                             <input type="hidden" name="por" value="visitante">
+                             <input type="hidden" name="idPartido" value= "${partido.idParttido}">
+                      </div>
+                            <input class="btn btn-primary" type="submit" name="Enviar datos" value="Apostar">                           
+                  </form>
             </div>
-            <div class="col-md-4">
+                      <div class="col-md-4" style="color: #000000; padding-top: 70px">
                 <h4>Fecha</h4>
                 <p>${partido.fecha}</p>
+                <p>${partido.idParttido}</p>
             </div>
         </div>
-    </form>
+    
 </div>
         <c:import url="componentesHTML/footer.jsp" /> 
     </body>

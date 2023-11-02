@@ -1,6 +1,6 @@
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
 <c:import url="WEB-INF/jsp/componentesHTML/inicioHTML.jsp" />
-<c:import url="WEB-INF/jsp/componentesHTML/navBar-No-Iniciado.jsp" />
+<c:import url="WEB-INF/jsp/componentesHTML/navBar-Iniciado.jsp" />
 <c:import url="WEB-INF/jsp/componentesHTML/ul-BarraDeportes.jsp" />
              <h2 id = "bets">BETS DESTACADAS</h2>
         <div id="carouselExample" class="carousel slide">
