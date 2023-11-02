@@ -4,6 +4,8 @@
  */
 package com.mycompany.apuestatodook.model;
 
+import java.util.logging.Logger;
+
 /**
  *
  * @author Juan
@@ -14,18 +16,35 @@ public class Apuesta {
     private int monto;
     private int premio;
     private String por_quien;
-    private int idPersona;
+    private int idUsuario;
     private int idResultado;
+    private int idPartido;
 
-    public Apuesta(int idApuesta, int monto, int premio, String por_quien, int idPersona, int idResultado) {
+    public Apuesta(int idApuesta, int monto, int premio, String por_quien, int idUsuario, int idResultado) {
         this.idApuesta = idApuesta;
         this.monto = monto;
         this.premio = premio;
         this.por_quien = por_quien;
-        this.idPersona = idPersona;
+        this.idUsuario = idUsuario;
         this.idResultado = idResultado;
+        this.idPartido = idPartido;
     }
 
+    public int getIdApuesta() {
+        return idApuesta;
+    }
+
+    public int getIdUsuario() {
+        return idUsuario;
+    }
+
+    public int getIdPartido() {
+        return idPartido;
+    }
+
+    public void setIdPartido(int idPartdio) {
+        this.idPartido = idPartido;
+    }
     
 
     public int getMonto() {
@@ -42,21 +61,11 @@ public class Apuesta {
     }
 
     public int getIdPersona() {
-        return idPersona;
+        return idUsuario;
     }
 
     public int getIdResultado() {
         return idResultado;
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-
-
+    }   
     
 }

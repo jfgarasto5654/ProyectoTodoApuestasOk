@@ -18,6 +18,14 @@ public class Usuario {
         return dinero;
     }
 
+    public int getIDusuario() {
+        return IDusuario;
+    }
+
+    public String getUsuario() {
+        return usuario;
+    }
+
     public void setDinero(double dinero) {
         this.dinero = dinero;
     }
