@@ -14,7 +14,6 @@ public class Persona {
     private String nombre;
     private String apellido;
     private int edad;
-    private double dinero;
     private int fk_id_ususario;
 
     public String getDni() {
@@ -33,10 +32,6 @@ public class Persona {
         return edad;
     }
 
-    public double getDinero() {
-        return dinero;
-    }
-
     public void setDni(String dni) {
         this.dni = dni;
     }
@@ -53,17 +48,12 @@ public class Persona {
         this.edad = edad;
     }
 
-    public void setDinero(double dinero) {
-        this.dinero = dinero;
-    }
-
-    public Persona(int id_persona, String dni, String nombre, String apellido, int edad, double dinero, int fk_id_ususario) {
+    public Persona(int id_persona, String dni, String nombre, String apellido, int edad, int fk_id_ususario) {
         this.id_persona = id_persona;
         this.dni = dni;
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
-        this.dinero = dinero;
         this.fk_id_ususario = fk_id_ususario;
     }
     

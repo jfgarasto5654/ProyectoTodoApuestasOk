@@ -16,8 +16,8 @@ public class ApuestaDAO {
             preparedStatement.setInt(1, apuesta.getMonto());
             preparedStatement.setInt(2, apuesta.getPremio());
             preparedStatement.setString(3, apuesta.getPor_quien());
-            preparedStatement.setString(4, apuesta.getIdPersona());
-            preparedStatement.setString(5, apuesta.getIdResultado());
+            preparedStatement.setInt(4, apuesta.getIdPersona());
+            preparedStatement.setInt(5, apuesta.getIdResultado());
             preparedStatement.executeUpdate();
         } catch (SQLException ex) {
             throw new RuntimeException(ex);

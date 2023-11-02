@@ -10,21 +10,23 @@ package com.mycompany.apuestatodook.model;
  */
 public class Apuesta {
 
-    private String idApuesta;
+    private int idApuesta;
     private int monto;
     private int premio;
     private String por_quien;
-    private String idPersona;
-    private String idResultado;
+    private int idPersona;
+    private int idResultado;
 
-    public Apuesta(String idApuesta, int monto, int premio, String por_quien, String idPersona, String idResultado) {
+    public Apuesta(int idApuesta, int monto, int premio, String por_quien, int idPersona, int idResultado) {
         this.idApuesta = idApuesta;
         this.monto = monto;
-        this.premio = monto*2;
+        this.premio = premio;
         this.por_quien = por_quien;
         this.idPersona = idPersona;
         this.idResultado = idResultado;
     }
+
+    
 
     public int getMonto() {
         return monto;
@@ -39,11 +41,11 @@ public class Apuesta {
         return premio;
     }
 
-    public String getIdPersona() {
+    public int getIdPersona() {
         return idPersona;
     }
 
-    public String getIdResultado() {
+    public int getIdResultado() {
         return idResultado;
     }
     
