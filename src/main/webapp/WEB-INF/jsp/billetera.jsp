@@ -2,14 +2,13 @@
 <c:import url="componentesHTML/inicioHTML.jsp" />
 <c:import url="componentesHTML/navBar-Iniciado.jsp" />
 <c:import url="componentesHTML/ul-BarraDeportes.jsp" />
-        <body>
     <div class="container mt-4">
         <div class="row">
             <div class="col-lg-6">
                 <div class="card">
                     <div class="card-body">
                         <h3 class="card-title">Dinero</h3>
-                        <p class="card-text">9999999</p>
+                        <p class="card-text">Número de 4 cifras</p>
                     </div>
                 </div>
             </div>
@@ -18,12 +17,14 @@
                     <div class="card-body">
                         <h4 class="card-title">Agregar Dinero</h4>
                         <div class="form-group">
-                            <input type="number" class="form-control" placeholder="Monto a agregar">
+                            <input type="number" class="form-control" placeholder="Monto a agregar" id="montoAgregar">
                         </div>
+                        <button class="btn btn-primary" onclick="agregarDinero()">Enviar</button>
                         <h4 class="card-title">Retirar Dinero</h4>
                         <div class="form-group">
-                            <input type="number" class="form-control" placeholder="Monto a retirar">
+                            <input type="number" class="form-control" placeholder="Monto a retirar" id="montoRetirar">
                         </div>
+                        <button class="btn btn-primary" onclick="retirarDinero()">Enviar</button>
                     </div>
                 </div>
             </div>
