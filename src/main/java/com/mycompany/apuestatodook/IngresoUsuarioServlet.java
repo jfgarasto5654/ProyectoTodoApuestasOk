@@ -1,4 +1,3 @@
-
 package com.mycompany.apuestatodook;
 
 import com.mycompany.apuestatodook.model.Usuario;

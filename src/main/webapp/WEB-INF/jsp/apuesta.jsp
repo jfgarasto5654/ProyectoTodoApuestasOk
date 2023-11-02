@@ -41,6 +41,7 @@
                 <h4>Fecha</h4>
                 <p>${partido.fecha}</p>
                 <p>${partido.idParttido}</p>
+                
             </div>
         </div>
     

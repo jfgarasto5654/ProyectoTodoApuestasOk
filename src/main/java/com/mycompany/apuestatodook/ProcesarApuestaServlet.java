@@ -26,7 +26,6 @@ public class ProcesarApuestaServlet extends HttpServlet {
 
             Apuesta apuesta = new Apuesta( monto, por, idUsuario, Integer.parseInt(idPartido));
 
-            // Agregar la apuesta a la base de datos
             ApuestaDAO apuestaDAO = new ApuestaDAO();
             apuestaDAO.add(apuesta);
         } else {
