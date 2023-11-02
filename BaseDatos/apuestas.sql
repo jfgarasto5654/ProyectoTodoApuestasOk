@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 31-10-2023 a las 20:11:57
+-- Tiempo de generación: 02-11-2023 a las 16:35:35
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -32,8 +32,8 @@ CREATE TABLE `apuesta` (
   `monto` decimal(10,2) NOT NULL,
   `premio` decimal(10,2) NOT NULL,
   `por_quien` enum('local','visitante') NOT NULL,
-  `fk_id_persona` int(11) DEFAULT NULL,
-  `fk_id_resultado` int(11) DEFAULT NULL
+  `fk_id_resultado` int(11) DEFAULT NULL,
+  `fk_id_usuario` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -82,7 +82,6 @@ CREATE TABLE `persona` (
   `nombre` varchar(255) NOT NULL,
   `apellido` varchar(255) NOT NULL,
   `edad` int(11) DEFAULT NULL,
-  `dinero` decimal(10,2) DEFAULT 0.00,
   `fk_id_usuario` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -90,23 +89,23 @@ CREATE TABLE `persona` (
 -- Volcado de datos para la tabla `persona`
 --
 
-INSERT INTO `persona` (`id_persona`, `dni`, `nombre`, `apellido`, `edad`, `dinero`, `fk_id_usuario`) VALUES
-(1, '42382349', 'Nombre1', 'Apellido1', NULL, 0.00, NULL),
-(2, '25560981', 'Nombre2', 'Apellido2', NULL, 0.00, NULL),
-(3, '19632400', 'Nombre3', 'Apellido3', NULL, 0.00, NULL),
-(4, '33254417', 'Nombre4', 'Apellido4', NULL, 0.00, NULL),
-(5, '28385463', 'Nombre5', 'Apellido5', NULL, 0.00, NULL),
-(6, '37334279', 'Nombre6', 'Apellido6', NULL, 0.00, NULL),
-(7, '32529631', 'Nombre7', 'Apellido7', NULL, 0.00, NULL),
-(8, '35995411', 'Nombre8', 'Apellido8', NULL, 0.00, NULL),
-(9, '37579419', 'Nombre9', 'Apellido9', NULL, 0.00, NULL),
-(10, '25469541', 'Nombre10', 'Apellido10', NULL, 0.00, NULL),
-(11, '31799881', 'Nombre11', 'Apellido11', NULL, 0.00, NULL),
-(12, '41034616', 'Nombre12', 'Apellido12', NULL, 0.00, NULL),
-(13, '40482394', 'Nombre13', 'Apellido13', NULL, 0.00, NULL),
-(14, '35720751', 'Nombre14', 'Apellido14', NULL, 0.00, NULL),
-(15, '26382240', 'Nombre15', 'Apellido15', NULL, 0.00, NULL),
-(16, '2344', 'ian', 'tepper', 35, 0.00, 21);
+INSERT INTO `persona` (`id_persona`, `dni`, `nombre`, `apellido`, `edad`, `fk_id_usuario`) VALUES
+(1, '42382349', 'Nombre1', 'Apellido1', NULL, NULL),
+(2, '25560981', 'Nombre2', 'Apellido2', NULL, NULL),
+(3, '19632400', 'Nombre3', 'Apellido3', NULL, NULL),
+(4, '33254417', 'Nombre4', 'Apellido4', NULL, NULL),
+(5, '28385463', 'Nombre5', 'Apellido5', NULL, NULL),
+(6, '37334279', 'Nombre6', 'Apellido6', NULL, NULL),
+(7, '32529631', 'Nombre7', 'Apellido7', NULL, NULL),
+(8, '35995411', 'Nombre8', 'Apellido8', NULL, NULL),
+(9, '37579419', 'Nombre9', 'Apellido9', NULL, NULL),
+(10, '25469541', 'Nombre10', 'Apellido10', NULL, NULL),
+(11, '31799881', 'Nombre11', 'Apellido11', NULL, NULL),
+(12, '41034616', 'Nombre12', 'Apellido12', NULL, NULL),
+(13, '40482394', 'Nombre13', 'Apellido13', NULL, NULL),
+(14, '35720751', 'Nombre14', 'Apellido14', NULL, NULL),
+(15, '26382240', 'Nombre15', 'Apellido15', NULL, NULL),
+(16, '2344', 'ian', 'tepper', 35, 21);
 
 -- --------------------------------------------------------
 
@@ -129,30 +128,31 @@ CREATE TABLE `resultado` (
 CREATE TABLE `usuario` (
   `id_usuario` int(11) NOT NULL,
   `usuario` varchar(255) NOT NULL,
-  `contrasenia` varchar(255) NOT NULL
+  `contrasenia` varchar(255) NOT NULL,
+  `dinero` decimal(10,2) DEFAULT 0.00
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `usuario`
 --
 
-INSERT INTO `usuario` (`id_usuario`, `usuario`, `contrasenia`) VALUES
-(1, 'Usuario1', 'Contraseña1'),
-(2, 'Usuario2', 'Contraseña2'),
-(3, 'Usuario3', 'Contraseña3'),
-(4, 'Usuario4', 'Contraseña4'),
-(5, 'Usuario5', 'Contraseña5'),
-(6, 'Usuario6', 'Contraseña6'),
-(7, 'Usuario7', 'Contraseña7'),
-(8, 'Usuario8', 'Contraseña8'),
-(9, 'Usuario9', 'Contraseña9'),
-(10, 'Usuario10', 'Contraseña10'),
-(11, 'Usuario11', 'Contraseña11'),
-(12, 'Usuario12', 'Contraseña12'),
-(13, 'Usuario13', 'Contraseña13'),
-(14, 'Usuario14', 'Contraseña14'),
-(15, 'Usuario15', 'Contraseña15'),
-(21, 'ianalan', 'contraseña');
+INSERT INTO `usuario` (`id_usuario`, `usuario`, `contrasenia`, `dinero`) VALUES
+(1, 'Usuario1', 'Contraseña1', 0.00),
+(2, 'Usuario2', 'Contraseña2', 0.00),
+(3, 'Usuario3', 'Contraseña3', 0.00),
+(4, 'Usuario4', 'Contraseña4', 0.00),
+(5, 'Usuario5', 'Contraseña5', 0.00),
+(6, 'Usuario6', 'Contraseña6', 0.00),
+(7, 'Usuario7', 'Contraseña7', 0.00),
+(8, 'Usuario8', 'Contraseña8', 0.00),
+(9, 'Usuario9', 'Contraseña9', 0.00),
+(10, 'Usuario10', 'Contraseña10', 0.00),
+(11, 'Usuario11', 'Contraseña11', 0.00),
+(12, 'Usuario12', 'Contraseña12', 0.00),
+(13, 'Usuario13', 'Contraseña13', 0.00),
+(14, 'Usuario14', 'Contraseña14', 0.00),
+(15, 'Usuario15', 'Contraseña15', 0.00),
+(21, 'ianalan', 'contraseña', 0.00);
 
 --
 -- Índices para tablas volcadas
@@ -164,7 +164,7 @@ INSERT INTO `usuario` (`id_usuario`, `usuario`, `contrasenia`) VALUES
 ALTER TABLE `apuesta`
   ADD PRIMARY KEY (`id_apuesta`),
   ADD KEY `fk_id_resultado` (`fk_id_resultado`),
-  ADD KEY `fk_id_persona` (`fk_id_persona`);
+  ADD KEY `fk_id_usuario` (`fk_id_usuario`);
 
 --
 -- Indices de la tabla `partido`
@@ -235,7 +235,7 @@ ALTER TABLE `usuario`
 --
 ALTER TABLE `apuesta`
   ADD CONSTRAINT `apuesta_ibfk_3` FOREIGN KEY (`fk_id_resultado`) REFERENCES `resultado` (`id_resultado`),
-  ADD CONSTRAINT `apuesta_ibfk_4` FOREIGN KEY (`fk_id_persona`) REFERENCES `persona` (`id_persona`);
+  ADD CONSTRAINT `apuesta_ibfk_4` FOREIGN KEY (`fk_id_usuario`) REFERENCES `usuario` (`id_usuario`);
 
 --
 -- Filtros para la tabla `persona`
