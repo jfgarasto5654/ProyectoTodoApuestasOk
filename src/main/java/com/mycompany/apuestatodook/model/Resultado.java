@@ -1,3 +1,6 @@
+package com.mycompany.apuestatodook.model;
+
+
 public class Resultado {
     private int idResultado;
     private String ganador;

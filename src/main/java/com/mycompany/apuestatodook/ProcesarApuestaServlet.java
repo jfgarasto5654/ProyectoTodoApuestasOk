@@ -15,9 +15,7 @@ public class ProcesarApuestaServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String idPartido = request.getParameter("idPartido");
-
         String por = request.getParameter("por");
-
         Usuario usuario = (Usuario) request.getSession().getAttribute("userLogueado");
 
         if (usuario != null) {
@@ -26,15 +24,14 @@ public class ProcesarApuestaServlet extends HttpServlet {
             String montoSTR = request.getParameter("monto");
             int monto = Integer.parseInt(montoSTR);
 
-            Apuesta apuesta = new Apuesta(0, monto, 0, por, idUsuario, 0);
-            apuesta.setIdPartido(Integer.parseInt(idPartido)); 
+            Apuesta apuesta = new Apuesta( monto, por, idUsuario, Integer.parseInt(idPartido));
 
+            // Agregar la apuesta a la base de datos
             ApuestaDAO apuestaDAO = new ApuestaDAO();
             apuestaDAO.add(apuesta);
         } else {
-        request.setAttribute("hayError", true);
-        request.setAttribute("mensajeError", "Ingrese Nuevamente!");
-        request.getRequestDispatcher("/WEB-INF/jsp/inicioSesion.jsp").forward(request, response);
+            request.setAttribute("hayError", true);
+            request.setAttribute("mensajeError", "Ingrese Nuevamente!");
         }
 
         request.getRequestDispatcher("/WEB-INF/jsp/usuarioCreado.jsp").forward(request, response);
