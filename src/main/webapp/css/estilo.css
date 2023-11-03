@@ -6,6 +6,12 @@ body{
    min-height: 100vh;
 }
 
+#apuestaTodo{
+    
+    height: 500px;
+    width: 200px;
+}
+
 
 .container-fluid{
     margin-left: 70px;
@@ -33,6 +39,16 @@ body{
   font-weight:600;
   color: black;
   float: left;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    padding: 30px;
+    margin: 30px;
 }
 
 .mi-link-barra{
@@ -68,6 +84,10 @@ body{
     text-align: center;
     margin-top: 60px;
     color: black;
+    margin-left: 500px;
+    margin-right: 500px;
+    background-color: #ccc414;
+    font-family: 'Oswald', sans-serif;
 }
 
 .d-block{
