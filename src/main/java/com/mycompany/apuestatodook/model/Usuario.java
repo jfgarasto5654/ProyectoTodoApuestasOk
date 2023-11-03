@@ -9,9 +9,10 @@ public class Usuario{
     private String contrasenia;
     private double dinero;
 
-    public Usuario(int IDusuario1, String usuario, String contrasenia) {
+    public Usuario(int IDusuario, String usuario, String contrasenia) {
         this.usuario = usuario;
         this.contrasenia = contrasenia;
+        this.IDusuario= IDusuario;
     }
 
     public double getDinero() {
@@ -41,6 +42,11 @@ public class Usuario{
 
     public void setIDusuario(int IDusuario) {
         this.IDusuario = IDusuario;
+    }
+
+    @Override
+    public String toString() {
+        return "Usuario{" + "IDusuario=" + IDusuario + ", usuario=" + usuario + ", contrasenia=" + contrasenia + ", dinero=" + dinero + '}';
     }
 
 }

@@ -41,6 +41,7 @@ public class UsuarioDAO {
         try (ResultSet resultSet = preparedStatement.executeQuery()) {
             if (resultSet.next()) {
                 validado = rsRowToUsuario(resultSet);
+                System.out.println(validado);
             }
         }
     } catch (SQLException ex) {
