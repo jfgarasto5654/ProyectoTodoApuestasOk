@@ -34,13 +34,37 @@ public class BilleteraServlet extends HttpServlet{
         
         request.getRequestDispatcher(destino).forward(request, response);
     }
-
-
+ 
+    
     
     @Override
     protected void doPost (HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         
+        Usuario usuario = (Usuario)req.getSession().getAttribute("usuario"); 
+                 
+        String operacion = req.getParameter("Modificar");
+        
+        String montoSTR = req.getParameter("monto");
+        double monto =  Integer.parseInt(montoSTR);
+        double dineroEnLaCuenta = usuario.getDinero();
+        
+        if(operacion.equals("ingreso")){
+            
+            dineroEnLaCuenta+= monto;              
+        }
+        else{
+            dineroEnLaCuenta-= monto; 
+        }
+        
+        usuario.setDinero(dineroEnLaCuenta); // actualizo el atributo dinero del objeto usuario
+        
+        UsuarioDAO usuarioDAO = new UsuarioDAO();
+        usuarioDAO.updateDinero(usuario); // actualizo el dinero (tabla usuario) en la base de datos
+        
+        req.getRequestDispatcher("WEB-INF/jsp/billetera.jsp").forward(req, resp);
+
     }
     
-}
+} 
+
