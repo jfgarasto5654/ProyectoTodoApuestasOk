@@ -99,6 +99,22 @@ public class UsuarioDAO {
         
         return dinero;
     }
+ 
+
+   //  actualiza el dinero en la BD  
+    public void updateDinero(Usuario usuario) {
+        String query = "UPDATE usuario SET dinero = ? WHERE id = ?";
+        
+        try (Connection con = ConnectionPool.getInstance().getConnection(); PreparedStatement preparedStatement = con.prepareStatement(query)) {
+            
+            preparedStatement.setDouble(1, usuario.getDinero());
+            preparedStatement.setInt(2, usuario.getIDusuario());
+            preparedStatement.executeUpdate();
+            
+        } catch (SQLException ex) {
+            throw new RuntimeException(ex);
+        }
+    }
 
     
 }
