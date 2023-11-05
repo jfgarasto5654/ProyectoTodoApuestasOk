@@ -7,7 +7,7 @@
     </filter>
     <filter-mapping>
         <filter-name>loginfilter</filter-name>
-        <url-pattern>/billetera</url-pattern>
+        <url-pattern>/Billetera</url-pattern>
     </filter-mapping>
     <servlet>
         <servlet-name>SvIndex</servlet-name>

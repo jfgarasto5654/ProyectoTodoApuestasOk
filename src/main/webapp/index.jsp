@@ -44,31 +44,31 @@
     <div class="card" style="width: 18rem;">
   <img src="..." class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h5 class="card-title">Depositos y extracciones</h5>
+    <p class="card-text">Contamos con depositos y extracciones al instante y al banco/billetera virtual que quieras!</p>
     <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
     
     <div class="card" style="width: 18rem; ">
-    <img src="..." class="card-img-top" alt="...">
+        <img src="img/Barcelona-Madrid-Aguero.jpg" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <h5 class="card-title">X2</h5>
+      <p class="card-text">Solo por hoy todas sus apuestas seran pagadas X2.</p>
       <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
   </div>
     
     <div class="card" style="width: 18rem; ">
-    <img src="..." class="card-img-top" alt="...">
+        <img src="img/espn-vs-boca-falta-de-respeto-vivo-png..png" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <h5 class="card-title">Apoya a Argentina</h5>
+      <p class="card-text">Cuotas mejoradas en la final de la Libertadores Boca-Fluiminense</p>
       <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
   </div>
     
-</div>   
+</div>  
 
 
 

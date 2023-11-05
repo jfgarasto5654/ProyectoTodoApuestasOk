@@ -75,6 +75,48 @@ public class UsuarioDAO {
             throw new RuntimeException(ex);
         }
     }
+    
+    
+    public double getDineroPorIdUsuario (Integer Id) {
+        
+        String query = "SELECT dinero FROM usuario WHERE id_usuario = ?";
+        
+        double dinero = 0.0;
+        
+        try (Connection con = ConnectionPool.getInstance().getConnection(); PreparedStatement preparedStatement = con.prepareStatement(query)) {
+            
+            preparedStatement.setInt(1, Id);
+            
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                
+                if (resultSet.next()) { 
+                    dinero = resultSet.getDouble(4);
+                }  
+            }
+        } catch (SQLException ex) {
+            throw new RuntimeException(ex);
+        }
+        
+        return dinero;
+    }
+ 
+
+   //  actualiza el dinero en la BD  
+    public void updateDinero(Usuario usuario) {
+        String query = "UPDATE usuario SET dinero = ? WHERE id = ?";
+        
+        try (Connection con = ConnectionPool.getInstance().getConnection(); PreparedStatement preparedStatement = con.prepareStatement(query)) {
+            
+            preparedStatement.setDouble(1, usuario.getDinero());
+            preparedStatement.setInt(2, usuario.getIDusuario());
+            preparedStatement.executeUpdate();
+            
+        } catch (SQLException ex) {
+            throw new RuntimeException(ex);
+        }
+    }
+
+    
 }
     
 
