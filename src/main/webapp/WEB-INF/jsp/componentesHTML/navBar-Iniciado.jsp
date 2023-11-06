@@ -44,6 +44,9 @@
                           <a href="${pageContext.request.contextPath}/apuestas-persona" class="nav-link">Apuestas</a>
                         </li>
                         <li class="nav-item" >
+                          <a href="${pageContext.request.contextPath}/Perfil" class="nav-link">perfil</a>
+                        </li>
+                        <li class="nav-item" >
                           <a href="${pageContext.request.contextPath}/logout" class="btn btn-danger">Logout</a>
                         </li>
                       </ul>

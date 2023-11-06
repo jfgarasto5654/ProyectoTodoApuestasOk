@@ -103,7 +103,7 @@ public class UsuarioDAO {
 
    //  actualiza el dinero en la BD  
     public void updateDinero(Usuario usuario) {
-        String query = "UPDATE usuario SET dinero = ? WHERE id = ?";
+        String query = "UPDATE usuario SET dinero = ? WHERE id_usuario = ?";
         
         try (Connection con = ConnectionPool.getInstance().getConnection(); PreparedStatement preparedStatement = con.prepareStatement(query)) {
             

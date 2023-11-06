@@ -22,7 +22,7 @@ public class BilleteraServlet extends HttpServlet{
         UsuarioDAO usuarioDAO = new UsuarioDAO();
         String destino;
         
-        Usuario usuario = (Usuario)request.getSession().getAttribute("usuario"); 
+        Usuario usuario = (Usuario)request.getSession().getAttribute("userLogueado"); 
         
         int IDusuario = usuario.getIDusuario();
 
@@ -41,7 +41,7 @@ public class BilleteraServlet extends HttpServlet{
     protected void doPost (HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         
-        Usuario usuario = (Usuario)req.getSession().getAttribute("usuario"); 
+        Usuario usuario = (Usuario)req.getSession().getAttribute("userLogueado"); 
                  
         String operacion = req.getParameter("Modificar");
         
@@ -61,6 +61,8 @@ public class BilleteraServlet extends HttpServlet{
         
         UsuarioDAO usuarioDAO = new UsuarioDAO();
         usuarioDAO.updateDinero(usuario); // actualizo el dinero (tabla usuario) en la base de datos
+        
+        req.setAttribute("dinero", dineroEnLaCuenta);
         
         req.getRequestDispatcher("WEB-INF/jsp/billetera.jsp").forward(req, resp);
 

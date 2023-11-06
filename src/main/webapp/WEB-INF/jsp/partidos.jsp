@@ -2,8 +2,12 @@
 <c:import url="componentesHTML/inicioHTML.jsp" />
 <c:import url="componentesHTML/navBar-Iniciado.jsp" />
 <c:import url="componentesHTML/ul-BarraDeportes.jsp" />
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Oswald:wght@600&display=swap');
+</style>
         
-<h1 style="margin-top: 30px; color: aliceblue">Partidos Disponibles</h1>
+<h1 id = "bets">PARTIDOS DISPONIBLES</h1>
 <div class="row">
     <div class="col-md-12">
         <div class="partidos-container">
