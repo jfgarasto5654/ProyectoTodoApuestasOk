@@ -10,7 +10,7 @@
                     <form action="Billetera" method="GET"> 
                         <div class="card-body">
                             <h3 class="card-title">Dinero</h3>
-                            <p class="card-text">${dinero}</p>
+                            <p class="card-text"> $ ${dinero}</p>
                         </div>                    
                     </form>
                         
