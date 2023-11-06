@@ -22,7 +22,7 @@ public class BilleteraServlet extends HttpServlet{
         UsuarioDAO usuarioDAO = new UsuarioDAO();
         String destino;
         
-        Usuario usuario = (Usuario)request.getSession().getAttribute("usuario"); 
+        Usuario usuario = (Usuario)request.getSession().getAttribute("userLogueado"); 
         
         int IDusuario = usuario.getIDusuario();
 

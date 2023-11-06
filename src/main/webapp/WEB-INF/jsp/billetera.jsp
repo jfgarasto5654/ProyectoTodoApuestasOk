@@ -7,7 +7,7 @@
             <div class="col-lg-6">
                 <div class="card">
                     
-                    <form action="SvBilletera" method="GET"> 
+                    <form action="Billetera" method="GET"> 
                         <div class="card-body">
                             <h3 class="card-title">Dinero</h3>
                             <p class="card-text">${dinero}</p>
@@ -20,7 +20,7 @@
                 <div class="card">
                     <div class="card-body">
                         
-                        <form action="SvBilletera" method="POST">
+                        <form action="Billetera" method="POST">
                             <h4 class="card-title">Agregar Dinero</h4>
                             <div class="form-group">
                                 <input type="number" class="form-control" name="monto" placeholder="Monto a agregar" id="montoAgregar">
@@ -29,7 +29,7 @@
                             <button class="btn btn-primary" type="submit">Enviar</button>
                         </form>
 
-                        <form action="SvBilletera" method="POST">
+                        <form action="Billetera" method="POST">
                             <h4 class="card-title">Retirar Dinero</h4>
                             <div class="form-group">
                                 <input type="number" class="form-control" name="monto" placeholder="Monto a retirar" id="montoRetirar"> 
