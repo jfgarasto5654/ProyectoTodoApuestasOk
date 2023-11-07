@@ -38,35 +38,37 @@ public class BilleteraServlet extends HttpServlet{
     
     
     @Override
-    protected void doPost (HttpServletRequest req, HttpServletResponse resp)
-            throws ServletException, IOException {
-        
-        Usuario usuario = (Usuario)req.getSession().getAttribute("userLogueado"); 
-                 
-        String operacion = req.getParameter("Modificar");
-        
-        String montoSTR = req.getParameter("monto");
-        double monto =  Integer.parseInt(montoSTR);
-        double dineroEnLaCuenta = usuario.getDinero();
-        
-        if(operacion.equals("ingreso")){
-            
-            dineroEnLaCuenta+= monto;              
-        }
-        else{
-            dineroEnLaCuenta-= monto; 
-        }
-        
-        usuario.setDinero(dineroEnLaCuenta); // actualizo el atributo dinero del objeto usuario
-        
-        UsuarioDAO usuarioDAO = new UsuarioDAO();
-        usuarioDAO.updateDinero(usuario); // actualizo el dinero (tabla usuario) en la base de datos
-        
-        req.setAttribute("dinero", dineroEnLaCuenta);
-        
-        req.getRequestDispatcher("WEB-INF/jsp/billetera.jsp").forward(req, resp);
+   protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    UsuarioDAO usuarioDAO = new UsuarioDAO();
+    Usuario usuario = (Usuario) req.getSession().getAttribute("userLogueado");
+    int IDusuario = usuario.getIDusuario();
 
+    double dineroDisponible = usuarioDAO.getDineroPorIdUsuario(IDusuario);
+    String operacion = req.getParameter("Modificar");
+    String montoSTR = req.getParameter("monto");
+    double monto = Double.parseDouble(montoSTR);
+
+    if (operacion.equals("ingreso")) {
+        dineroDisponible += monto;
+    } else {
+        if (dineroDisponible >= monto) {
+            dineroDisponible -= monto;
+        } else {
+            req.setAttribute("dinero", dineroDisponible );
+            req.setAttribute("hayError", true);
+            req.setAttribute("mensajeError", "Saldo insuficiente para el retiro.");
+            req.getRequestDispatcher("WEB-INF/jsp/billetera.jsp").forward(req, resp);
+            return;
+        }
     }
+
+    usuario.setDinero(dineroDisponible);
+    usuarioDAO.updateDinero(usuario);
+    
+    req.getSession().setAttribute("userLogueado", usuario);
+
+    resp.sendRedirect(req.getContextPath() + "/Billetera");
+}
     
 } 
 

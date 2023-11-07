@@ -90,7 +90,7 @@ public class UsuarioDAO {
             try (ResultSet resultSet = preparedStatement.executeQuery()) {
                 
                 if (resultSet.next()) { 
-                    dinero = resultSet.getDouble(4);
+                    dinero = resultSet.getDouble(1);
                 }  
             }
         } catch (SQLException ex) {
