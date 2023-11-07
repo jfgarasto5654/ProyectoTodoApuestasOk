@@ -18,6 +18,11 @@
             </form>
         </div>
         <div class="col-md-4 text-center" style="color: #000000; padding: 30px">
+            <c:if test="${hayError}">
+                                        <div class="container mt-3 p-3 bg-danger text-light">
+                                            <h2>${mensajeError}</h2>
+                                        </div>
+            </c:if>
             <h4>Fecha</h4>
             <p>${partido.fecha}</p>
         </div>

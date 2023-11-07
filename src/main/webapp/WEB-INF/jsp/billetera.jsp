@@ -31,7 +31,7 @@
                                 <input type="number" class="form-control" name="monto" placeholder="Monto a agregar" id="montoAgregar">
                                 <input type="hidden" class="form-control" name="Modificar" value="ingreso" id="montoAgregar">
                             </div>
-                            <button class="btn btn-succes" type="submit">Enviar</button>
+                            <button class="btn btn-success" type="submit">Enviar</button>
                         </form>
 
                         <form action="Billetera" method="POST">
@@ -40,7 +40,7 @@
                                 <input type="number" class="form-control" name="monto" placeholder="Monto a retirar" id="montoRetirar"> 
                                 <input type="hidden" class="form-control" name="Modificar" value="retiro" id="montoAgregar">
                             </div>
-                            <button class="btn btn-succes" type="submit">Enviar</button> 
+                            <button class="btn btn-success" type="submit">Enviar</button> 
                         </form>
                     </div>
                 </div>

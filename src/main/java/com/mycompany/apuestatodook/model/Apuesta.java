@@ -14,6 +14,7 @@ public class Apuesta {
         this.idUsuario = idUsuario;
         this.idPartido = idPartido;
     }
+
     public int getIdApuesta() {
         return idApuesta;
     }
@@ -34,7 +35,24 @@ public class Apuesta {
         return idPartido;
     }
 
+    public void setIdApuesta(int idApuesta) {
+        this.idApuesta = idApuesta;
+    }
+
+    public void setMonto(int monto) {
+        this.monto = monto;
+    }
+
+    public void setPor_quien(String por_quien) {
+        this.por_quien = por_quien;
+    }
+
+    public void setIdUsuario(int idUsuario) {
+        this.idUsuario = idUsuario;
+    }
+
     public void setIdPartido(int idPartido) {
         this.idPartido = idPartido;
     }
+
 }

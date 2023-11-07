@@ -41,7 +41,7 @@
                           <a href="${pageContext.request.contextPath}/Resultados" class="nav-link">Resultados</a>
                         </li>
                         <li class="nav-item" >
-                          <a href="${pageContext.request.contextPath}/Resultados" class="nav-link">Apuestas</a>
+                          <a href="${pageContext.request.contextPath}/ApuestasMostrar" class="nav-link">Apuestas</a>
                         </li>
                         <li class="nav-item" >
                           <a href="${pageContext.request.contextPath}/Perfil" class="nav-link">perfil</a>

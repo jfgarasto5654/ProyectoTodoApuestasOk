@@ -20,7 +20,7 @@ public class ApuestaServlet extends HttpServlet {
         
         PartidoDAO PartidoDAO = new PartidoDAO();
         
-        Partido partido = PartidoDAO.getPartidoPorId(partidoId);
+        Partido partido = PartidoDAO.getPartidoPorId(partidoId);      
         
         request.setAttribute("partido", partido);
         request.getRequestDispatcher("WEB-INF/jsp/apuesta.jsp").forward(request, response);
