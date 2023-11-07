@@ -193,7 +193,7 @@ height: 100vh;
     margin: 50px;
 }
 .partido-burbuja {
-    background-image: url('../img/amarillohexa.jpg');
+    background-image: url('../img/202895-plain-yellow-and-white-background-graphic.jpg');
     background-size: cover; /* Escalar la imagen para cubrir todo el contenedor */
     background-position: center; /* Centrar la imagen */
     background-repeat: no-repeat; /* Evitar la repetición de la imagen */
