@@ -25,18 +25,6 @@ public class IndexServlet extends HttpServlet {
                 case "errorIngresoUsuario":
                     destino = "/WEB-INF/jsp/errorIngresoUsuario.jsp";
                     break;
-                case "billetera":
-                    destino = "/WEB-INF/jsp/billetera.jsp";
-                    break;
-                case "partidos":
-                    destino = "/WEB-INF/jsp/partidos.jsp";
-                    break;
-                case "principalIniciado":
-                    destino = "/WEB-INF/jsp/principalIniciado.jsp";
-                    break;
-                case "resultados":
-                    destino = "/WEB-INF/jsp/resultados.jsp";
-                    break;
                 case "usuarioCreado":
                     destino = "/WEB-INF/jsp/usuarioCreado.jsp";
                     break;

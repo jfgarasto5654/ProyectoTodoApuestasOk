@@ -35,13 +35,13 @@
                           <a href="${pageContext.request.contextPath}/Partidos" class="nav-link">Partidos</a>
                         </li>
                         <li class="nav-item" >
-                          <a href="Index?action=billetera" class="nav-link">billetera</a>
+                          <a href="${pageContext.request.contextPath}/Billetera" class="nav-link">billetera</a>
                         </li>
                         <li class="nav-item" >
-                          <a href="Index?action=resultados" class="nav-link">Resultados</a>
+                          <a href="${pageContext.request.contextPath}/Resultados" class="nav-link">Resultados</a>
                         </li>
                         <li class="nav-item" >
-                          <a href="${pageContext.request.contextPath}/apuestas-persona" class="nav-link">Apuestas</a>
+                          <a href="${pageContext.request.contextPath}/Resultados" class="nav-link">Apuestas</a>
                         </li>
                         <li class="nav-item" >
                           <a href="${pageContext.request.contextPath}/Perfil" class="nav-link">perfil</a>

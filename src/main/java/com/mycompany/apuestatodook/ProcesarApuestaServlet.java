@@ -53,7 +53,7 @@ public class ProcesarApuestaServlet extends HttpServlet {
         } else {
             request.setAttribute("hayError", true);
             request.setAttribute("mensajeError", "Ingrese Nuevamente!");
-            request.getRequestDispatcher("/WEB-INF/jsp/iniciosesion").forward(request, response);
+            request.getRequestDispatcher("WEB-INF/jsp/iniciosesion").forward(request, response);
         }
 
         request.getRequestDispatcher("/WEB-INF/jsp/ApuestaCreada.jsp").forward(request, response);

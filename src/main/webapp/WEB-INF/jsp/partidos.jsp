@@ -22,5 +22,7 @@
         </div>
     </div>
 </div>
+        <c:import url="componentesHTML/footer.jsp" /> 
+    </body>
 </html>
 

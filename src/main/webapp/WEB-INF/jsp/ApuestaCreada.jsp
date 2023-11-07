@@ -20,7 +20,8 @@
                   <h5 class="card-text">Su apuesta ha sido de $ ${apuesta.monto} por el equipo ${apuesta.por_quien}</h3>
                   <h5 class="card-text">En caso de ganar su premio sera de $ ${premio}</h5>
                  
-                  <a style="padding: 10px" href="#" class="btn btn-primary">Seguir apostando</a>
+                  <a style="padding: 10px" href="${pageContext.request.contextPath}/Partidos" class="btn btn-success">Seguir apostando</a>
+                   <a style="padding: 10px" href="${pageContext.request.contextPath}" class="btn btn-success">Inicio</a>
                 </div>
                   
                   <div class="card-header">
