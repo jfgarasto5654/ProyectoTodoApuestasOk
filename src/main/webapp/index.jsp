@@ -14,17 +14,17 @@
 
       <div class="carousel-inner">
         <div class="carousel-item active">
-            <a href="Index?action=inicioSesion">
+            <a href="${pageContext.request.contextPath}/Partidos">
           <img src="img/Boca-Racing-ESPN.jpg" class="d-block " alt="...">
           </a>
         </div>
         <div class="carousel-item">
-            <a href="Index?action=inicioSesion">
+            <a href="${pageContext.request.contextPath}/Partidos">
           <img src="img/Barcelona-Madrid-Aguero.jpg" class="d-block " alt="...">
           </a>
         </div>
         <div class="carousel-item">
-            <a href="Index?action=inicioSesion">
+            <a href="${pageContext.request.contextPath}/Partidos">
           <img src="img/espn-Final.jpg" class="d-block " alt="...">
           </a>
         </div>
@@ -46,7 +46,7 @@
   <div class="card-body">
     <h5 class="card-title">Depositos y extracciones</h5>
     <p class="card-text">Contamos con depositos y extracciones al instante y al banco/billetera virtual que quieras!</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <a href="${pageContext.request.contextPath}/Partidos" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>
     
@@ -55,7 +55,7 @@
     <div class="card-body">
       <h5 class="card-title">X2</h5>
       <p class="card-text">Solo por hoy todas sus apuestas seran pagadas X2.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <a href="${pageContext.request.contextPath}/Partidos" class="btn btn-primary">Go somewhere</a>
     </div>
   </div>
     
@@ -64,7 +64,7 @@
     <div class="card-body">
       <h5 class="card-title">Apoya a Argentina</h5>
       <p class="card-text">Cuotas mejoradas en la final de la Libertadores Boca-Fluiminense</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <a href="${pageContext.request.contextPath}/Partidos" class="btn btn-primary">Go somewhere</a>
     </div>
   </div>
     

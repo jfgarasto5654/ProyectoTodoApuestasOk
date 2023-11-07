@@ -120,7 +120,7 @@ footer {
             position: absolute;
             bottom: 0;
             width: 100%;
-            background-color: #000000;
+            background-color: black;
             color: white;
             padding: 10px;
             text-align: center;
@@ -148,6 +148,13 @@ footer {
         .footer-column p {
             margin: 0;
             font-size: 12px
+        .btn-social {
+                font-size: 20px; 
+                margin: 5px; 
+            }
+        .btn-social i {
+                color: white;
+            }
         }
 
 .tabla-grande {
@@ -186,7 +193,10 @@ height: 100vh;
     margin: 50px;
 }
 .partido-burbuja {
-    background-color:#ccc414;
+    background-image: url('../img/amarillohexa.jpg');
+    background-size: cover; /* Escalar la imagen para cubrir todo el contenedor */
+    background-position: center; /* Centrar la imagen */
+    background-repeat: no-repeat; /* Evitar la repetición de la imagen */
     border: 2px solid #333;
     padding: 10px;
     text-align: center;
@@ -217,4 +227,7 @@ height: 100vh;
     background-color: black;
   padding: 6px; 
 }
-
+.footer-logo img {
+           width: 50px; 
+           height: auto; 
+            }

@@ -1,28 +1,29 @@
 <footer>
-        <div class="footer-content">
-            <div class="footer-column">
-                <h3>Columna Izquierda</h3>
-                <p>Texto de ejemplo para la columna izquierda.</p>
+    <div class="footer-content">
+        <div class="footer-column">
+            <h3>Información General</h3>
+            <p>Detalles importantes sobre nosotros.</p>
+        </div>
+        <div class="footer-column">
+            <h3>Nuestra Empresa</h3>
+            <p>Descubre quiénes somos y qué hacemos.</p>
+            <div class="footer-logo">
+                <img src="img/logoAP.jpg" alt="Logo de Nuestra Empresa">
             </div>
-            <div class="footer-column">
-                <h3>Columna Central</h3>
-                <p>Texto de ejemplo para la columna central.</p>
-                <div class="footer-logo">
-                    <img src="logo.png" alt="Logo de Mi Sitio Web">
-                </div>
-                <div class="footer-info">
-                    <p>&copy; 2023 Mi Sitio Web</p>
-                    <p><a href="politica-de-privacidad.html">Pol?tica de Privacidad</a></p>
-                    <p><a href="contacto.html">Contacto</a></p>
-                </div>
-            </div>
-            <div class="footer-column">
-                <h3>Columna Derecha</h3>
-                <p>Texto de ejemplo para la columna derecha.</p>
-            </div>
-            <div class="footer-column">
-                <h3>Columna Adicional</h3>
-                <p>Texto de ejemplo para la columna adicional.</p>
+            <div class="footer-info">
+                <p>&copy; 2023 Nuestra Empresa</p>
+                <p><a href="https://charlycimino.com/" target="_blank">Política de Privacidad</a></p>
+                <p><a href="https://charlycimino.com/" target="_blank">Contáctanos</a></p>
+
             </div>
         </div>
-    </footer>
+        <div class="footer-column">
+            <h3>Recursos Útiles</h3>
+            <p>Encuentra recursos que pueden interesarte.</p>
+        </div>
+        <div class="footer-column">
+            <h3>Ayuda Adicional</h3>
+            <p>Obtén más información y asistencia.</p>
+        </div>
+    </div>
+</footer>
