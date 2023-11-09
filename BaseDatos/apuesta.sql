@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-11-2023 a las 19:43:22
+-- Tiempo de generación: 09-11-2023 a las 16:31:36
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `apuestas`
+-- Base de datos: `apuesta`
 --
 
 -- --------------------------------------------------------
@@ -30,18 +30,12 @@ SET time_zone = "+00:00";
 CREATE TABLE `apuesta` (
   `id_apuesta` int(11) NOT NULL,
   `monto` decimal(10,2) NOT NULL,
-  `por_quien` enum('local','visitante') NOT NULL,
+  `por_quien` varchar(255) DEFAULT NULL,
   `fk_id_resultado` int(11) DEFAULT NULL,
   `fk_id_usuario` int(11) DEFAULT NULL,
-  `fk_id_partido` int(11) DEFAULT NULL
+  `fk_id_partido` int(11) DEFAULT NULL,
+  `estado` varchar(20) DEFAULT 'N'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Volcado de datos para la tabla `apuesta`
---
-
-INSERT INTO `apuesta` (`id_apuesta`, `monto`, `por_quien`, `fk_id_resultado`, `fk_id_usuario`, `fk_id_partido`) VALUES
-(6, 230.00, 'local', NULL, 22, 1);
 
 -- --------------------------------------------------------
 
@@ -123,7 +117,7 @@ INSERT INTO `persona` (`id_persona`, `dni`, `nombre`, `apellido`, `edad`, `fk_id
 
 CREATE TABLE `resultado` (
   `id_resultado` int(11) NOT NULL,
-  `ganador` enum('local','visitante','empate') DEFAULT NULL,
+  `ganador` varchar(255) DEFAULT NULL,
   `fk_id_partido` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -182,7 +176,7 @@ INSERT INTO `usuario` (`id_usuario`, `usuario`, `contrasenia`, `dinero`) VALUES
 (14, 'Usuario14', 'Contraseña14', 0.00),
 (15, 'Usuario15', 'Contraseña15', 0.00),
 (21, 'ianalan', 'contraseña', 0.00),
-(22, '1', '1', 0.00);
+(22, '1', '1', 16.00);
 
 --
 -- Índices para tablas volcadas
@@ -231,7 +225,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `apuesta`
 --
 ALTER TABLE `apuesta`
-  MODIFY `id_apuesta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_apuesta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT de la tabla `partido`
@@ -267,7 +261,8 @@ ALTER TABLE `usuario`
 ALTER TABLE `apuesta`
   ADD CONSTRAINT `apuesta_ibfk_3` FOREIGN KEY (`fk_id_resultado`) REFERENCES `resultado` (`id_resultado`),
   ADD CONSTRAINT `apuesta_ibfk_4` FOREIGN KEY (`fk_id_usuario`) REFERENCES `usuario` (`id_usuario`),
-  ADD CONSTRAINT `apuesta_ibfk_5` FOREIGN KEY (`fk_id_partido`) REFERENCES `partido` (`id_partido`);
+  ADD CONSTRAINT `apuesta_ibfk_5` FOREIGN KEY (`fk_id_partido`) REFERENCES `partido` (`id_partido`),
+  ADD CONSTRAINT `fk_apuesta_resultado` FOREIGN KEY (`fk_id_resultado`) REFERENCES `resultado` (`id_resultado`);
 
 --
 -- Filtros para la tabla `persona`
