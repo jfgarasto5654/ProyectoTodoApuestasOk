@@ -2,7 +2,13 @@
 <c:import url="componentesHTML/inicioHTML.jsp" />
 <c:import url="componentesHTML/navBar-Iniciado.jsp" />
 <c:import url="componentesHTML/ul-BarraDeportes.jsp" />
-<h1 id="bets">Resultados de los Partidos</h1>
+
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Oswald:wght@600&display=swap');
+</style>
+
+<h1 id="bets">RESULTADOS DE LOS PARTIDOS</h1>
 <div class="row">
     <div class="col-md-12">
         <div class="partidos-container">

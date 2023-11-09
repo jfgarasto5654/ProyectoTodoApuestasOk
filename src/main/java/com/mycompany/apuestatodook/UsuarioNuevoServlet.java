@@ -21,10 +21,20 @@ public class UsuarioNuevoServlet extends HttpServlet {
         String nombre = request.getParameter("nombre");
         String apellido = request.getParameter("apellido");
         String edadStr = request.getParameter("edad");
-        int edad = Integer.parseInt(edadStr);
+        int edad = 0;
+        
+        if(edadStr != ""){
+          edad = Integer.parseInt(edadStr);  
+        }
+        
         String dni = request.getParameter("dni");
 
-        if (edad < 18) {
+         if((nombre.equals("")) || ("" == usuario) || "" == password || "" == cpassword || "" == apellido || "" == dni) {
+           request.setAttribute("hayError", true);
+            request.setAttribute("mensajeError", "Se deben completar todos los campos.");
+            request.getRequestDispatcher("/WEB-INF/jsp/crearUsuario.jsp").forward(request, response);
+         }
+        else if (edad < 18) {
             request.setAttribute("hayError", true);
             request.setAttribute("mensajeError", "La edad debe ser mayor o igual a 18 años.");
             request.getRequestDispatcher("/WEB-INF/jsp/crearUsuario.jsp").forward(request, response);
