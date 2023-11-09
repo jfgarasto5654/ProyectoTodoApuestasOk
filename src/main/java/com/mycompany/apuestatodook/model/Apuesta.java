@@ -7,7 +7,7 @@ public class Apuesta {
     private String por_quien;
     private int idUsuario;
     private int idPartido;
-    private int estado;
+    private char estado;
     private int fk_id_resultado;
 
     public Apuesta(int monto, String por_quien, int idUsuario, int idPartido, int fk_id_resultado) {
@@ -26,11 +26,11 @@ public class Apuesta {
         this.fk_id_resultado = fk_id_resultado;
     }
     
-    public int getEstado() {
+    public char getEstado() {
         return estado;
     }
 
-    public void setEstado(int estado) {
+    public void setEstado(char estado) {
         this.estado = estado;
     }
     

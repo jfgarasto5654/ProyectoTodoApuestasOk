@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.apuestatodook.model;
 
 import java.sql.Connection;
@@ -100,23 +96,19 @@ public class UsuarioDAO {
         return dinero;
     }
  
-
-   //  actualiza el dinero en la BD  
-    public void updateDinero(Usuario usuario) {
+ 
+        public void updateDinero(Usuario usuario) {
         String query = "UPDATE usuario SET dinero = ? WHERE id_usuario = ?";
-        
-        try (Connection con = ConnectionPool.getInstance().getConnection(); PreparedStatement preparedStatement = con.prepareStatement(query)) {
-            
+        try (Connection con = ConnectionPool.getInstance().getConnection();
+             PreparedStatement preparedStatement = con.prepareStatement(query)) {
             preparedStatement.setDouble(1, usuario.getDinero());
             preparedStatement.setInt(2, usuario.getIDusuario());
             preparedStatement.executeUpdate();
-            
+            System.out.println("Actualización del dinero del usuario en la base de datos. Nuevo saldo: " + usuario.getDinero());
         } catch (SQLException ex) {
+            System.out.println("Error al actualizar el dinero del usuario: " + ex.getMessage());     
             throw new RuntimeException(ex);
         }
     }
-
-    
 }
-    
 

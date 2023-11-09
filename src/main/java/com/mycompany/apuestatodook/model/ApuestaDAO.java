@@ -4,23 +4,33 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ApuestaDAO {
 
     public void add(Apuesta apuesta) {
-    String query = "INSERT INTO apuesta (monto, por_quien, fk_id_usuario, fk_id_partido, fk_id_resultado) VALUES (?, ?, ?, ?, ?)";
-    try (Connection con = ConnectionPool.getInstance().getConnection(); PreparedStatement preparedStatement = con.prepareStatement(query)) {
-        preparedStatement.setInt(1, apuesta.getMonto());
-        preparedStatement.setString(2, apuesta.getPor_quien());
-        preparedStatement.setInt(3, apuesta.getIdUsuario());
-        preparedStatement.setInt(4, apuesta.getIdPartido());
-        preparedStatement.setInt(5, apuesta.getFk_id_resultado());
-        preparedStatement.executeUpdate();
-    } catch (SQLException ex) {
-        throw new RuntimeException(ex);
-    }
+        String query = "INSERT INTO apuesta (monto, por_quien, fk_id_usuario, fk_id_partido, fk_id_resultado) VALUES (?, ?, ?, ?, ?)";
+        try (Connection con = ConnectionPool.getInstance().getConnection(); PreparedStatement preparedStatement = con.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
+            preparedStatement.setInt(1, apuesta.getMonto());
+            preparedStatement.setString(2, apuesta.getPor_quien());
+            preparedStatement.setInt(3, apuesta.getIdUsuario());
+            preparedStatement.setInt(4, apuesta.getIdPartido());
+            preparedStatement.setInt(5, apuesta.getFk_id_resultado());
+            preparedStatement.executeUpdate();
+
+            try (ResultSet generatedKeys = preparedStatement.getGeneratedKeys()) {
+                if (generatedKeys.next()) {
+                    int idApuesta = generatedKeys.getInt(1);
+                    apuesta.setIdApuesta(idApuesta);
+                } else {
+                    throw new SQLException("La inserción no generó el ID deseado.");
+                }
+            }
+        } catch (SQLException ex) {
+            throw new RuntimeException(ex);
+        }
     }
     public List<Apuesta> getApuestasPorUsuario(int idUsuario) {
     List<Apuesta> apuestas = new ArrayList<>();
@@ -76,11 +86,16 @@ public class ApuestaDAO {
     String query = "UPDATE apuesta SET estado = ? WHERE id_apuesta = ?";
     try (Connection con = ConnectionPool.getInstance().getConnection();
          PreparedStatement preparedStatement = con.prepareStatement(query)) {
+        System.out.println("ID de apuesta antes de la actualización: " + apuesta.getIdApuesta());
         preparedStatement.setString(1, String.valueOf(apuesta.getEstado()));
         preparedStatement.setInt(2, apuesta.getIdApuesta());
         preparedStatement.executeUpdate();
+        
+        // Imprimir el estado después de la actualización
+        System.out.println("Estado actualizado: " + apuesta.getEstado());
     } catch (SQLException ex) {
+        System.out.println("Error al actualizar el estado: " + ex.getMessage());
         throw new RuntimeException(ex);
     }
-    }
+}
 }

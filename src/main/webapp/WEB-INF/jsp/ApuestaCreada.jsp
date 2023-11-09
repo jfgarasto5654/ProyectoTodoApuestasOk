@@ -26,6 +26,14 @@
                   
                   <div class="card-header">
                   Gracias por confiar en nosotros
+                  <c:choose>
+                    <c:when test="${hayGanador}">
+                        <h1>¡Felicidades, has ganado la apuesta!</h1>
+                    </c:when>
+                    <c:when test="${hayPerdedor}">
+                        <h1>Lo siento, has perdido la apuesta.</h1>
+                    </c:when>
+                </c:choose>
                 </div>
                   
               </div>           

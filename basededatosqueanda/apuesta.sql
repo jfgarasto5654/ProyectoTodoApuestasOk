@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-11-2023 a las 16:31:36
+-- Tiempo de generación: 09-11-2023 a las 23:08:29
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.2.4
 
@@ -36,6 +36,32 @@ CREATE TABLE `apuesta` (
   `fk_id_partido` int(11) DEFAULT NULL,
   `estado` varchar(20) DEFAULT 'N'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `apuesta`
+--
+
+INSERT INTO `apuesta` (`id_apuesta`, `monto`, `por_quien`, `fk_id_resultado`, `fk_id_usuario`, `fk_id_partido`, `estado`) VALUES
+(61, 1.00, 'local', 1, 22, 1, 'N'),
+(62, 1.00, 'local', 1, 22, 1, 'N'),
+(63, 50.00, 'local', 1, 22, 1, 'G'),
+(64, 50.00, 'local', 1, 22, 1, 'G'),
+(65, 100.00, 'local', 1, 22, 1, 'G'),
+(66, 50.00, 'local', 1, 22, 1, 'G'),
+(67, 100.00, 'local', 1, 22, 1, 'G'),
+(68, 100.00, 'local', 1, 22, 1, 'G'),
+(69, 100.00, 'local', 1, 22, 1, 'G'),
+(70, 50.00, 'local', 1, 22, 1, 'G'),
+(71, 100.00, 'local', 1, 22, 1, 'N'),
+(72, 100.00, 'local', 1, 22, 1, 'N'),
+(73, 100.00, 'local', 1, 22, 1, 'N'),
+(74, 100.00, 'local', 1, 22, 1, 'N'),
+(75, 400.00, 'local', 1, 22, 1, 'N'),
+(76, 200.00, 'local', 1, 22, 1, 'N'),
+(77, 150.00, 'local', 1, 22, 1, 'N'),
+(78, 1000.00, 'local', 1, 22, 1, 'N'),
+(79, 1000.00, 'local', 1, 22, 1, 'N'),
+(80, 1000.00, 'visitante', 1, 22, 1, 'N');
 
 -- --------------------------------------------------------
 
@@ -160,7 +186,7 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`id_usuario`, `usuario`, `contrasenia`, `dinero`) VALUES
-(1, 'Usuario1', 'Contraseña1', 0.00),
+(1, 'Usuario1', 'Contraseña1', 100.00),
 (2, 'Usuario2', 'Contraseña2', 0.00),
 (3, 'Usuario3', 'Contraseña3', 0.00),
 (4, 'Usuario4', 'Contraseña4', 0.00),
@@ -176,7 +202,7 @@ INSERT INTO `usuario` (`id_usuario`, `usuario`, `contrasenia`, `dinero`) VALUES
 (14, 'Usuario14', 'Contraseña14', 0.00),
 (15, 'Usuario15', 'Contraseña15', 0.00),
 (21, 'ianalan', 'contraseña', 0.00),
-(22, '1', '1', 16.00);
+(22, '1', '1', 3000.00);
 
 --
 -- Índices para tablas volcadas
@@ -225,7 +251,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `apuesta`
 --
 ALTER TABLE `apuesta`
-  MODIFY `id_apuesta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id_apuesta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
 
 --
 -- AUTO_INCREMENT de la tabla `partido`
