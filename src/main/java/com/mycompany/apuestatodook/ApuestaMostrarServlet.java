@@ -27,7 +27,6 @@ public class ApuestaMostrarServlet extends HttpServlet {
             // Establece la lista de apuestas como atributo en la solicitud
             request.setAttribute("apuestas", apuestas);
 
-            // Redirige a un JSP que mostrará la lista de apuestas
             request.getRequestDispatcher("WEB-INF/jsp/apuestasMostrar.jsp").forward(request, response);
         } else {
             // Maneja el caso en el que el usuario no esté autenticado

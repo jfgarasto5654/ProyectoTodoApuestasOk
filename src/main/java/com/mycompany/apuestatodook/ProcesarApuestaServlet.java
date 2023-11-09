@@ -4,6 +4,7 @@ import com.mycompany.apuestatodook.model.Apuesta;
 import com.mycompany.apuestatodook.model.ApuestaDAO;
 import com.mycompany.apuestatodook.model.Partido;
 import com.mycompany.apuestatodook.model.PartidoDAO;
+import com.mycompany.apuestatodook.model.Resultado;
 import com.mycompany.apuestatodook.model.ResultadoDAO;
 import com.mycompany.apuestatodook.model.Usuario;
 import com.mycompany.apuestatodook.model.UsuarioDAO;
@@ -19,8 +20,8 @@ public class ProcesarApuestaServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Usuario usuario = (Usuario) request.getSession().getAttribute("userLogueado");
-
         if (usuario != null) {
+                         System.out.println("bandera");
             String idPartido = request.getParameter("idPartido");
             String por = request.getParameter("por");
             int idUsuario = usuario.getIDusuario();
@@ -45,7 +46,32 @@ public class ProcesarApuestaServlet extends HttpServlet {
             request.setAttribute("apuesta", apuesta);
             ApuestaDAO apuestaDAO = new ApuestaDAO();
             apuestaDAO.add(apuesta);
+            
+            int idPartidonum = apuesta.getIdPartido();
+            
+            Resultado resultadoPartido = resultadoDAO.getResultadoByIdPartido(idPartidonum);
 
+
+            if (resultadoPartido != null) {
+                if (resultadoPartido.getGanador().equals(apuesta.getPor_quien())) {
+                    // El usuario ha ganado la apuesta
+                    int premio = apuesta.getMonto() * 2;
+                    usuario.setDinero(usuario.getDinero() + premio);
+                    apuesta.setEstado('G'); // G para indicar ganada
+                    request.setAttribute("hayGanador", true);
+                } else {
+                    // El usuario ha perdido la apuesta
+                    apuesta.setEstado('P'); // P para indicar perdida
+                    request.setAttribute("hayPerdedor", true);
+                }
+
+                // Actualizar el estado en la base de datos
+                apuestaDAO.updateEstado(apuesta);
+                // Actualizar el dinero del usuario en la base de datos
+                UsuarioDAO usuarioDAO = new UsuarioDAO();
+                usuarioDAO.updateDinero(usuario);
+            }
+            
             PartidoDAO partidoDAO = new PartidoDAO();
 
             int partidoID = Integer.parseInt(idPartido);
@@ -62,7 +88,6 @@ public class ProcesarApuestaServlet extends HttpServlet {
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             usuarioDAO.updateDinero(usuario);
             request.getSession().setAttribute("userLogueado", usuario);
-
 
             request.getRequestDispatcher("WEB-INF/jsp/ApuestaCreada.jsp").forward(request, response);
         } else {

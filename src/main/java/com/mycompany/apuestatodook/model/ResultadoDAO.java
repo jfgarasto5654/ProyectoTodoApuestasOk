@@ -48,6 +48,7 @@ public class ResultadoDAO {
         } catch (SQLException ex) {
             throw new RuntimeException(ex);
         }
+        
         return resultado;
     }
     
