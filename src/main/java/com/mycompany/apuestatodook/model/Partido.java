@@ -42,8 +42,8 @@ public class Partido {
         this.fecha = fecha;
     }
 
-    public void setIdPartido(int idParttido) {
-        this.idPartido = idParttido;
+    public void setIdPartido(int idPartido) {
+        this.idPartido = idPartido;
     }
 
     public String getLocal() {
