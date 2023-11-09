@@ -8,14 +8,24 @@ public class Apuesta {
     private int idUsuario;
     private int idPartido;
     private int estado;
+    private int fk_id_resultado;
 
-    public Apuesta(int monto, String por_quien, int idUsuario, int idPartido) {
+    public Apuesta(int monto, String por_quien, int idUsuario, int idPartido, int fk_id_resultado) {
         this.monto = monto;
         this.por_quien = por_quien;
         this.idUsuario = idUsuario;
         this.idPartido = idPartido;
+        this.fk_id_resultado = fk_id_resultado;
+    }
+    
+    public int getFk_id_resultado() {
+        return fk_id_resultado;
     }
 
+    public void setFk_id_resultado(int fk_id_resultado) {
+        this.fk_id_resultado = fk_id_resultado;
+    }
+    
     public int getEstado() {
         return estado;
     }

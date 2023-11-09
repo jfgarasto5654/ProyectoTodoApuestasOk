@@ -10,16 +10,17 @@ import java.util.List;
 public class ApuestaDAO {
 
     public void add(Apuesta apuesta) {
-        String query = "INSERT INTO apuesta (monto, por_quien, fk_id_usuario, fk_id_partido) VALUES (?, ?, ?, ?)";
-        try (Connection con = ConnectionPool.getInstance().getConnection(); PreparedStatement preparedStatement = con.prepareStatement(query)) {
-            preparedStatement.setInt(1, apuesta.getMonto());
-            preparedStatement.setString(2, apuesta.getPor_quien());
-            preparedStatement.setInt(3, apuesta.getIdUsuario());
-            preparedStatement.setInt(4, apuesta.getIdPartido());
-            preparedStatement.executeUpdate();
-        } catch (SQLException ex) {
-            throw new RuntimeException(ex);
-        }
+    String query = "INSERT INTO apuesta (monto, por_quien, fk_id_usuario, fk_id_partido, fk_id_resultado) VALUES (?, ?, ?, ?, ?)";
+    try (Connection con = ConnectionPool.getInstance().getConnection(); PreparedStatement preparedStatement = con.prepareStatement(query)) {
+        preparedStatement.setInt(1, apuesta.getMonto());
+        preparedStatement.setString(2, apuesta.getPor_quien());
+        preparedStatement.setInt(3, apuesta.getIdUsuario());
+        preparedStatement.setInt(4, apuesta.getIdPartido());
+        preparedStatement.setInt(5, apuesta.getFk_id_resultado());
+        preparedStatement.executeUpdate();
+    } catch (SQLException ex) {
+        throw new RuntimeException(ex);
+    }
     }
     public List<Apuesta> getApuestasPorUsuario(int idUsuario) {
     List<Apuesta> apuestas = new ArrayList<>();
@@ -60,13 +61,16 @@ public class ApuestaDAO {
 
 
     private Apuesta rsRowToApuesta(ResultSet rs) throws SQLException {
-        int monto = rs.getInt("monto");
-        String por_quien = rs.getString("por_quien");
-        int idUsuario = rs.getInt("fk_id_usuario");
-        int idPartido = rs.getInt("fk_id_partido");
+    int monto = rs.getInt("monto");
+    String por_quien = rs.getString("por_quien");
+    int idUsuario = rs.getInt("fk_id_usuario");
+    int idPartido = rs.getInt("fk_id_partido");
+    int fk_id_resultado = rs.getInt("fk_id_resultado");
 
-        return new Apuesta(monto, por_quien, idUsuario, idPartido);
-    }
+    Apuesta apuesta = new Apuesta(monto, por_quien, idUsuario, idPartido, fk_id_resultado);
+
+    return apuesta;
+}
     
     public void updateEstado(Apuesta apuesta) {
     String query = "UPDATE apuesta SET estado = ? WHERE id_apuesta = ?";

@@ -4,6 +4,7 @@ import com.mycompany.apuestatodook.model.Apuesta;
 import com.mycompany.apuestatodook.model.ApuestaDAO;
 import com.mycompany.apuestatodook.model.Partido;
 import com.mycompany.apuestatodook.model.PartidoDAO;
+import com.mycompany.apuestatodook.model.ResultadoDAO;
 import com.mycompany.apuestatodook.model.Usuario;
 import com.mycompany.apuestatodook.model.UsuarioDAO;
 import jakarta.servlet.ServletException;
@@ -34,8 +35,12 @@ public class ProcesarApuestaServlet extends HttpServlet {
                 request.getRequestDispatcher("WEB-INF/jsp/apuesta.jsp").forward(request, response);
                 return;
             }
+            
+            ResultadoDAO resultadoDAO = new ResultadoDAO();
+            int idPartidoParam = Integer.parseInt(idPartido);
+            int idResultado = resultadoDAO.getIdResultadoByIdPartido(idPartidoParam);
 
-            Apuesta apuesta = new Apuesta(monto, por, idUsuario, Integer.parseInt(idPartido));
+            Apuesta apuesta = new Apuesta(monto, por, idUsuario, Integer.parseInt(idPartido), idResultado);
 
             request.setAttribute("apuesta", apuesta);
             ApuestaDAO apuestaDAO = new ApuestaDAO();
