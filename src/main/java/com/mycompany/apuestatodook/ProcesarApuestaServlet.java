@@ -53,7 +53,7 @@ public class ProcesarApuestaServlet extends HttpServlet {
             Resultado resultadoPartido = resultadoDAO.getResultadoByIdPartido(idPartidonum);
 
             if (resultadoPartido != null) {
-                if (resultadoPartido.getGanador().equals(apuesta.getPor_quien())) {
+                if (resultadoPartido.getGanador().equals(apuesta.getpor_quien())) {
                     usuario.setDinero(usuario.getDinero() + apuesta.getMonto());
                     apuesta.setEstado('G');
                     request.setAttribute("hayGanador", true);

@@ -9,13 +9,36 @@ public class Apuesta {
     private int idPartido;
     private char estado;
     private int fk_id_resultado;
+    private String local;
+    private String visitante;
+    private String fecha;
 
+    public Apuesta(String local, String visitante, String fecha, int monto, String por_quien) {
+        this.local = local;
+        this.visitante = visitante;
+        this.fecha = fecha;
+        this.monto = monto;
+        this.por_quien = por_quien;
+    }
+    
     public Apuesta(int monto, String por_quien, int idUsuario, int idPartido, int fk_id_resultado) {
         this.monto = monto;
         this.por_quien = por_quien;
         this.idUsuario = idUsuario;
         this.idPartido = idPartido;
         this.fk_id_resultado = fk_id_resultado;
+    }
+    
+    public String getLocal() {
+        return local;
+    }
+
+    public String getVisitante() {
+        return visitante;
+    }
+
+    public String getFecha() {
+        return fecha;
     }
     
     public int getFk_id_resultado() {
@@ -42,7 +65,7 @@ public class Apuesta {
         return monto;
     }
 
-    public String getPor_quien() {
+    public String getpor_quien() {
         return por_quien;
     }
 

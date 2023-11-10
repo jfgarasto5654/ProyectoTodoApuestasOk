@@ -18,11 +18,11 @@ public class ApuestaMostrarServlet extends HttpServlet {
             throws ServletException, IOException {
         // Obtén el usuario actual de la sesión
         Usuario usuario = (Usuario) request.getSession().getAttribute("userLogueado");
-        
+
         if (usuario != null) {
             // Utiliza un DAO para obtener las apuestas del usuario
             ApuestaDAO apuestaDAO = new ApuestaDAO();
-            List<Apuesta> apuestas = apuestaDAO.getApuestasPorUsuario(usuario.getIDusuario());
+            List<Apuesta> apuestas = apuestaDAO.getAllApuestasConResultado();
 
             // Establece la lista de apuestas como atributo en la solicitud
             request.setAttribute("apuestas", apuestas);

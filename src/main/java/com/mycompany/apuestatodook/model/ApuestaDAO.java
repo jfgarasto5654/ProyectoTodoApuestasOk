@@ -14,7 +14,7 @@ public class ApuestaDAO {
         String query = "INSERT INTO apuesta (monto, por_quien, fk_id_usuario, fk_id_partido, fk_id_resultado) VALUES (?, ?, ?, ?, ?)";
         try (Connection con = ConnectionPool.getInstance().getConnection(); PreparedStatement preparedStatement = con.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
             preparedStatement.setInt(1, apuesta.getMonto());
-            preparedStatement.setString(2, apuesta.getPor_quien());
+            preparedStatement.setString(2, apuesta.getpor_quien());
             preparedStatement.setInt(3, apuesta.getIdUsuario());
             preparedStatement.setInt(4, apuesta.getIdPartido());
             preparedStatement.setInt(5, apuesta.getFk_id_resultado());
@@ -80,7 +80,7 @@ public class ApuestaDAO {
     Apuesta apuesta = new Apuesta(monto, por_quien, idUsuario, idPartido, fk_id_resultado);
 
     return apuesta;
-}
+    }
     
     public void updateEstado(Apuesta apuesta) {
     String query = "UPDATE apuesta SET estado = ? WHERE id_apuesta = ?";
@@ -97,5 +97,31 @@ public class ApuestaDAO {
         System.out.println("Error al actualizar el estado: " + ex.getMessage());
         throw new RuntimeException(ex);
     }
-}
+    }
+    public List<Apuesta> getAllApuestasConResultado() {
+    List<Apuesta> apuestasConResultado = new ArrayList<>();
+    String query = "SELECT apuesta.por_quien, apuesta.monto, partido.local, partido.visitante, partido.fecha " +
+            "FROM apuesta " +
+            "JOIN resultado ON resultado.fk_id_partido = apuesta.fk_id_partido " +
+            "JOIN partido ON partido.id_partido = apuesta.fk_id_partido";
+
+    try (Connection con = ConnectionPool.getInstance().getConnection();
+         PreparedStatement ps = con.prepareStatement(query);
+         ResultSet rs = ps.executeQuery()) {
+        while (rs.next()) {
+            String por_quien = rs.getString("por_quien");
+            int monto = rs.getInt("monto");
+            String local = rs.getString("local");
+            String visitante = rs.getString("visitante");
+            String fecha = rs.getString("fecha");
+
+            Apuesta apuesta = new Apuesta(local, visitante, fecha, monto, por_quien);
+            apuestasConResultado.add(apuesta);
+        }
+    } catch (SQLException ex) {
+        throw new RuntimeException(ex);
+    }
+    return apuestasConResultado;
+    }
+
 }

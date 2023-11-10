@@ -8,15 +8,17 @@
 </style>
         
 <h1 id="bets">Apuestas</h1>
+
 <div class="row">
     <div class="col-md-12">
         <div class="partidos-container">
-            <c:forEach var="apuesta" items="${apuestas}">
+            <c:forEach items="${apuestas}" var="apuesta" varStatus="loop">
                 <div class="partido-burbuja">
-                    <div class="monto">Monto: $${apuesta.monto}</div>
-                    <div class="por_quien">Por Quien: ${apuesta.por_quien}</div>
-                    <div class="idUsuario">ID Usuario: ${apuesta.idUsuario}</div>
-                    <div class="idPartido">ID Partido: ${apuesta.idPartido}</div>
+                    <div class="equipo-local">${apuesta.local}</div>
+                    <div class="equipo-visitante">${apuesta.visitante}</div>
+                    <div class="fecha">${apuesta.fecha}</div>
+                    <div class="por-quien">Por Quién: ${apuesta.por_quien}</div>
+                    <div class="monto">Monto: ${apuesta.monto}</div>
                 </div>
             </c:forEach>
         </div>
