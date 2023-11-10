@@ -32,6 +32,8 @@ public class IngresoUsuarioServlet extends HttpServlet {
             String haciaDondeIba = request.getParameter("deDondeViene");
             HttpSession session = request.getSession();
             session.setMaxInactiveInterval(3600);
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            user.setRol(usuarioDAO.getRolPorIdUsuario(usuarioDAO.getIDPorNombre(p)));
             session.setAttribute("userLogueado", user);
            if (haciaDondeIba != null) {
                 response.sendRedirect(request.getContextPath() + haciaDondeIba);

@@ -95,6 +95,52 @@ public class UsuarioDAO {
         
         return dinero;
     }
+    
+    public String getRolPorIdUsuario (Integer Id) {
+        
+        String query = "SELECT rol FROM usuario WHERE id_usuario = ?";
+        
+        String rol = null;
+        
+        try (Connection con = ConnectionPool.getInstance().getConnection(); PreparedStatement preparedStatement = con.prepareStatement(query)) {
+            
+            preparedStatement.setInt(1, Id);
+            
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                
+                if (resultSet.next()) { 
+                    rol = resultSet.getString(1);
+                }  
+            }
+        } catch (SQLException ex) {
+            throw new RuntimeException(ex);
+        }
+        
+        return rol;
+    }
+    
+    public int getIDPorNombre (String usuario) {
+        
+        String query = "SELECT id_usuario FROM usuario WHERE usuario = ?";
+        
+        int id = 0;
+        
+        try (Connection con = ConnectionPool.getInstance().getConnection(); PreparedStatement preparedStatement = con.prepareStatement(query)) {
+            
+            preparedStatement.setString(2, usuario);
+            
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                
+                if (resultSet.next()) { 
+                    id = resultSet.getInt(1);
+                }  
+            }
+        } catch (SQLException ex) {
+            throw new RuntimeException(ex);
+        }
+        
+        return id;
+    }
  
  
         public void updateDinero(Usuario usuario) {

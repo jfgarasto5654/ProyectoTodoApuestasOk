@@ -8,6 +8,7 @@ public class Usuario{
     private String usuario;
     private String contrasenia;
     private double dinero;
+    private String rol;
 
     public Usuario(int IDusuario, String usuario, String contrasenia) {
         this.usuario = usuario;
@@ -48,6 +49,17 @@ public class Usuario{
     public String toString() {
         return "Usuario{" + "IDusuario=" + IDusuario + ", usuario=" + usuario + ", contrasenia=" + contrasenia + ", dinero=" + dinero + '}';
     }
+
+    public void setRol(String rol) {
+        this.rol = rol;
+    }
+
+    public String getRol() {
+        return rol;
+    }
+
+    
+    
 
 }
 
