@@ -46,7 +46,14 @@ public class BilleteraServlet extends HttpServlet{
     double dineroDisponible = usuarioDAO.getDineroPorIdUsuario(IDusuario);
     String operacion = req.getParameter("Modificar");
     String montoSTR = req.getParameter("monto");
-    double monto = Double.parseDouble(montoSTR);
+    double monto = 0;
+    if(montoSTR != ""){
+        monto = Double.parseDouble(montoSTR);   
+    } else {
+            req.setAttribute("hayError", true);
+            req.setAttribute("mensajeError", "Debe ingresar un monto por favor. ");
+            req.getRequestDispatcher("WEB-INF/jsp/billetera.jsp").forward(req, resp);
+    }
 
     if (operacion.equals("ingreso")) {
         dineroDisponible += monto;

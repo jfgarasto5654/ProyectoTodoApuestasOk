@@ -42,11 +42,11 @@
 <div class="contenedor">
  
     <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
+        <img src="img/tarjetas-credito.jpeg" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">Depositos y extracciones</h5>
     <p class="card-text">Contamos con depositos y extracciones al instante y al banco/billetera virtual que quieras!</p>
-    <a href="${pageContext.request.contextPath}/Partidos" class="btn btn-primary">Go somewhere</a>
+    <a href="${pageContext.request.contextPath}/Partidos" class="btn btn-primary">Go</a>
   </div>
 </div>
     
@@ -55,7 +55,7 @@
     <div class="card-body">
       <h5 class="card-title">X2</h5>
       <p class="card-text">Solo por hoy todas sus apuestas seran pagadas X2.</p>
-      <a href="${pageContext.request.contextPath}/Partidos" class="btn btn-primary">Go somewhere</a>
+      <a href="${pageContext.request.contextPath}/Partidos" class="btn btn-primary">Go</a>
     </div>
   </div>
     
@@ -64,7 +64,7 @@
     <div class="card-body">
       <h5 class="card-title">Apoya a Argentina</h5>
       <p class="card-text">Cuotas mejoradas en la final de la Libertadores Boca-Fluiminense</p>
-      <a href="${pageContext.request.contextPath}/Partidos" class="btn btn-primary">Go somewhere</a>
+      <a href="${pageContext.request.contextPath}/Partidos" class="btn btn-primary">Go</a>
     </div>
   </div>
     
