@@ -12,6 +12,6 @@ public class UtilFilter {
         request.setAttribute("hayError", true);
         request.setAttribute("mensajeError", mensajeError);
         
-        request.getRequestDispatcher("${pageContext.request.contextPath}/IngresoUsuario").forward(request, response);
+        request.getRequestDispatcher("/Index?action=inicioSesion").forward(request, response);
     }
 }
