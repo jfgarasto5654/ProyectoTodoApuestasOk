@@ -3,7 +3,7 @@
 <c:import url="componentesHTML/navBar-Iniciado.jsp" />
 <c:import url="componentesHTML/ul-BarraDeportes.jsp" />
 
-<div class="container">
+<div class="container" id="contenedorPrincipal">
     <div class="row" style="background-color: #ccc414; margin-top: 50px">
         <div class="col-md-4" style="color: #000000; padding: 30px">
             <h4>Local</h4>
@@ -25,6 +25,8 @@
             </c:if>
             <h4>Fecha</h4>
             <p>${partido.fecha}</p>
+            <h2>Saldo:</h2>
+            <p>${dineroUsuario}</p>
         </div>
         <div class="col-md-4" style="color: #000000; padding: 30px">
             <h4>Visitante</h4>
