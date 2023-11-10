@@ -3,7 +3,6 @@ package com.mycompany.apuestatodook;
 import com.mycompany.apuestatodook.model.Persona;
 import com.mycompany.apuestatodook.model.PersonaDAO;
 import com.mycompany.apuestatodook.model.Usuario;
-import com.mycompany.apuestatodook.model.UsuarioDAO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -21,7 +20,6 @@ public class perfilServlet extends HttpServlet{
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        UsuarioDAO usuarioDAO = new UsuarioDAO();
         String destino;
         
         Usuario usuario = (Usuario) request.getSession().getAttribute("userLogueado");

@@ -1,7 +1,7 @@
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
 <c:import url="componentesHTML/inicioHTML.jsp" />
 <c:import url="componentesHTML/navBar-Iniciado.jsp" />
-        
+<c:import url="componentesHTML/ul-BarraDeportes.jsp" />        
         <div id="nav-bar">
             <h1>AP</h1>  
         </div>

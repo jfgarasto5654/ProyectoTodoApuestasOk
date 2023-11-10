@@ -1,16 +1,7 @@
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>ApuestaTodo</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-        <link href="css/estilo.css" rel="stylesheet" type="text/css"/>
-    </head>
-
-<c:import url="componentesHTML/navBar-Iniciado.jsp" />    
-            
+<c:import url="componentesHTML/inicioHTML.jsp" />
+<c:import url="componentesHTML/navBar-Iniciado.jsp" />
+<c:import url="componentesHTML/ul-BarraDeportes.jsp" />
                 <div class="card">               
                 <div class="card-body">
                   <h3 class="card-title">Felicitaciones su apuesta ha sido creada</h3>
@@ -28,7 +19,7 @@
                   Gracias por confiar en nosotros
                   <c:choose>
                     <c:when test="${hayGanador}">
-                        <h1>Â¡Felicidades, has ganado la apuesta!</h1>
+                        <h1>¡Felicidades, has ganado la apuesta!</h1>
                     </c:when>
                     <c:when test="${hayPerdedor}">
                         <h1>Lo siento, has perdido la apuesta.</h1>

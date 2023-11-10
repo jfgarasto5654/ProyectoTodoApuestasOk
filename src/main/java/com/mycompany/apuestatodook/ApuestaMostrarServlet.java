@@ -16,20 +16,16 @@ public class ApuestaMostrarServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        // Obtén el usuario actual de la sesión
         Usuario usuario = (Usuario) request.getSession().getAttribute("userLogueado");
 
         if (usuario != null) {
-            // Utiliza un DAO para obtener las apuestas del usuario
             ApuestaDAO apuestaDAO = new ApuestaDAO();
             List<Apuesta> apuestas = apuestaDAO.getAllApuestasConResultado();
 
-            // Establece la lista de apuestas como atributo en la solicitud
             request.setAttribute("apuestas", apuestas);
 
             request.getRequestDispatcher("WEB-INF/jsp/apuestasMostrar.jsp").forward(request, response);
         } else {
-            // Maneja el caso en el que el usuario no esté autenticado
             request.setAttribute("hayError", true);
             request.setAttribute("mensajeError", "Por favor, inicie sesión.");
             request.getRequestDispatcher("WEB-INF/jsp/iniciosesion.jsp").forward(request, response);

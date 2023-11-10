@@ -1,7 +1,7 @@
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
 <c:import url="componentesHTML/inicioHTML.jsp" />
 <c:import url="componentesHTML/navBar-Iniciado.jsp" />
-
+<c:import url="componentesHTML/ul-BarraDeportes.jsp" />
 <section class="h-100 ">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
