@@ -100,7 +100,7 @@ public class UsuarioDAO {
         
         String query = "SELECT rol FROM usuario WHERE id_usuario = ?";
         
-        String rol = null;
+        String rol = "";
         
         try (Connection con = ConnectionPool.getInstance().getConnection(); PreparedStatement preparedStatement = con.prepareStatement(query)) {
             
@@ -127,7 +127,7 @@ public class UsuarioDAO {
         
         try (Connection con = ConnectionPool.getInstance().getConnection(); PreparedStatement preparedStatement = con.prepareStatement(query)) {
             
-            preparedStatement.setString(2, usuario);
+            preparedStatement.setString(1, usuario);
             
             try (ResultSet resultSet = preparedStatement.executeQuery()) {
                 

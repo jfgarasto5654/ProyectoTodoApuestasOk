@@ -34,6 +34,7 @@ public class IngresoUsuarioServlet extends HttpServlet {
             session.setMaxInactiveInterval(3600);
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             user.setRol(usuarioDAO.getRolPorIdUsuario(usuarioDAO.getIDPorNombre(p)));
+            System.out.println(user.getRol());
             session.setAttribute("userLogueado", user);
            if (haciaDondeIba != null) {
                 response.sendRedirect(request.getContextPath() + haciaDondeIba);

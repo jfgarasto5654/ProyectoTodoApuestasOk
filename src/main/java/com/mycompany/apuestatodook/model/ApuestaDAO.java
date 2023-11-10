@@ -33,24 +33,29 @@ public class ApuestaDAO {
         }
     }
     public List<Apuesta> getApuestasPorUsuario(int idUsuario) {
-    List<Apuesta> apuestas = new ArrayList<>();
-    String query = "SELECT * FROM apuesta WHERE fk_id_usuario = ?";
-    
+    List<Apuesta> apuestasConResultado = new ArrayList<>();
+    String query = "SELECT apuesta.por_quien, apuesta.monto, partido.local, partido.visitante, partido.fecha WHERE fk_id_usuario = ?" +
+            "FROM apuesta " +
+            "JOIN resultado ON resultado.fk_id_partido = apuesta.fk_id_partido " +
+            "JOIN partido ON partido.id_partido = apuesta.fk_id_partido";
+
     try (Connection con = ConnectionPool.getInstance().getConnection();
-         PreparedStatement preparedStatement = con.prepareStatement(query)) {
-        preparedStatement.setInt(1, idUsuario);
-        
-        try (ResultSet resultSet = preparedStatement.executeQuery()) {
-            while (resultSet.next()) {
-                Apuesta apuesta = rsRowToApuesta(resultSet);
-                apuestas.add(apuesta);
-            }
+         PreparedStatement ps = con.prepareStatement(query);
+         ResultSet rs = ps.executeQuery()) {
+        while (rs.next()) {
+            String por_quien = rs.getString("por_quien");
+            int monto = rs.getInt("monto");
+            String local = rs.getString("local");
+            String visitante = rs.getString("visitante");
+            String fecha = rs.getString("fecha");
+
+            Apuesta apuesta = new Apuesta(local, visitante, fecha, monto, por_quien);
+            apuestasConResultado.add(apuesta);
         }
     } catch (SQLException ex) {
         throw new RuntimeException(ex);
     }
-    
-    return apuestas;
+    return apuestasConResultado;
     }
     
     public String getResultadoPorPartido(int idPartido) {
