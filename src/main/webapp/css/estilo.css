@@ -234,3 +234,8 @@ height: 100vh;
 .col-md-4 h4, .col-md-4 p, .form-control {
     font-size: 20px; /* Ajusta el valor según el tamaño deseado */
 }
+
+#montoAgregar{
+    padding: 20px;
+}
+

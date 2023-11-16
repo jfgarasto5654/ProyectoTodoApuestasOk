@@ -20,6 +20,7 @@
     <filter-mapping>
         <filter-name>adminfilter</filter-name>
         <url-pattern>/ApuestasMostrar</url-pattern>
+        <url-pattern>/AdminPartidos</url-pattern>
     </filter-mapping>
     <servlet>
         <servlet-name>SvIndex</servlet-name>

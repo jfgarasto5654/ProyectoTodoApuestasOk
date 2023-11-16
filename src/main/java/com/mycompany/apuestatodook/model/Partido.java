@@ -22,6 +22,13 @@ public class Partido {
         this.fecha = fecha;
         this.idPartido = idPartido;
     }
+    
+    public Partido(String local, String visitante, String fecha) {
+        this.local = local;
+        this.visitante = visitante;
+        this.fecha = fecha;
+    }
+    
      public Partido(String local, String visitante, String fecha, Resultado resultado) {
         this.local = local;
         this.visitante = visitante;

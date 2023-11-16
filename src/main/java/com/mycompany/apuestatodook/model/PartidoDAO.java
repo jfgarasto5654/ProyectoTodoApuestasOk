@@ -72,6 +72,7 @@ public class PartidoDAO {
         }
         return partido;
     }
+    
 
     private Partido rsRowToPartido(ResultSet rs) throws SQLException {
        int id_partido = rs.getInt(1);
