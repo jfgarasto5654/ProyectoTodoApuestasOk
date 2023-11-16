@@ -32,31 +32,35 @@ public class ApuestaDAO {
             throw new RuntimeException(ex);
         }
     }
+    
     public List<Apuesta> getApuestasPorUsuario(int idUsuario) {
     List<Apuesta> apuestasConResultado = new ArrayList<>();
-    String query = "SELECT apuesta.por_quien, apuesta.monto, partido.local, partido.visitante, partido.fecha WHERE fk_id_usuario = ?" +
+    String query = "SELECT apuesta.por_quien, apuesta.monto, partido.local, partido.visitante, partido.fecha " +
             "FROM apuesta " +
             "JOIN resultado ON resultado.fk_id_partido = apuesta.fk_id_partido " +
-            "JOIN partido ON partido.id_partido = apuesta.fk_id_partido";
+            "JOIN partido ON partido.id_partido = apuesta.fk_id_partido " +
+            "WHERE apuesta.fk_id_usuario = ?"; // Agregamos la condición para el ID del usuario
 
     try (Connection con = ConnectionPool.getInstance().getConnection();
-         PreparedStatement ps = con.prepareStatement(query);
-         ResultSet rs = ps.executeQuery()) {
-        while (rs.next()) {
-            String por_quien = rs.getString("por_quien");
-            int monto = rs.getInt("monto");
-            String local = rs.getString("local");
-            String visitante = rs.getString("visitante");
-            String fecha = rs.getString("fecha");
+         PreparedStatement ps = con.prepareStatement(query)) {
+        ps.setInt(1, idUsuario); // Asignamos el valor del ID de usuario al parámetro en la consulta
+        try (ResultSet rs = ps.executeQuery()) {
+            while (rs.next()) {
+                String por_quien = rs.getString("por_quien");
+                int monto = rs.getInt("monto");
+                String local = rs.getString("local");
+                String visitante = rs.getString("visitante");
+                String fecha = rs.getString("fecha");
 
-            Apuesta apuesta = new Apuesta(local, visitante, fecha, monto, por_quien);
-            apuestasConResultado.add(apuesta);
+                Apuesta apuesta = new Apuesta(local, visitante, fecha, monto, por_quien);
+                apuestasConResultado.add(apuesta);
+            }
         }
     } catch (SQLException ex) {
         throw new RuntimeException(ex);
     }
     return apuestasConResultado;
-    }
+}
     
     public String getResultadoPorPartido(int idPartido) {
     String query = "SELECT ganador FROM resultado WHERE id_partido = ?";
