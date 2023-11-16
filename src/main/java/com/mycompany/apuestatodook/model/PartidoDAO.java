@@ -1,6 +1,7 @@
 package com.mycompany.apuestatodook.model;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -71,6 +72,18 @@ public class PartidoDAO {
             throw new RuntimeException(ex);
         }
         return partido;
+    }
+    
+   public void agregarPartido(String local, String visitante, java.sql.Date fecha) {
+        String query = "INSERT INTO partido ( local, visitante, fecha) VALUES (? , ?, ?)";
+        try (Connection con = ConnectionPool.getInstance().getConnection(); PreparedStatement preparedStatement = con.prepareStatement(query)) {
+            preparedStatement.setString(1, local);
+            preparedStatement.setString(2, visitante);
+            preparedStatement.setDate(3, fecha);
+            preparedStatement.executeUpdate();
+        } catch (SQLException ex) {
+            throw new RuntimeException(ex);
+        }
     }
     
 

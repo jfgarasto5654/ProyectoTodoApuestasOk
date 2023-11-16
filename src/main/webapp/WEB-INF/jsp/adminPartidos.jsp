@@ -12,7 +12,7 @@
                             <div class="form-group">
                                 <input type="text" class="form-control" name="Local" placeholder="Local" id="montoAgregar" style="padding: 20px">
                                 <input type="text" class="form-control" name="Visitante" placeholder="Visitante" id="montoAgregar">
-                                <input type="text" class="form-control" name="Fecha" placeholder="Fecha" id="montoAgregar">
+                                <input type="date" class="form-control" name="Fecha" placeholder="Fecha" id="montoAgregar">
                                 <input type="hidden" class="form-control" name="Modificar" value="ingreso" id="montoAgregar">
                             </div>
                             <button class="btn btn-success" type="submit">Agregar</button>
