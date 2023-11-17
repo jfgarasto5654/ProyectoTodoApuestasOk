@@ -51,6 +51,11 @@
                           <a href="${pageContext.request.contextPath}/AdminPartidos" class="nav-link">ADMIN</a>
                         </li>  
                         </c:if>
+                        <c:if test="${userLogueado.getRol().equals('ADMIN')}">
+                        <li class="nav-item" >
+                          <a href="${pageContext.request.contextPath}/Balance" class="nav-link">Balance</a>
+                        </li>  
+                        </c:if>
                         <li class="nav-item" >
                           <a href="${pageContext.request.contextPath}/Salir" class="btn btn-danger">Logout</a>
                         </li>

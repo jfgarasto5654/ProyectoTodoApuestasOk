@@ -41,6 +41,7 @@ public class ProcesarApuestaServlet extends HttpServlet {
             ResultadoDAO resultadoDAO = new ResultadoDAO();
             int idPartidoParam = Integer.parseInt(idPartido);
             int idResultado = resultadoDAO.getIdResultadoByIdPartido(idPartidoParam);
+            
 
             Apuesta apuesta = new Apuesta(monto, por, idUsuario, Integer.parseInt(idPartido), idResultado);
 

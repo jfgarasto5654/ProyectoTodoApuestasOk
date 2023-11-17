@@ -132,5 +132,34 @@ public class ApuestaDAO {
     }
     return apuestasConResultado;
     }
+    
+    public List<Apuesta> getAllApuestasBalance() {
+    List<Apuesta> apuestasConResultado = new ArrayList<>();
+    String query = "SELECT apuesta.por_quien, SUM(apuesta.monto) AS TOTALPERDIDA, partido.local, partido.visitante, partido.fecha " +
+    "FROM apuesta " +
+    "JOIN resultado ON resultado.fk_id_partido = apuesta.fk_id_partido " +
+    "JOIN partido ON partido.id_partido = apuesta.fk_id_partido " +
+    "WHERE apuesta.estado = 'N' " +
+    "GROUP BY apuesta.por_quien, partido.local, partido.visitante, partido.fecha " +
+    "ORDER BY TOTALPERDIDA DESC";
+    try (Connection con = ConnectionPool.getInstance().getConnection();
+         PreparedStatement ps = con.prepareStatement(query);
+         ResultSet rs = ps.executeQuery()) {
+        while (rs.next()) {
+            String por_quien = rs.getString("por_quien");
+            int monto = rs.getInt("TOTALPERDIDA");
+            String local = rs.getString("local");
+            String visitante = rs.getString("visitante");
+            String fecha = rs.getString("fecha");
+
+            Apuesta apuesta = new Apuesta(local, visitante, fecha, monto, por_quien);
+            apuestasConResultado.add(apuesta);
+            System.out.println("Apuesta agregada: " + apuesta.toString()); // Agregar registro para verificar las apuestas obtenidas
+        }
+    } catch (SQLException ex) {
+        throw new RuntimeException(ex);
+    }
+    return apuestasConResultado;
+    }
 
 }

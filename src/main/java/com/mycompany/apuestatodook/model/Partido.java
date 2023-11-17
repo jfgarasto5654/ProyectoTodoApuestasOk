@@ -7,6 +7,7 @@ public class Partido {
     private String fecha;
     private int idPartido;
     private Resultado resultado;
+    private int balance;
 
     public Resultado getResultado() {
         return resultado;
@@ -35,8 +36,9 @@ public class Partido {
         this.fecha = fecha;
         this.resultado = resultado;
     }
-    
 
+    
+     
     public void setLocal(String local) {
         this.local = local;
     }

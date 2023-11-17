@@ -45,6 +45,8 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
             
             SimpleDateFormat formatoFechaJSP = new SimpleDateFormat("yyyy-MM-dd"); // El formato depende de tu input date en el formulario
             java.util.Date fechaUtil = formatoFechaJSP.parse(fechaStr);
+            
+            //utilizar local date
 
             // Convertir de java.util.Date a java.sql.Date
             java.sql.Date fechaSQL = new java.sql.Date(fechaUtil.getTime());

@@ -28,6 +28,14 @@ public class Apuesta {
         this.idPartido = idPartido;
         this.fk_id_resultado = fk_id_resultado;
     }
+
+    public Apuesta(int monto, int idPartido, String local, String visitante) {
+        this.monto = monto;
+        this.idPartido = idPartido;
+        this.local = local;
+        this.visitante = visitante;
+    }
+    
     
     public String getLocal() {
         return local;
@@ -96,5 +104,12 @@ public class Apuesta {
     public void setIdPartido(int idPartido) {
         this.idPartido = idPartido;
     }
+
+    @Override
+    public String toString() {
+        return "Apuesta{" + "idApuesta=" + idApuesta + ", monto=" + monto + ", por_quien=" + por_quien + ", idUsuario=" + idUsuario + ", idPartido=" + idPartido + ", estado=" + estado + ", fk_id_resultado=" + fk_id_resultado + ", local=" + local + ", visitante=" + visitante + ", fecha=" + fecha + '}';
+    }
+    
+    
 
 }
