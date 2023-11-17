@@ -21,11 +21,11 @@
                         <form action="AdminPartidos" method="POST">
                             <h4 class="card-title">Cuenta Creada</h4>
                             <h1>FELICITACIONES</h1>
-        <h1>SU CUENTA HA SIDO CREADA</h1>
-        <h1>Gracias por unirte a la comunidad de Apuesta Todo</h1>
-        <h3>Aposta con responsabilidad</h3>
-        <h3>Estas siendo redireccionado</h3>
-                            <button class="btn btn-success" type="submit">Agregar</button>
+                            <h1>SU CUENTA HA SIDO CREADA</h1>
+                            <h1>Gracias por unirte a la comunidad de Apuesta Todo</h1>
+                            <h3>Aposta con responsabilidad</h3>
+                            <h3>Estas siendo redireccionado</h3>
+
                         </form>
                     </div>
                 </div>
