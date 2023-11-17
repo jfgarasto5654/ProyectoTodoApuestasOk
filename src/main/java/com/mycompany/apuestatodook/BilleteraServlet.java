@@ -47,15 +47,24 @@ public class BilleteraServlet extends HttpServlet{
     String operacion = req.getParameter("Modificar");
     String montoSTR = req.getParameter("monto");
     double monto = 0;
-    if(montoSTR != ""){
-        monto = Double.parseDouble(montoSTR);   
-    } else {
+    
+    if(montoSTR!=""){
+    monto = Double.parseDouble(montoSTR);
+    }
+    if(montoSTR==""){
+            req.setAttribute("dinero", dineroDisponible);
             req.setAttribute("hayError", true);
             req.setAttribute("mensajeError", "Debe ingresar un monto por favor. ");
             req.getRequestDispatcher("WEB-INF/jsp/billetera.jsp").forward(req, resp);
-    }
-
-    if (operacion.equals("ingreso")) {
+        
+    }else if(monto<0){
+            req.setAttribute("dinero", dineroDisponible);
+           req.setAttribute("hayError", true);
+           req.setAttribute("mensajeError", "El monto no debe ser negativo");
+           req.getRequestDispatcher("WEB-INF/jsp/billetera.jsp").forward(req, resp); 
+        }
+    else {
+            if (operacion.equals("ingreso")) {
         dineroDisponible += monto;
     } else {
         if (dineroDisponible >= monto) {
@@ -75,6 +84,8 @@ public class BilleteraServlet extends HttpServlet{
     req.getSession().setAttribute("userLogueado", usuario);
 
     resp.sendRedirect(req.getContextPath() + "/Billetera");
+    }
+
 }
     
 } 
